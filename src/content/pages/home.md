@@ -118,7 +118,7 @@ clientes:
       client_name: Naruta
       url: https://natura.web
 testimonios:
-  show_section: true
+  show_section: false
   title: Lo que dicen nuestros socios
 image: /ruta/a/imagen-ejemplo.jpg
 ---
