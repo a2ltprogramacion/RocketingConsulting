@@ -1,5 +1,5 @@
 # Resumen del Proyecto: Elevawod.cl
-# Versión 2.0
+# Versión 3.0
 
 ## 1. Visión y Objetivos del Proyecto
 
@@ -17,10 +17,10 @@
 
 - **Dominio y Hosting:**
   - Dominio: `Elevawod.cl`.
-  - Hosting actual: Página de aterrizaje en Canva. Existe un hosting con correo, pero hay apertura a nuevas opciones para mejorar rendimiento.
+  - Hosting actual: Página de aterrizaje en Canva. Existe apertura a nuevas opciones para mejorar rendimiento.
 
 - **Estructura de la Landing Page (en orden de prioridad):**
-  1. Inicio (Hero Section)
+  1. Inicio
   2. Proyectos
   3. Clientes / Testimonios
   4. Servicios
@@ -34,52 +34,45 @@
   - Fotos (Galería)
 
 - **Control del Contenido (CMS):**
-  - Es de suma importancia tener control total sobre textos e imágenes de toda la web.
+  - Control total sobre textos, imágenes y SEO de toda la web.
   - Actualizar y gestionar proyectos fácilmente.
-  - Control sobre el SEO.
 
 ---
 
-## 3. Dirección de Diseño Estratégico
+## 3. Dirección de Diseño Estratégico (V3.0)
 
-### 3.1. Sitios de Referencia
+### 3.1. Documentos Fuente de Identidad
 
-- **Primaria:** `agencialean.cl`
-- **Secundarias:** `brandcrops.com`, `amarillolab.com`
+- **Referencia Visual Principal:** Mockup `web-Elevawod.pdf`.
+- **Paleta Cromática:** `Paleta de Colores.png`.
+- **Guía Tipográfica:** `Tipografía Corporativa.docx`.
 
-### 3.2. Análisis Consolidado y Recomendaciones
+### 3.2. Directrices de Implementación
 
-El objetivo es lograr un equilibrio entre la **confianza y profesionalismo** de `agencialean.cl` y la **modernidad y sofisticación** de `brandcrops.com`.
+- **Paleta de Colores (Base: `Paleta de Colores.png`):**
+  - **Color Acento (CTAs, Banners):** Coral Elevawod (`#F5775F`). Transmite energía y dinamismo.
+  - **Color Primario (Textos, Contraste):** Gris Profundo (`#3D3D3D`). Representa estabilidad y profesionalismo.
+  - **Fondo Principal:** Blanco puro (`#FFFFFF`).
+  - **Texto Invertido (sobre Coral o Gris):** Blanco puro (`#FFFFFF`).
 
-- **Estructura y Layout (Base: agencialean.cl):**
-  - Adoptar un layout claro, basado en un grid de 12 columnas, con abundante espacio en blanco para crear una jerarquía visual sólida y profesional.
+- **Tipografía (Base: `Tipografía Corporativa.docx`):**
+  - **Títulos (H1, H2, H3):** Usar **Montserrat (Negrita)**. Debe ser Sans-serif para una apariencia moderna y directa.
+  - **Párrafos y Subtítulos:** Usar **Open Sans**. Garantiza máxima legibilidad.
 
-- **Paleta de Colores (Base: agencialean.cl):**
-  - Utilizar una paleta de alto contraste que inspire confianza: azul oscuro corporativo como primario (`~#0A253F`) y un color de acento vibrante (ej. naranja, `~#FF6F3C`) para los CTAs.
+- **Componentes y Layout (Base: `web-Elevawod.pdf`):**
+  - **Estilo General:** Limpio, moderno, con alto contraste y enfoque en el contenido.
+  - **Botones:** Fondos sólidos (Coral o Gris) con texto en alto contraste (Blanco o Gris).
+  - **Tarjetas (Proyectos/Servicios):** Limpias, con sombras sutiles o bordes definidos para separación.
 
-- **Tipografía (Fusión estratégica):**
-  - **Títulos (H1, H2):** Usar una tipografía **Serif moderna** (estilo `brandcrops.com`, similar a Playfair Display) para añadir un toque editorial, de calidad y sofisticación.
-  - **Párrafos:** Usar una tipografía **Sans-serif neutra y muy legible** (estilo `agencialean.cl`, similar a Open Sans, 16-18px) para garantizar la claridad.
+### 3.3. Conclusión de Diseño (V3.0)
 
-- **Componentes y Micro-interacciones (Inspiración: amarillolab.com):**
-  - **Botones:** Grandes, rectangulares, con esquinas ligeramente redondeadas y colores de alto contraste.
-  - **Interacciones:** Implementar feedback dinámico pero sutil en los estados `hover`. Por ejemplo, un botón de color sólido que al pasar el cursor se invierte a un estilo con borde y fondo blanco.
-
-### 3.3. Conclusión de Diseño
-
-La web de Elevawod.cl debe sentirse **sólidamente profesional y confiable**, pero a la vez **completamente actual y moderna**, combinando una estructura predecible con detalles de diseño sofisticados e interacciones satisfactorias.
+La web de Elevawod.cl debe proyectar una imagen **cercana, energética y profesional**. Se abandona la estética Serif (Playfair Display) y la paleta Azul/Naranja en favor de una identidad visual (Coral/Gris) y tipográfica (Montserrat/Open Sans) más directa y moderna, alineada con los últimos documentos proporcionados por el cliente.
 
 ---
 
-## 4. Arquitectura y Funcionalidades Implementadas (Estado Actual)
+## 4. Arquitectura y Funcionalidades (Sin cambios)
 
-- **Framework:** Astro en modo **SSR (Server-Side Rendering)** con adaptador para Netlify.
-- **CMS:** Decap CMS configurado en la ruta `/admin`.
-- **Colecciones de Contenido:**
-  - `pages`: Para páginas estáticas (Home).
-  - `proyectos`: Para el portafolio. Utiliza slugs limpios controlados desde el CMS.
-  - `ajustes`: Para configuraciones globales, como la selección de 0 a 3 proyectos destacados.
-- **Funcionalidades:**
-  - Renderizado de página de inicio con proyectos destacados.
-  - Galería de todos los proyectos en `/proyectos`.
-  - Páginas de detalle dinámicas para cada proyecto.
+- **Framework:** Astro en modo **SSR (Server-Side Rendering)**.
+- **CMS:** Decap CMS.
+- **Colecciones de Contenido:** `pages`, `proyectos`, `ajustes`, `servicios`, `informacion-de-contacto`.
+- **Funcionalidades:** Renderizado de página de inicio, galería de proyectos, páginas de detalle dinámicas.

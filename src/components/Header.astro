@@ -1,4 +1,5 @@
 ---
+// @src/components/Header.astro (VERSIÓN 4.2 - CORREGIDO)
 import { getEntry } from 'astro:content';
 
 const contacto = await getEntry('informacion-de-contacto', 'general');
@@ -12,17 +13,20 @@ const navLinks = [
   { href: "/#nosotros", text: "Nosotros" },
   { href: "/proyectos", text: "Proyectos" },
   { href: "/#servicios", text: "Servicios" },
+  { href: "/#clientes", text: "Clientes" },
 ];
 ---
 
-<header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-colors duration-300 ease-in-out">
+{/* Header V4.1 (absolute) */}
+<header id="main-header" class="absolute top-0 left-0 w-full z-50 transition-colors duration-300 ease-in-out">
   <div class="container mx-auto flex justify-between items-center p-4">
-    <a href="/" class="ml-5 md:ml-32 no-underline hover:no-underline ">
+    <a href="/" class="ml-5 md:ml-16 no-underline hover:no-underline ">
       <img class="max-h-14 md:max-h-20" src="/assets/uploads/Logo-Elevawod-Horizontal-trasnparente.png" alt="Logo Elevawod" />
     </a>
 
     
-        <nav class="hidden md:flex items-center space-x-6 mr-5 md:mr-32">
+    {/* Navegación de escritorio oculta (V4.0) */}
+    <nav class="hidden items-center space-x-6 mr-5 md:mr-32">
       {navLinks.map(link => 
         <a
           href={link.href}
@@ -32,52 +36,48 @@ const navLinks = [
         </a>
       )}
       {waHref && (
-        <a href={waHref} target="_blank" rel="noopener noreferrer" class="bg-accent text-primary font-bold py-2 px-4 rounded-md transition-all duration-300 ease-in-out hover:bg-white hover:text-accent border-2 border-accent no-underline hover:no-underline">Contacto</a>
+        <a href={waHref} target="_blank" rel="noopener noreferrer" class="bg-accent text-primary font-bold py-2 px-4 transition-all duration-300 ease-in-out hover:bg-white hover:text-accent border-2 border-accent no-underline hover:no-underline">Contacto</a>
       )}
     </nav>
 
-        <button id="mobile-menu-button" class="md:hidden text-white z-50 mr-5">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+    {/* Botón de hamburguesa visible siempre (V4.0) */}
+    <button id="mobile-menu-button" class="block text-white z-50 mr-5 md:mr-16">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
     </button>
   </div>
 
-    <div id="mobile-menu" class="md:hidden fixed top-0 left-0 w-full h-screen bg-primary/95 backdrop-blur-sm flex flex-col items-center justify-center space-y-8 transform -translate-x-full transition-transform duration-300 ease-in-out">
+    {/* CORREGIDO V4.2: Se eliminó 'md:hidden'.
+      Este div DEBE existir en todos los tamaños de pantalla
+      para que el script pueda encontrarlo y mostrarlo.
+    */}
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-primary/95 backdrop-blur-sm flex flex-col items-center justify-center space-y-8 transform -translate-x-full transition-transform duration-300 ease-in-out">
     {navLinks.map(link => 
       <a href={link.href} class="text-white text-3xl font-sans mobile-link">{link.text}</a>
     )}
     {waHref && (
-      <a href={waHref} target="_blank" rel="noopener noreferrer" class="bg-accent text-primary font-bold py-3 px-8 text-lg rounded-md mt-8">Contacto</a>
+      <a href={waHref} target="_blank" rel="noopener noreferrer" class="bg-accent text-primary font-bold py-3 px-8 text-lg mt-8">Contacto</a>
     )}
   </div>
 </header>
 
 <style>
-/* CSS para el efecto de subrayado animado */
+/* Estilos para el efecto de subrayado (si se usara en desktop) */
 .submenu-link {
-  /* Necesario para posicionar el pseudoelemento relativo al enlace */
   position: relative;
-  /* El color del texto se mantiene blanco */
-  color: white !important; 
+  color: white !important;
 }
-
-/* Creación del pseudoelemento que actuará como línea */
 .submenu-link::after {
   content: '';
   position: absolute;
-  bottom: -4px; /* Distancia debajo del texto */
+  bottom: -4px;
   left: 0;
   width: 100%;
   height: 2px;
-  /* Usamos el color naranja (asumo que 'accent' es tu naranja, o usa un código HEX como #ff8c00) */
-  background-color: theme('colors.accent'); 
-  
-  /* Estado inicial: la línea es invisible (ancho 0) */
+  background-color: theme('colors.accent');
   transform: scaleX(0);
-  transform-origin: bottom left; /* La animación comienza desde la izquierda */
+  transform-origin: bottom left;
   transition: transform 0.3s ease-out;
 }
-
-/* Estado al hacer hover: la línea se dibuja (ancho 100%) */
 .submenu-link:hover::after {
   transform: scaleX(1);
 }
@@ -85,24 +85,15 @@ const navLinks = [
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const header = document.getElementById('main-header');
+    // Script de menú móvil (sin cambios)
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    if (!header || !mobileMenuButton || !mobileMenu) {
+    if (!mobileMenuButton || !mobileMenu) {
       return; 
     }
 
     const mobileLinks = mobileMenu.querySelectorAll('.mobile-link');
-
-    // Header background on scroll
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('bg-primary', 'shadow-lg');
-      } else {
-        header.classList.remove('bg-primary', 'shadow-lg');
-      }
-    });
 
     // Toggle mobile menu
     mobileMenuButton.addEventListener('click', (e) => {

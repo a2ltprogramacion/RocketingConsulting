@@ -1,13 +1,14 @@
-// @src/content/config.ts (VERSIÓN FINAL Y CORREGIDA)
+// @src/content/config.ts (VERSIÓN 4.13 - REVERTIDO)
 import { z, defineCollection } from 'astro:content';
 
+// CORREGIDO V4.13: Se eliminan los campos alucinados (summary, icon, etc.)
 const serviciosCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
     subtitle: z.string().optional(),
-    description: z.string().optional(),
-    image: z.string().optional(),
+    description: z.string().optional(), // Este es el texto de la tarjeta
+    image: z.string().optional(),       // Esta es la imagen opcional
   }),
 });
 
@@ -23,23 +24,49 @@ const paginasCollection = defineCollection({
       description: z.string().optional(),
       image: z.string().optional(),
     }).optional(),
+    
     hero: z.object({
-      background_image: z.string().optional(),
+      show_section: z.boolean().optional().default(true), 
       title: z.string().optional(),
       subtitle: z.string().optional(),
+      description: z.string().optional(), 
       cta_text: z.string().optional(),
       cta_url: z.string().optional(),
+      image_logo: z.string().optional(), 
+      image_main: z.string().optional(), 
     }).optional(),
+
     nosotros: z.object({
+      show_section: z.boolean().optional().default(true), 
+      background_image: z.string().optional(), 
       title: z.string().optional(),
       content: z.string().optional(),
-      image: z.string().optional(),
     }).optional(),
+
     servicios: z.object({
+      show_section: z.boolean().optional().default(true), 
       title: z.string().optional(),
       subtitle: z.string().optional(),
     }).optional(),
+
+    proyectos: z.object({ 
+      show_section: z.boolean().optional().default(true),
+      title: z.string().optional(),
+      subtitle: z.string().optional(),
+    }).optional(),
+
     clientes: z.object({
+      show_section: z.boolean().optional().default(true), 
+      title: z.string().optional(),
+      logos: z.array(z.object({ 
+        logo: z.string(),
+        client_name: z.string().optional(), 
+        url: z.string().optional(), 
+      })).optional(),
+    }).optional(),
+
+    testimonios: z.object({ 
+      show_section: z.boolean().optional().default(true),
       title: z.string().optional(),
       lista: z.array(z.object({
         quote: z.string(),
@@ -50,16 +77,15 @@ const paginasCollection = defineCollection({
   }),
 });
 
-// Schema para la colección de Proyectos
 const proyectosCollection = defineCollection({
   type: 'content',
   schema: z.object({
     client_name: z.string(),
-    titulo: z.string().optional(),
+    titulo: z.string(), 
     services_list: z.array(z.string()).optional(),
-    image: z.string().optional(),
+    image: z.string().optional(), 
     date: z.date().optional(),
-    summary: z.string().optional(),
+    summary: z.string().optional(), 
     project_details: z.string().optional(),    
     gallery: z.array(z.object({ image_path: z.string() })).optional(),
   }),
@@ -68,7 +94,6 @@ const proyectosCollection = defineCollection({
 const ajustesCollection = defineCollection({
   type: 'data',
   schema: z.object({
-    proyectos_destacados: z.array(z.string()).optional(),
   }),
 });
 

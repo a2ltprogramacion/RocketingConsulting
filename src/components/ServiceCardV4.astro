@@ -1,0 +1,60 @@
+---
+// @src/components/ServiceCardV4.astro (VERSIÓN 4.13 - DISEÑO CORREGIDO)
+import type { CollectionEntry } from 'astro:content';
+import { mdToHtml } from '../utils/markdown';
+
+export interface Props {
+  servicio: CollectionEntry<'servicios'>;
+}
+const { servicio } = Astro.props;
+
+// Usamos los campos correctos (description)
+const renderedTitle = servicio.data.title ?? "Servicio de Ejemplo";
+const description = servicio.data.description; // Usamos 'description'
+const image = servicio.data.image;
+---
+
+{/* Spec V4.13: 
+  - Fondo gris (bg-primary)
+  - Imagen opcional en mitad superior (h-1/2)
+  - Imagen 80% transparente (opacity-20)
+  - Imagen hover 90% transparente (group-hover:opacity-10)
+  - Texto blanco (text-text-inverted)
+  - Strong en Coral (prose-strong:text-accent)
+  - Hover de título (funciona)
+*/}
+<div class="group relative bg-primary text-text-inverted shadow-lg overflow-hidden h-96 flex flex-col">
+  
+  {/* Capa de Imagen (mitad superior) */}
+  {image && (
+    <div 
+      class="absolute top-0 left-0 w-full h-1/2 bg-cover bg-center 
+             opacity-0 group-hover:opacity-10 transition-opacity duration-300 ease-in-out"
+      style={image ? 'background-image: url(' + image + ')' : ''}
+    >
+      {/* No se necesita overlay, la imagen en sí es transparente */}
+    </div>
+  )}
+
+  {/* Contenido de Texto (superpuesto) */}
+  <div class="relative z-10 p-6 flex flex-col flex-grow">
+    
+    <h3 class="text-2xl font-bold mb-4 inline-block relative">
+      <span>{renderedTitle}</span>
+      {/* Efecto Hover: Subrayado V4.1 (Funciona) */}
+      <span class="absolute bottom-0 left-0 w-full h-0.5 bg-accent 
+                   transform scale-x-0 origin-left 
+                   transition-transform duration-300 ease-out 
+                   group-hover:scale-x-100">
+      </span>
+    </h3>
+
+    {/* Descripción (usando prose para el <strong>) */}
+    {description && (
+      <div class="prose prose-lg max-w-none text-text-inverted/90 
+                  prose-strong:text-accent">
+        <span set:html={mdToHtml(description)} />
+      </div>
+    )}
+  </div>
+</div>

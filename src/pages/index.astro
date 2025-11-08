@@ -1,275 +1,284 @@
 ---
-// Fase VERDE: Implementación de la Landing Page
-// src/pages/index.astro (Fragmento Corregido)
-import { getEntry, getCollection, type CollectionEntry } from 'astro:content'; 
+// @src/pages/index.astro (VERSIÓN 4.9 - RESPONSIVE GRANDE)
+import { getEntry, getCollection, type CollectionEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import { mdToHtml } from '../utils/markdown';
-import PortafolioList from '../components/PortafolioList.astro'; 
+import ServiceCardV4 from '../components/ServiceCardV4.astro'; 
+import ProjectCardV4 from '../components/ProjectCardV4.astro'; 
 
-// 1. Leer la fuente de verdad (Headless CMS) de forma segura
+// 1. Cargar datos del CMS
 const home = await getEntry('pages', 'home');
-const homeSettings = await getEntry('ajustes', 'home');
-
-//Servicios Collection importada
-const todosLosServicios = await getCollection('servicios');
-
-// Valores por defecto para la página
-const title = home?.data.title ?? 'Elevawod - Desarrollo de Software e IA';
-const description = home?.data.description ?? 'Soluciones de software e inteligencia artificial a medida.';
-const hero = home?.data.hero ?? { background_image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop', title: 'Un socio tecnológico, no un proveedor más.', subtitle: 'Creamos soluciones de software e inteligencia artificial que se sienten cercanas, como parte de tu equipo.' };
-const nosotros = home?.data.nosotros ?? { title: 'Nosotros', image: '' };
-const clientes = home?.data.clientes ?? { title: 'Lo que dicen nuestros clientes', lista: [] };
+const allServicios = await getCollection('servicios');
+const allProyectos = await getCollection('proyectos');
 const contacto = await getEntry('informacion-de-contacto', 'general');
 
-const serviciosTitle = home?.data.servicios?.title ?? 'Nuestros Servicios';
-const serviciosSubtitle = home?.data.servicios?.subtitle;
+// 2. Validar datos con placeholders
+const title = home?.data.title ?? 'Elevawod - Agencia de Marketing';
+const description = home?.data.description ?? 'Estrategias de marketing para PYMES.';
 
-// Si la página de inicio no se carga, no podemos renderizar su contenido
-if (!home) {
-  // Podríamos mostrar un mensaje de error o simplemente no renderizar la sección
-  // Por ahora, el layout se cargará con títulos por defecto.
-} 
+// Datos de secciones
+const hero = home?.data.hero ?? { show_section: true, title: "Convertimos estrategias en impacto", cta_text: "Hablemos" };
+const nosotros = home?.data.nosotros ?? { show_section: true, title: "¿Quiénes Sómos?" };
+const servicios = home?.data.servicios ?? { show_section: true, title: "Nuestros Servicios" };
+const proyectos = home?.data.proyectos ?? { show_section: true, title: "Nuestros Proyectos" };
+const clientes = home?.data.clientes ?? { show_section: true, title: "Clientes que confían en nosotros" };
+const testimonios = home?.data.testimonios ?? { show_section: true, title: "Lo que dicen nuestros socios" };
 
-const { Content } = home ? await home.render() : { Content: () => null };
+// Renderizar markdown de 'nosotros'
+const nosotrosContent = nosotros.content ? mdToHtml(nosotros.content) : "Somos una agencia cercana, práctica y comprometida...";
 
-// 2. Lectura de Proyectos Destacados de forma segura
-const featuredProjectSlugs = homeSettings?.data.proyectos_destacados ?? [];
-
-let featuredProjects: CollectionEntry<'proyectos'>[] = [];
-if (featuredProjectSlugs.length > 0) {
-  featuredProjects = await getCollection('proyectos', ({ slug }) => {
-    return featuredProjectSlugs.includes(slug);
-  });
-
-  // Mantener el orden definido en el CMS
-  featuredProjects.sort((a, b) => {
-    return featuredProjectSlugs.indexOf(a.slug) - featuredProjectSlugs.indexOf(b.slug);
-  });
-}
+type Testimonio = {
+  quote: string;
+  author?: string;
+  google_review_embed?: string;
+};
+const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
 ---
 
 <Layout title={title} description={description}>
-  <main class="bg-secondary">
-    <!-- Hero Section -->
-    <header id="inicio" class="relative h-screen flex items-center justify-center text-center text-text-inverted">
-      <!-- Background Image -->
-      <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center" style={`background-image: url('${hero.background_image}');`}></div>
-      
-      <!-- Overlay -->
-      <div class="absolute top-0 left-0 w-full h-full bg-primary opacity-80"></div>
-    
-      <!-- Content -->
-      <div class="relative z-10 px-8 animate-fade-in-up">
-        <h1 class="text-4xl md:text-6xl font-sans font-bold mb-4 text-white">
-          {hero.title}
-        </h1>
-        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">
-          <span id="typewriter-subtitle">{hero.subtitle}</span>
-        </p>
-        {contacto?.data.email && (<a href={`mailto:${contacto.data.email}`}  
-           class="bg-accent text-primary font-bold py-3 px-8 text-lg rounded-md transition-all duration-300 ease-in-out hover:bg-white hover:text-accent border-2 border-accent"
-        >Hablemos de tu idea</a>)}
-      </div>
-    </header>
+  <main>
 
-    <!-- Nosotros Section -->
-<section id="nosotros" class="py-20 px-8">
+    {hero.show_section && (
+      <section 
+        id="inicio" 
+        class="relative min-h-screen flex items-center bg-accent text-text-inverted"
+      >
+        {/* MODIFICADO V4.9: Se reemplazó 'container' por 'max-w-screen-xl' */}
+        <div class="w-full max-w-screen-xl mx-auto px-8 py-20 md:py-32 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          
+          <div class="relative z-10 animate-fade-in-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+              {hero.title ?? "Título Hero de Prueba"}
+            </h1>
+            {hero.subtitle && (
+              <p class="text-lg md:text-xl text-text-inverted/90 mb-4" set:html={mdToHtml(hero.subtitle)} />
+            )}
+            {hero.description && (
+              <div class="prose prose-xl prose-invert max-w-none prose-strong:text-primary" set:html={mdToHtml(hero.description)} />
+            )}
+            {hero.cta_text && (
+              <a 
+                href={hero.cta_url ?? "#contacto"}  
+                class="bg-primary text-text-inverted font-bold py-3 px-8 text-lg transition-all duration-300 ease-in-out hover:bg-white hover:text-primary mt-8 inline-block"
+              >
+                {hero.cta_text}
+              </a>
+            )}
+          </div>
 
-  <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center desktop-lg:max-w-[80%]">
-
-    <div class="text-text-base w-full max-w-none text-center md:text-left md:col-span-2">
-      <h2 class="font-sans text-4xl font-bold mb-4 text-primary">
-        <span>{nosotros.title}</span>
-      </h2>
-      {nosotros.content ? (
-        <div class="prose prose-2xl max-w-none">
-          <span set:html={mdToHtml(nosotros.content)} />
-        </div>
-      ) : (
-        <Content />
-      )}
-    </div>
-
-    {nosotros.image && 
-      <img 
-        src={nosotros.image} 
-        alt={`Imagen de ${nosotros.title}`} 
-        class="shadow-xl w-full h-auto object-cover transition-transform duration-300 hover:scale-105 
-               max-w-md mx-auto {/* Restringe la imagen y la centra en su celda */}
-              " 
-      />
-    }
-  </div>
-</section>
-
-    <!-- Proyectos Section -->
-    {featuredProjects.length > 0 && (
-      <section id="proyectos" class="bg-white py-20 px-8">
-        <div class="container mx-auto text-center">
-          <h2 class="font-sans text-4xl font-bold mb-12 text-primary">Proyectos Destacados</h2>
-          <PortafolioList projects={featuredProjects} />
+          <div class="relative flex items-center justify-center min-h-[400px]">
+            {hero.image_logo && (
+              <img 
+                src={hero.image_logo} 
+                alt="Logo Elevawod" 
+                class="absolute inset-0 w-full h-full object-contain opacity-20 transform scale-125"
+              />
+            )}
+            {hero.image_main && (
+              <img 
+                src={hero.image_main} 
+                alt="Imagen Hero" 
+                class="relative z-10 w-full max-w-md object-cover shadow-2xl"
+              />
+            )}
+            {!hero.image_logo && !hero.image_main && (
+              <div class="relative z-10 w-full max-w-md h-80 bg-black/10 flex items-center justify-center text-text-inverted/50">
+                (Imágenes se mostrarán aquí)
+              </div>
+            )}
+          </div>
         </div>
       </section>
     )}
 
-    <!-- Servicios Section -->
-    <section id="servicios" class="py-20 px-8">
-      <div class="container mx-auto text-center">
-        {/* Usamos el título que obtuvimos de home.md */}
-        <h2 class="font-sans text-4xl font-bold mb-12 text-primary">
-          <span>{serviciosTitle}</span>
-        </h2>
-
-        {serviciosSubtitle && (
-          <p class="text-2xl max-w-2xl mx-auto mt-4 mb-12 text-gray-600">
-            {serviciosSubtitle}
-          </p>
-        )}
-
-        <div class="flex flex-wrap justify-center gap-8">
-          {todosLosServicios.map(servicio => (
-            <div class="w-full md:w-1/3 lg:w-[30%] flex flex-col bg-white p-6 shadow-lg  text-center transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
-              {servicio.data.image && <img src={servicio.data.image} alt={`Imagen de ${servicio.data.title}`} class="w-full h-40 object-cover mb-4 rounded" />}
-              
-              <div class="flex-grow">
-                <h3 class="font-sans text-2xl font-bold mb-2 text-primary">
-                  <span>{servicio.data.title}</span>
-                </h3>
-                <p class="text-text-base">
-                  <span set:html={mdToHtml(servicio.data.description)} />
-                </p>
+    {nosotros.show_section && (
+      <section 
+        id="nosotros" 
+        class="relative py-24 bg-cover bg-center bg-no-repeat"
+        style={nosotros.background_image ? 'background-image: url(' + nosotros.background_image + ')' : 'background-color: #eee;'}
+      >
+        {/* MODIFICADO V4.9: Se reemplazó 'container' por 'max-w-screen-xl' */}
+        <div class="relative w-full max-w-screen-xl mx-auto px-8">
+          <div class="w-full md:w-1/2 lg:w-2/5 mr-auto">
+            <div class="bg-primary text-text-inverted p-8 md:p-12 shadow-xl">
+              <h2 class="text-3xl font-bold mb-4">
+                {nosotros.title ?? "¿Quiénes Sómos?"}
+              </h2>
+              <div class="prose prose-lg prose-invert max-w-none prose-strong:text-accent">
+                <span set:html={nosotrosContent} />
               </div>
-
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-</section>
+      </section>
+    )}
 
-    <!-- Testimonios Section (Carousel) -->
-    <section id="clientes" class="bg-primary py-20 px-8 text-text-inverted">
-      <div class="container mx-auto text-center">
-        <h2 class="font-sans text-4xl font-bold mb-8 text-text-inverted">{clientes.title}</h2>
+    {servicios.show_section && (
+      <section 
+        id="servicios" 
+        class="py-20 px-8 bg-accent text-text-inverted"
+      >
+        {/* MODIFICADO V4.9: Se reemplazó 'container' por 'max-w-screen-xl' */}
+        <div class="w-full max-w-screen-xl mx-auto text-center">
+          <h2 class="text-4xl font-bold mb-4">
+            {servicios.title ?? "Nuestros Servicios"}
+          </h2>
+          {servicios.subtitle && (
+            <p class="text-xl max-w-2xl mx-auto mb-12 text-text-inverted/90">
+              {servicios.subtitle}
+            </p>
+          )}
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+            {allServicios.map(servicio => (
+              <ServiceCardV4 servicio={servicio} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
 
-        {((clientes.lista ?? []).length > 0) ? (
-          <div class="relative max-w-4xl mx-auto">
-            <!-- viewport -->
-            <div class="overflow-hidden " id="clientes-viewport">
-              <div class="flex transition-transform duration-700 ease-in-out" id="clientes-track" style="transform: translateX(0%);">
-                {(clientes.lista ?? []).map(cliente => (
-                  <div class="min-w-full p-6 flex-shrink-0 flex items-center justify-center">
-                    <div class="w-full max-w-3xl bg-white/10 p-8  shadow-md text-left clientes-card">
-                      {cliente.google_review_embed ? (
-                        <div set:html={cliente.google_review_embed} />
-                      ) : (
-                        <>
-                          <p class="text-lg md:text-xl italic mb-4 quote whitespace-normal break-words">
-                            <span set:html={mdToHtml(cliente.quote)} />
-                          </p>
-                          <p class="font-bold text-right mt-4 author">- {cliente.author}</p>
-                        </>
-                      )}
+    {proyectos.show_section && (
+      <section 
+        id="proyectos" 
+        class="py-20 px-8 bg-secondary"
+      >
+        {/* MODIFICADO V4.9: Se reemplazó 'container' por 'max-w-screen-xl' */}
+        <div class="w-full max-w-screen-xl mx-auto text-center">
+          <h2 class="text-4xl font-bold mb-4 text-primary">
+            {proyectos.title ?? "Proyectos"}
+          </h2>
+          {proyectos.subtitle && (
+            <p class="text-xl max-w-2xl mx-auto mb-12 text-text-base">
+              {proyectos.subtitle}
+            </p>
+          )}
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+            {allProyectos.map(project => (
+              <ProjectCardV4 project={project} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {clientes.show_section && (
+      <section id="clientes" class="py-20">
+        <div class="bg-accent text-text-inverted py-8 text-center">
+          <h2 class="text-3xl font-bold">
+            {clientes.title ?? "Confían en Nosotros"}
+          </h2>
+        </div>
+        <div class="bg-primary py-16">
+          {/* MODIFICADO V4.9: Se reemplazó 'container' por 'max-w-screen-xl' */}
+          <div class="w-full max-w-screen-xl mx-auto px-8">
+            <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+              {(clientes.logos ?? []).map(cliente => (
+                cliente.url ? (
+                  <a href={cliente.url} target="_blank" rel="noopener noreferrer">
+                    <img 
+                      src={cliente.logo} 
+                      alt={cliente.client_name ?? 'Logo de cliente'} 
+                      class="h-12 w-auto object-contain opacity-70 transition-opacity duration-300 hover:opacity-100"
+                    />
+                  </a>
+                ) : (
+                  <img 
+                    src={cliente.logo} 
+                    alt={cliente.client_name ?? 'Logo de cliente'} 
+                    class="h-12 w-auto object-contain opacity-70"
+                  />
+                )
+              ))}
+              {(clientes.logos ?? []).length === 0 && (
+                <p class="text-text-inverted/50">Logos de clientes se mostrarán aquí.</p>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
+
+    {testimonios.show_section && (
+      <section 
+        id="testimonios" 
+        class="bg-secondary py-20 px-8 text-primary"
+      >
+        {/* MODIFICADO V4.9: Se reemplazó 'container' por 'max-w-screen-xl' */}
+        <div class="w-full max-w-screen-xl mx-auto text-center">
+          <h2 class="text-4xl font-bold mb-12">
+            {testimonios.title ?? "Lo que dicen nuestros socios"}
+          </h2>
+
+          {testimoniosLista.length > 0 ? (
+            <div class="relative max-w-4xl mx-auto">
+              {/* Viewport */}
+              <div class="overflow-hidden" id="clientes-viewport">
+                <div class="flex transition-transform duration-700 ease-in-out" id="clientes-track" style="transform: translateX(0%);">
+                  
+                  {testimoniosLista.map((cliente: Testimonio) => (
+                    <div class="min-w-full p-6 flex-shrink-0 flex items-center justify-center">
+                      <div class="w-full max-w-3xl bg-white p-8 shadow-md text-left clientes-card border-l-4 border-accent">
+                        {cliente.google_review_embed ? (
+                          <div set:html={cliente.google_review_embed} />
+                        ) : (
+                          <>
+                            <p class="text-lg md:text-xl italic mb-4 quote whitespace-normal break-words text-text-base">
+                              <span set:html={mdToHtml(cliente.quote)} />
+                            </p>
+                            <p class="font-bold text-right mt-4 author text-primary">- {cliente.author}</p>
+                          </>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
+
+              {/* Controles */}
+              <button aria-label="Anterior" id="clientes-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-primary/20 hover:bg-primary/40 text-primary rounded-full w-10 h-10 flex items-center justify-center">‹</button>
+              <button aria-label="Siguiente" id="clientes-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-primary/20 hover:bg-primary/40 text-primary rounded-full w-10 h-10 flex items-center justify-center">›</button>
+
+              {/* Dots */}
+              <div id="clientes-dots" class="flex justify-center gap-3 mt-6"></div>
             </div>
-
-            <!-- controls -->
-            <button aria-label="Anterior" id="clientes-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full w-10 h-10 flex items-center justify-center">‹</button>
-            <button aria-label="Siguiente" id="clientes-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full w-10 h-10 flex items-center justify-center">›</button>
-
-            <!-- dots -->
-            <div id="clientes-dots" class="flex justify-center gap-3 mt-6"></div>
-          </div>
-        ) : (
-          <p class="text-lg">No hay testimonios disponibles.</p>
-        )}
-      </div>
-    </section>
-
-    <!-- Contacto Section -->
-    <section id="contacto" class="py-20 px-8 text-center">
-        <h2 class="font-sans text-4xl font-bold mb-4 text-primary">{contacto?.data.contact_heading ?? '¿Listo para empezar?'}</h2>
-        <p class="text-lg max-w-2xl mx-auto mb-8">{contacto?.data.contact_subheading ?? 'Conversemos por WhatsApp para una respuesta más rápida o envíame un correo.'}</p>
-        <div class="flex justify-center items-center gap-4 flex-wrap"> 
-            {contacto?.data.whatsapp && (
-              (() => {
-                const msg = encodeURIComponent(contacto.data.whatsapp_message ?? 'Hola, quiero cotizar un proyecto');
-                const href = `https://wa.me/${contacto.data.whatsapp}?text=${msg}`;
-                return (
-                  <a href={href}
-                      class="bg-[#25D366] text-white font-bold py-3 px-8 text-lg transition-transform duration-300 hover:scale-105 hover:shadow-lg"
-                      target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                );
-              })()
-            )}
-            {contacto?.data.email && (
-              <a href={`mailto:${contacto.data.email}`} 
-                  class="bg-accent text-primary font-bold py-3 px-8 text-lg rounded-md transition-all duration-300 ease-in-out hover:bg-white hover:text-accent border-2 border-accent"
-              >Correo Electrónico: {contacto.data.email}</a>
-            )}
-
-            {contacto?.data.email && (
-          <div class="relative"> {/* ELIMINAMOS inline-block del padre */}
-            <a id="email-copy-button" 
-              data-email={contacto.data.email}
-              href={`mailto:${contacto.data.email}`} 
-              class="bg-accent text-primary font-bold py-3 px-8 text-lg rounded-md transition-all duration-300 ease-in-out hover:bg-white hover:text-accent border-2 border-accent"
-            >
-              📄 Copiar Correo
-            </a>
-             {/* Tooltip de confirmación (oculto por defecto) */}
-            <span id="copy-tooltip" class="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 px-3 py-1 bg-green-600 text-white text-sm rounded-md opacity-0 transition-opacity duration-300 pointer-events-none">
-                ¡Copiado!
-            </span>
-          </div>
-        )}
+          ) : (
+            /* Placeholder */
+            <p class="text-text-base/70">
+              (Los testimonios de los clientes se mostrarán aquí cuando se carguen en el CMS)
+            </p>
+          )}
         </div>
-					{contacto?.data.address ? <div class="mt-6 text-sm text-primary">{contacto.data.address}</div> : null}
-    </section>
-
+      </section>
+    )}
+  
   </main>
 </Layout>
 
 <style>
+  /* Animación fade-in-up */
   @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-
   .animate-fade-in-up {
     animation: fade-in-up 1s ease-out forwards;
   }
 
-  /* Typewriter aniamtion */
-  .typewriter-cursor::after {
-    content: '|';
-    animation: blink 1s step-end infinite;
+  /* Estilos del Carrusel (Sin cambios) */
+  #clientes-dots button { 
+    width: 10px; 
+    height: 10px; 
+    border-radius: 9999px;
+    background: theme('colors.primary / 0.4'); 
+    border: none; 
+  }
+  #clientes-dots button.active { 
+    background: theme('colors.primary');
   }
 
-  @keyframes blink {
-    from, to { opacity: 1 }
-    50% { opacity: 0 }
-  }
-
-  /* Carousel styles for testimonials */
-  #clientes-viewport { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); }
-  #clientes-track > div { padding: 2rem; }
-  #clientes-dots button { width: 10px; height: 10px; border-radius: 9999px; background: rgba(255,255,255,0.4); border: none; }
-  #clientes-dots button.active { background: white; }
-
-  /* Testimonial card styling */
   .clientes-card { min-height: 160px; display: flex; flex-direction: column; justify-content: space-between; }
   .clientes-card .quote { line-height: 1.5; max-height: 28vh; overflow: auto; }
   .clientes-card .author { margin-top: 1rem; }
-  /* Ensure long words wrap */
   .clientes-card, .clientes-card .quote { word-break: break-word; overflow-wrap: anywhere; }
 
   @media (min-width: 768px) {
@@ -278,56 +287,33 @@ if (featuredProjectSlugs.length > 0) {
 </style>
 
 <script>
+  // Script del carrusel de testimonios (V4.1 CON TIPOS)
   document.addEventListener('DOMContentLoaded', () => {
-    const subtitleEl = document.getElementById('typewriter-subtitle');
-
-    if (subtitleEl) {
-      const originalText = subtitleEl.textContent || '';
-      let i = 0;
-      
-      subtitleEl.innerHTML = '';
-      subtitleEl.classList.add('typewriter-cursor');
-
-      function typeWriter() {
-        if (i < originalText.length) {
-          subtitleEl!.innerHTML += originalText.charAt(i);
-          i++;
-          setTimeout(typeWriter, 40);
-        }
-      }
-
-      setTimeout(typeWriter, 1000);
-    }
-
-    // Testimonials carousel logic
     (function(){
       const track = document.getElementById('clientes-track');
       const prev = document.getElementById('clientes-prev');
       const next = document.getElementById('clientes-next');
       const dotsContainer = document.getElementById('clientes-dots');
       const viewport = document.getElementById('clientes-viewport');
+      
       if (!track || !dotsContainer) return;
+      const slides = Array.from(track.children);
+      const total = slides.length;
+      if (total === 0) return; // Si no hay slides, no hacer nada
 
-  if (!track) return;
-  const slides = Array.from(track.children);
-  const total = slides.length;
-      if (total === 0) return;
-
-  let index: number = 0;
-  let autoplay = true;
-  let timer: number | null = null;
-  const interval = 5000; // 5s
+      let index: number = 0;
+      let timer: number | null = null;
+      const interval = 5000;
 
       function goTo(i: number) {
         index = (i + total) % total;
-        if (track) track.style.transform = `translateX(-${index * 100}%)`;
+        if (track) (track as HTMLElement).style.transform = `translateX(-${index * 100}%)`;
         if (dotsContainer) Array.from(dotsContainer.children).forEach((b, idx) => (b as HTMLElement).classList.toggle('active', idx === index));
       }
 
       function nextSlide() { goTo(index + 1); }
       function prevSlide() { goTo(index - 1); }
 
-      // create dots
       for (let i=0;i<total;i++){
         const b = document.createElement('button');
         b.type = 'button';
@@ -335,15 +321,13 @@ if (featuredProjectSlugs.length > 0) {
         dotsContainer.appendChild(b);
       }
 
-      // attach controls
       if (next) next.addEventListener('click', ()=>{ nextSlide(); resetTimer(); });
       if (prev) prev.addEventListener('click', ()=>{ prevSlide(); resetTimer(); });
 
-  function startTimer(){ if (timer) clearInterval(timer as number); timer = window.setInterval(()=>{ nextSlide(); }, interval); }
-  function stopTimer(){ if (timer) { clearInterval(timer as number); timer = null; } }
-  function resetTimer(){ stopTimer(); startTimer(); }
+      function startTimer(){ if (timer) clearInterval(timer as number); timer = window.setInterval(()=>{ nextSlide(); }, interval); }
+      function stopTimer(){ if (timer) { clearInterval(timer as number); timer = null; } }
+      function resetTimer(){ stopTimer(); startTimer(); }
 
-      // pause on hover/focus
       [viewport, track, prev, next, dotsContainer].forEach(el=>{
         if (!el) return;
         el.addEventListener('mouseenter', ()=>{ stopTimer(); });
@@ -351,49 +335,9 @@ if (featuredProjectSlugs.length > 0) {
         el.addEventListener('focusin', ()=>{ stopTimer(); });
         el.addEventListener('focusout', ()=>{ startTimer(); });
       });
-
-      // init
+      
       goTo(0);
       startTimer();
-
     })();
   });
-
-document.addEventListener('DOMContentLoaded', () => {
-    // ... [Tu código existente de navegación móvil aquí] ...
-    
-    // --- Lógica de Copia al Portapapeles ---
-    const copyButton = document.getElementById('email-copy-button');
-    const tooltip = document.getElementById('copy-tooltip');
-
-    if (copyButton && tooltip) {
-        // Previene la acción por defecto (abrir cliente de correo)
-        copyButton.addEventListener('click', (e) => {
-            e.preventDefault(); 
-            
-            const email = copyButton.getAttribute('data-email');
-            
-            if (email) {
-                // 1. Usar la API moderna de Portapapeles
-                navigator.clipboard.writeText(email)
-                    .then(() => {
-                        // 2. Mostrar la confirmación (Tooltip)
-                        tooltip.classList.remove('opacity-0');
-                        tooltip.classList.add('opacity-100');
-                        
-                        // 3. Revertir el estado después de 2 segundos
-                        setTimeout(() => {
-                            tooltip.classList.remove('opacity-100');
-                            tooltip.classList.add('opacity-0');
-                        }, 2000);
-                    })
-                    .catch(err => {
-                        console.error('Fallo al intentar copiar el texto: ', err);
-                        // Fallback simple: alert('No se pudo copiar el correo.');
-                    });
-            }
-        });
-    }
-});
 </script>
-

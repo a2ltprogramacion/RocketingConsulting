@@ -1,24 +1,33 @@
+/* @src/styles/global.css (VERSIÓN 4.5 - CORREGIDO) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  /* CORREGIDO V4.5:
+    Se elimina 'text-primary' de la regla base.
+    El color del título ahora se hereda del contenedor padre.
+  */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif text-primary;
+    @apply font-serif font-bold;
   }
   h1 {
-    @apply text-4xl font-bold;
+    @apply text-4xl;
   }
   h2 {
-    @apply text-3xl font-bold;
+    @apply text-3xl;
   }
   h3 {
-    @apply text-2xl font-bold;
+    @apply text-2xl;
   }
-  p {
-    @apply font-sans text-base;
+
+  /* El color base del texto (Gris) se aplica al body */
+  body {
+    @apply font-sans text-base text-text-base;
   }
+
   a {
+    /* Los enlaces usarán el color Coral */
     @apply text-accent hover:underline;
   }
 }
