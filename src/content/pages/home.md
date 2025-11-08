@@ -21,6 +21,7 @@ hero:
   cta_url: /contacto
   show_section: true
   image_logo: /assets/uploads/logo-trasnparente.png
+  image_main: /assets/uploads/hero.png
 nosotros:
   title: "Sobre Nosotros: El Arquitecto Asistente"
   image: /assets/uploads/logo.jpg
