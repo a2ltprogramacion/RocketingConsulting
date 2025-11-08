@@ -1,4 +1,8 @@
 ---
+title: Agencia de Marketing Digital para PYMES y Emprendedores | ELEVAWOD
+description: En ELEVAWOD, creamos estrategias de marketing digital para PYMES.
+  Nos enfocamos en resultados medibles y un retorno de inversión (ROAS) real
+  para escalar tu negocio. ¡Solicita un diagnóstico gratuito!
 canonical_url: https://elevawod.cl/
 robots: index, follow
 og:
@@ -7,40 +11,30 @@ og:
   description: No somos la típica agencia. Combinamos estrategia profesional con
     un trato humano para potenciar a PYMES y emprendedores. Resultados reales,
     sin la complejidad. ¡Descubre cómo lo hacemos!
-title: Agencia de Marketing Digital para PYMES y Emprendedores | ELEVAWOD
-clientes:
-  title: Lo que dicen nuestros socios
-  lista:
-    - quote: '"Antes de ELEVAWOD, invertir en publicidad era como tirar dinero a un
-        pozo sin fondo. Ellos no solo optimizaron nuestro presupuesto, sino que
-        triplicaron el retorno de nuestra inversión en menos de tres meses. Por
-        primera vez, vemos resultados claros y un crecimiento real en las
-        ventas. Son indispensables."'
-      author: Sofía Calderón, Fundadora de Tienda Aura
-    - quote: '"Como emprendedor, uno hace de todo. Estaba perdido con el marketing
-        digital hasta que encontré a ELEVAWOD. Más que una agencia, sentí que
-        eran una extensión de mi equipo. Su apoyo, claridad y empatía fueron
-        clave para organizar nuestra estrategia y dar el siguiente paso.
-        Realmente se preocupan por tu negocio."'
-      author: Javier Mendoza, CEO de Café Origen
-    - quote: '"Habíamos trabajado con otras agencias y siempre terminábamos
-        confundidos con informes llenos de jerga técnica y sin resultados
-        claros. El equipo de ELEVAWOD fue diferente desde el día uno. Nos
-        presentaron una estrategia simple, un plan de acción concreto y, lo más
-        importante, lo cumplieron. ¡Por fin entendemos hacia dónde vamos!"'
-      author: Carolina Rivas, Gerente de Servicios Integrales R&G
 hero:
   background_image: https://zerotrust.mx/wp-content/uploads/2023/08/Dimensiones-personalizadas-1000x600-px.jpg
-  title: Marketing Digital Estratégico para hacer crecer tu PYME.
+  title: "**Convertimos** estrategias **en impacto**"
   subtitle: "No somos la típica agencia. Dejamos la complejidad a un lado y nos
     enfocamos en resultados reales: más clientes, más ventas y un retorno de
     inversión (ROAS) que puedas ver."
   cta_text: Solicita tu Diagnóstico Gratuito
   cta_url: /contacto
-image: /ruta/a/imagen-ejemplo.jpg
-description: En ELEVAWOD, creamos estrategias de marketing digital para PYMES.
-  Nos enfocamos en resultados medibles y un retorno de inversión (ROAS) real
-  para escalar tu negocio. ¡Solicita un diagnóstico gratuito!
+  show_section: true
+nosotros:
+  title: "Sobre Nosotros: El Arquitecto Asistente"
+  image: /assets/uploads/logo.jpg
+  content: >-
+    Sabemos que el mundo digital puede ser abrumador y que muchas agencias te
+    tratan como un número más. **ELEVAWOD** nació de una idea simple: hacer la
+    digitalización estratégica verdaderamente accesible para los emprendedores y
+    dueños de PYMES.
+
+
+    No solo nos enfocamos en métricas y campañas; **construimos relaciones**. Somos un equipo de estrategas y creativos que se involucra de verdad con tu negocio, porque entendemos el esfuerzo que hay detrás de cada emprendimiento. Creemos que la colaboración y la empatía son las herramientas más poderosas para lograr resultados extraordinarios.
+
+
+    **Tu éxito es nuestro éxito.** Estamos aquí para ser el socio que te acompaña, te entiende y te ayuda a escalar.
+  show_section: true
 servicios:
   title: Soluciones diseñadas para tu crecimiento
   subtitle: Dejamos la jerga técnica a un lado para ofrecerte rutas claras y
@@ -83,19 +77,33 @@ servicios:
         prospectos, informan a tus clientes de novedades y generan ventas
         recurrentes, todo mientras tú te enfocas en dirigir tu negocio.
       image: /assets/uploads/gemini_generated_image_47fe5h47fe5h47fe.png
-nosotros:
-  title: "Sobre Nosotros: El Arquitecto Asistente"
-  image: /assets/uploads/logo.jpg
-  content: >-
-    Sabemos que el mundo digital puede ser abrumador y que muchas agencias te
-    tratan como un número más. **ELEVAWOD** nació de una idea simple: hacer la
-    digitalización estratégica verdaderamente accesible para los emprendedores y
-    dueños de PYMES.
-
-
-    No solo nos enfocamos en métricas y campañas; **construimos relaciones**. Somos un equipo de estrategas y creativos que se involucra de verdad con tu negocio, porque entendemos el esfuerzo que hay detrás de cada emprendimiento. Creemos que la colaboración y la empatía son las herramientas más poderosas para lograr resultados extraordinarios.
-
-
-    **Tu éxito es nuestro éxito.** Estamos aquí para ser el socio que te acompaña, te entiende y te ayuda a escalar.
+  show_section: true
+proyectos:
+  show_section: true
+clientes:
+  title: Lo que dicen nuestros socios
+  lista:
+    - quote: '"Antes de ELEVAWOD, invertir en publicidad era como tirar dinero a un
+        pozo sin fondo. Ellos no solo optimizaron nuestro presupuesto, sino que
+        triplicaron el retorno de nuestra inversión en menos de tres meses. Por
+        primera vez, vemos resultados claros y un crecimiento real en las
+        ventas. Son indispensables."'
+      author: Sofía Calderón, Fundadora de Tienda Aura
+    - quote: '"Como emprendedor, uno hace de todo. Estaba perdido con el marketing
+        digital hasta que encontré a ELEVAWOD. Más que una agencia, sentí que
+        eran una extensión de mi equipo. Su apoyo, claridad y empatía fueron
+        clave para organizar nuestra estrategia y dar el siguiente paso.
+        Realmente se preocupan por tu negocio."'
+      author: Javier Mendoza, CEO de Café Origen
+    - quote: '"Habíamos trabajado con otras agencias y siempre terminábamos
+        confundidos con informes llenos de jerga técnica y sin resultados
+        claros. El equipo de ELEVAWOD fue diferente desde el día uno. Nos
+        presentaron una estrategia simple, un plan de acción concreto y, lo más
+        importante, lo cumplieron. ¡Por fin entendemos hacia dónde vamos!"'
+      author: Carolina Rivas, Gerente de Servicios Integrales R&G
+  show_section: true
+testimonios:
+  show_section: true
+image: /ruta/a/imagen-ejemplo.jpg
 ---
 Nuestra experiencia en **Python/Django** nos permite construir soluciones robustas con una visión resolutiva. **TEST**
