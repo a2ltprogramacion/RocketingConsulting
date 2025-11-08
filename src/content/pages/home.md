@@ -13,7 +13,7 @@ og:
     sin la complejidad. ¡Descubre cómo lo hacemos!
 hero:
   background_image: https://zerotrust.mx/wp-content/uploads/2023/08/Dimensiones-personalizadas-1000x600-px.jpg
-  title: "### **Convertimos** estrategias **en impacto**"
+  title: "#### **Convertimos** estrategias **en impacto**"
   subtitle: "No somos la típica agencia. Dejamos la complejidad a un lado y nos
     enfocamos en resultados reales: más clientes, más ventas y un retorno de
     inversión **(ROAS)** que puedas ver."
