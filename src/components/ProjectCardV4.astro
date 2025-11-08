@@ -1,5 +1,5 @@
 ---
-// @src/components/ProjectCardV4.astro (VERSIÓN 4.8 - ANIMACIÓN CORREGIDA)
+// @src/components/ProjectCardV4.astro (VERSIÓN 4.11 - ANIMACIÓN CORREGIDA)
 import type { CollectionEntry } from 'astro:content';
 import { mdToHtml } from '../utils/markdown';
 
@@ -15,9 +15,6 @@ const summary = project.data.summary;
 const image = project.data.image ?? '/assets/uploads/placeholder.jpeg';
 ---
 
-{/* Spec V4.8: Animación de deslizamiento sincronizada (transform)
-    y alineada a la izquierda
-*/}
 <a 
   href={`/proyectos/${project.slug}`} 
   class="group relative block overflow-hidden shadow-lg h-80 w-full"
@@ -26,7 +23,7 @@ const image = project.data.image ?? '/assets/uploads/placeholder.jpeg';
   <img 
     src={image} 
     alt={`Imagen del proyecto ${titulo}`} 
-    class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" 
+    class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" 
   />
   
   {/* 2. Overlay oscuro */}
@@ -42,10 +39,12 @@ const image = project.data.image ?? '/assets/uploads/placeholder.jpeg';
         - Contiene TÍTULO + DESCRIPCIÓN
         - Estado Reposo: Abajo (translate-y-full)
         - Estado Hover: Arriba (translate-y-0)
+        - Al salir del hover: baja inmediatamente
     */}
     <div class="
       p-4 w-full
-      transition-transform duration-300 ease-out 
+      transition-transform ease-out 
+      duration-0 group-hover:duration-700
       transform translate-y-full
       group-hover:translate-y-0
     ">
@@ -79,9 +78,9 @@ const image = project.data.image ?? '/assets/uploads/placeholder.jpeg';
     <div class="
       absolute bottom-0 left-0
       p-4 w-full 
-      transition-opacity duration-300 ease-out
+      transition-opacity duration-0 ease-out
       opacity-100
-      group-hover:opacity-0
+      group-hover:opacity-0 
     ">
       <h3 class="text-lg font-bold text-text-inverted inline-block">
         <span class="bg-accent px-2 py-1 leading-tight">
