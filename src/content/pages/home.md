@@ -80,8 +80,10 @@ servicios:
   show_section: true
 proyectos:
   show_section: true
+  title: Proyectos
+  subtitle: Somos Exito a tu alcanse
 clientes:
-  title: Lo que dicen nuestros socios
+  title: Clientes
   lista:
     - quote: '"Antes de ELEVAWOD, invertir en publicidad era como tirar dinero a un
         pozo sin fondo. Ellos no solo optimizaron nuestro presupuesto, sino que
@@ -102,8 +104,22 @@ clientes:
         importante, lo cumplieron. ¡Por fin entendemos hacia dónde vamos!"'
       author: Carolina Rivas, Gerente de Servicios Integrales R&G
   show_section: true
+  logos:
+    - logo: /assets/uploads/gemini_generated_image_wbf0ybwbf0ybwbf0.png
+      client_name: Genericorp
+      url: https://genericorp.com
+    - logo: /assets/uploads/gemini_generated_image_oxi8zuoxi8zuoxi8.png
+      client_name: GlobalSolutions
+      url: https://globalsolutions.org
+    - logo: /assets/uploads/gemini_generated_image_v41rwov41rwov41r.png
+      client_name: NEXUS
+      url: https://nexus.corp
+    - logo: /assets/uploads/gemini_generated_image_r60dffr60dffr60d.png
+      client_name: Naruta
+      url: https://natura.web
 testimonios:
   show_section: true
+  title: Lo que dicen nuestros socios
 image: /ruta/a/imagen-ejemplo.jpg
 ---
 Nuestra experiencia en **Python/Django** nos permite construir soluciones robustas con una visión resolutiva. **TEST**
