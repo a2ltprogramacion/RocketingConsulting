@@ -35,6 +35,7 @@ nosotros:
 
     **Tu éxito es nuestro éxito.** Estamos aquí para ser el socio que te acompaña, te entiende y te ayuda a escalar.
   show_section: true
+  background_image: /assets/uploads/proyectos.png
 servicios:
   title: Soluciones diseñadas para tu crecimiento
   subtitle: Dejamos la jerga técnica a un lado para ofrecerte rutas claras y
