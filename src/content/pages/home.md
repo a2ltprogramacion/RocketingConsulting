@@ -16,7 +16,7 @@ hero:
   title: "**Convertimos** estrategias **en impacto**"
   subtitle: "No somos la típica agencia. Dejamos la complejidad a un lado y nos
     enfocamos en resultados reales: más clientes, más ventas y un retorno de
-    inversión (ROAS) que puedas ver."
+    inversión **(ROAS)** que puedas ver."
   cta_text: Solicita tu Diagnóstico Gratuito
   cta_url: /contacto
   show_section: true
