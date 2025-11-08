@@ -31,3 +31,13 @@
     @apply text-accent hover:underline;
   }
 }
+
+.prose-unsize h1,
+.prose-unsize h2,
+.prose-unsize h3,
+.prose-unsize h4,
+.prose-unsize p,
+.prose-unsize a,
+.prose-unsize span {
+  font-size: revert !important;
+}

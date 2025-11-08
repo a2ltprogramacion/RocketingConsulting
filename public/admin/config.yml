@@ -36,7 +36,7 @@ collections:
             required: false
             fields:
               - {label: "Mostrar Sección", name: "show_section", widget: "boolean", default: true}
-              - {label: "Título (Hero)", name: "title", widget: "text", required: false}
+              - {label: "Título (Hero)", name: "title", widget: "markdown", required: false}
               - {label: "Subtítulo (Hero)", name: "subtitle", widget: "markdown", required: false}
               - {label: "Descripción (Hero)", name: "description", widget: "markdown", required: false}
               - {label: "CTA Texto (Botón)", name: "cta_text", widget: "string", required: false}
@@ -52,7 +52,7 @@ collections:
             fields:
               - {label: "Mostrar Sección", name: "show_section", widget: "boolean", default: true}
               - {label: "Imagen de Fondo (Sección)", name: "background_image", widget: "image", required: false}
-              - {label: "Título (Nosotros)", name: "title", widget: "text", required: false}
+              - {label: "Título (Nosotros)", name: "title", widget: "markdown", required: false}
               - {label: "Descripción (Nosotros)", name: "content", widget: "markdown", required: false}
 
           # --- Servicios V4.0 (Sin cambios) ---

@@ -49,19 +49,6 @@ const email = c.email;
 			</>
 		)}
 
-		<script type="text/javascript" is:inline>
-			if (window.netlifyIdentity) {
-				window.netlifyIdentity.on("init", user => {
-				if (!user) {
-					window.netlifyIdentity.on("login", () => {
-					document.location.href = "/admin/";
-					});
-				}
-				});
-			}
-		</script>
-		<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
     </head>
 	<body class="bg-secondary text-text-base font-sans">
 		<Header />

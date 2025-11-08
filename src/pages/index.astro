@@ -1,22 +1,22 @@
 ---
-// @src/pages/index.astro (VERSIÓN 4.9 - RESPONSIVE GRANDE)
+// @src/pages/index.astro
 import { getEntry, getCollection, type CollectionEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import { mdToHtml } from '../utils/markdown';
 import ServiceCardV4 from '../components/ServiceCardV4.astro'; 
 import ProjectCardV4 from '../components/ProjectCardV4.astro'; 
 
-// 1. Cargar datos del CMS
+// Cargar datos del CMS
 const home = await getEntry('pages', 'home');
 const allServicios = await getCollection('servicios');
 const allProyectos = await getCollection('proyectos');
 const contacto = await getEntry('informacion-de-contacto', 'general');
 
-// 2. Validar datos con placeholders
+// Validar datos con placeholders (SEO)
 const title = home?.data.title ?? 'Elevawod - Agencia de Marketing';
 const description = home?.data.description ?? 'Estrategias de marketing para PYMES.';
 
-// Datos de secciones
+// Cargar datos de secciones
 const hero = home?.data.hero ?? { show_section: true, title: "Convertimos estrategias en impacto", cta_text: "Hablemos" };
 const nosotros = home?.data.nosotros ?? { show_section: true, title: "¿Quiénes Sómos?" };
 const servicios = home?.data.servicios ?? { show_section: true, title: "Nuestros Servicios" };
@@ -24,8 +24,47 @@ const proyectos = home?.data.proyectos ?? { show_section: true, title: "Nuestros
 const clientes = home?.data.clientes ?? { show_section: true, title: "Clientes que confían en nosotros" };
 const testimonios = home?.data.testimonios ?? { show_section: true, title: "Lo que dicen nuestros socios" };
 
-// Renderizar markdown de 'nosotros'
-const nosotrosContent = nosotros.content ? mdToHtml(nosotros.content) : "Somos una agencia cercana, práctica y comprometida...";
+// --- Renderizar Markdown a HTML ---
+
+/**
+ * Helper: Convierte MD a HTML, y opcionalmente remueve la
+ * etiqueta <p> envolvente (para títulos/subtítulos) para evitar
+ * anidación HTML inválida (ej. <p><p>...</p></p>).
+ */
+function render(md: string | undefined, inline = false): string {
+  if (!md) return "";
+  const html = mdToHtml(md); 
+  
+  if (inline) {
+    // Remueve <p> inicial y </p> final
+    return html.trim().replace(/^<p>/i, '').replace(/<\/p>$/i, '');
+  }
+  return html; // Para contenido (ej. hero.description) que sí necesita los <p>
+}
+
+// Hero
+const heroTitleHtml = render(hero.title, true); // true = inline (sin <p>)
+const heroSubtitleHtml = render(hero.subtitle, true); // true = inline (sin <p>)
+const heroDescriptionHtml = render(hero.description); // false = block (con <p>)
+const heroCtaTextHtml = render(hero.cta_text, true); // true = inline (sin <p>)
+
+// Nosotros
+const nosotrosTitleHtml = render(nosotros.title, true); // true = inline (sin <p>)
+const nosotrosContentHtml = render(nosotros.content); // false = block (con <p>)
+
+// Servicios
+const serviciosTitleHtml = render(servicios.title, true); // true = inline (sin <p>)
+const serviciosSubtitleHtml = render(servicios.subtitle, true); // true = inline (sin <p>)
+
+// Proyectos
+const proyectosTitleHtml = render(proyectos.title, true); // true = inline (sin <p>)
+const proyectosSubtitleHtml = render(proyectos.subtitle, true); // true = inline (sin <p>)
+
+// Clientes
+const clientesTitleHtml = render(clientes.title, true); // true = inline (sin <p>)
+
+// Testimonios
+const testimoniosTitleHtml = render(testimonios.title, true); // true = inline (sin <p>)
 
 type Testimonio = {
   quote: string;
@@ -38,34 +77,46 @@ const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
 <Layout title={title} description={description}>
   <main>
 
+    <!-- Sección Hero -->
     {hero.show_section && (
       <section 
         id="inicio" 
         class="relative min-h-screen flex items-center bg-accent text-text-inverted"
       >
-        {/* MODIFICADO V4.9: Se reemplazó 'container' por 'max-w-screen-xl' */}
         <div class="w-full max-w-screen-xl mx-auto px-8 py-20 md:py-32 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           
           <div class="relative z-10 animate-fade-in-up">
+            
             <h1 class="text-4xl md:text-6xl font-bold mb-4">
-              {hero.title ?? "Título Hero de Prueba"}
+              <span class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-5xl md:text-6xl"
+                    set:html={heroTitleHtml}>
+              </span>
             </h1>
+
             {hero.subtitle && (
-              <p class="text-lg md:text-xl text-text-inverted/90 mb-4" set:html={mdToHtml(hero.subtitle)} />
+              <p class="mb-4">
+                <span class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-xl"
+                      set:html={heroSubtitleHtml}>
+                </span>
+              </p>
             )}
+            
             {hero.description && (
-              <div class="prose prose-xl prose-invert max-w-none prose-strong:text-primary" set:html={mdToHtml(hero.description)} />
+              <div class="prose prose-xl prose-invert max-w-none prose-strong:text-primary prose-unsize text-lg" set:html={heroDescriptionHtml} />
             )}
+            
             {hero.cta_text && (
               <a 
                 href={hero.cta_url ?? "#contacto"}  
                 class="bg-primary text-text-inverted font-bold py-3 px-8 text-lg transition-all duration-300 ease-in-out hover:bg-white hover:text-primary mt-8 inline-block"
               >
-                {hero.cta_text}
+                <span class="prose prose-invert max-w-none prose-strong:text-accent prose-unsize text-lg" 
+                      set:html={heroCtaTextHtml} />
               </a>
             )}
           </div>
 
+          {/* (Imágenes sin cambios V4.9) */}
           <div class="relative flex items-center justify-center min-h-[400px]">
             {hero.image_logo && (
               <img 
@@ -91,21 +142,26 @@ const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
       </section>
     )}
 
+    <!-- Sección Nosotros -->
     {nosotros.show_section && (
       <section 
         id="nosotros" 
         class="relative py-24 bg-cover bg-center bg-no-repeat"
         style={nosotros.background_image ? 'background-image: url(' + nosotros.background_image + ')' : 'background-color: #eee;'}
       >
-        {/* MODIFICADO V4.9: Se reemplazó 'container' por 'max-w-screen-xl' */}
-        <div class="relative w-full max-w-screen-xl mx-auto px-8">
+        {/* (Tu margen 'lg:-mt-60' se conserva intacta) */}
+        <div class="relative w-full max-w-screen-xl mx-auto px-8 lg:-mt-60">
           <div class="w-full md:w-1/2 lg:w-2/5 mr-auto">
             <div class="bg-primary text-text-inverted p-8 md:p-12 shadow-xl">
-              <h2 class="text-3xl font-bold mb-4">
-                {nosotros.title ?? "¿Quiénes Sómos?"}
+              
+              <h2 class="mb-4">
+                <span class="prose prose-invert max-w-none prose-strong:text-accent prose-unsize text-4xl"
+                      set:html={nosotrosTitleHtml}>
+                </span>
               </h2>
-              <div class="prose prose-lg prose-invert max-w-none prose-strong:text-accent">
-                <span set:html={nosotrosContent} />
+              
+              <div class="prose prose-lg prose-invert max-w-none prose-strong:text-accent prose-unsize text-lg">
+                <span set:html={nosotrosContentHtml} />
               </div>
             </div>
           </div>
@@ -113,19 +169,25 @@ const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
       </section>
     )}
 
+    <!-- Sección Servicios -->
     {servicios.show_section && (
       <section 
         id="servicios" 
         class="py-20 px-8 bg-accent text-text-inverted"
       >
-        {/* MODIFICADO V4.9: Se reemplazó 'container' por 'max-w-screen-xl' */}
         <div class="w-full max-w-screen-xl mx-auto text-center">
-          <h2 class="text-4xl font-bold mb-4">
-            {servicios.title ?? "Nuestros Servicios"}
+          
+          <h2 class="mb-4">
+            <span class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-5xl"
+                  set:html={serviciosTitleHtml}>
+            </span>
           </h2>
+
           {servicios.subtitle && (
-            <p class="text-xl max-w-2xl mx-auto mb-12 text-text-inverted/90">
-              {servicios.subtitle}
+            <p class="max-w-2xl mx-auto mb-12">
+              <span class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-2xl"
+                    set:html={serviciosSubtitleHtml}>
+              </span>
             </p>
           )}
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
@@ -137,19 +199,25 @@ const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
       </section>
     )}
 
+    <!-- Sección Proyectos -->
     {proyectos.show_section && (
       <section 
         id="proyectos" 
         class="py-20 px-8 bg-secondary"
       >
-        {/* MODIFICADO V4.9: Se reemplazó 'container' por 'max-w-screen-xl' */}
         <div class="w-full max-w-screen-xl mx-auto text-center">
-          <h2 class="text-4xl font-bold mb-4 text-primary">
-            {proyectos.title ?? "Proyectos"}
+          
+          <h2 class="mb-4 text-primary">
+            <span class="prose max-w-none prose-strong:text-accent prose-unsize text-5xl"
+                  set:html={proyectosTitleHtml}>
+            </span>
           </h2>
+          
           {proyectos.subtitle && (
-            <p class="text-xl max-w-2xl mx-auto mb-12 text-text-base">
-              {proyectos.subtitle}
+            <p class="max-w-2xl mx-auto mb-12">
+              <span class="prose max-w-none prose-strong:text-accent prose-unsize text-2xl"
+                    set:html={proyectosSubtitleHtml}>
+              </span>
             </p>
           )}
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
@@ -161,15 +229,19 @@ const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
       </section>
     )}
 
+    <!-- Sección Clientes -->
     {clientes.show_section && (
       <section id="clientes" class="py-20">
         <div class="bg-accent text-text-inverted py-8 text-center">
-          <h2 class="text-3xl font-bold">
-            {clientes.title ?? "Confían en Nosotros"}
+          
+          <h2 class="font-bold">
+            <span class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-4xl"
+                  set:html={clientesTitleHtml}>
+            </span>
           </h2>
         </div>
         <div class="bg-primary py-16">
-          {/* MODIFICADO V4.9: Se reemplazó 'container' por 'max-w-screen-xl' */}
+          {/* (Tus clases V4.9 se conservan intactas) */}
           <div class="w-full max-w-screen-xl mx-auto px-8">
             <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
               {(clientes.logos ?? []).map(cliente => (
@@ -178,14 +250,14 @@ const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
                     <img 
                       src={cliente.logo} 
                       alt={cliente.client_name ?? 'Logo de cliente'} 
-                      class="h-12 w-auto object-contain opacity-70 transition-opacity duration-300 hover:opacity-100"
+                      class="h-64 w-auto object-contain opacity-100 lg:opacity-80 transition-opacity duration-300 hover:opacity-100"
                     />
                   </a>
                 ) : (
                   <img 
                     src={cliente.logo} 
                     alt={cliente.client_name ?? 'Logo de cliente'} 
-                    class="h-12 w-auto object-contain opacity-70"
+                    class="h-36 w-auto object-contain opacity-70"
                   />
                 )
               ))}
@@ -198,20 +270,23 @@ const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
       </section>
     )}
 
+    <!-- Sección Testimonios -->
     {testimonios.show_section && (
       <section 
         id="testimonios" 
         class="bg-secondary py-20 px-8 text-primary"
       >
-        {/* MODIFICADO V4.9: Se reemplazó 'container' por 'max-w-screen-xl' */}
         <div class="w-full max-w-screen-xl mx-auto text-center">
-          <h2 class="text-4xl font-bold mb-12">
-            {testimonios.title ?? "Lo que dicen nuestros socios"}
+          
+          <h2 class="mb-12">
+            <span class="prose max-w-none prose-strong:text-accent prose-unsize text-5xl"
+                  set:html={testimoniosTitleHtml}>
+            </span>
           </h2>
 
+          {/* (Sección de Carrusel sin cambios) */}
           {testimoniosLista.length > 0 ? (
             <div class="relative max-w-4xl mx-auto">
-              {/* Viewport */}
               <div class="overflow-hidden" id="clientes-viewport">
                 <div class="flex transition-transform duration-700 ease-in-out" id="clientes-track" style="transform: translateX(0%);">
                   
@@ -234,15 +309,11 @@ const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
                 </div>
               </div>
 
-              {/* Controles */}
               <button aria-label="Anterior" id="clientes-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-primary/20 hover:bg-primary/40 text-primary rounded-full w-10 h-10 flex items-center justify-center">‹</button>
               <button aria-label="Siguiente" id="clientes-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-primary/20 hover:bg-primary/40 text-primary rounded-full w-10 h-10 flex items-center justify-center">›</button>
-
-              {/* Dots */}
               <div id="clientes-dots" class="flex justify-center gap-3 mt-6"></div>
             </div>
           ) : (
-            /* Placeholder */
             <p class="text-text-base/70">
               (Los testimonios de los clientes se mostrarán aquí cuando se carguen en el CMS)
             </p>
