@@ -1,5 +1,5 @@
 ---
-// @src/components/Header.astro (VERSIÓN 4.2 - CORREGIDO)
+// @src/components/Header.astro (VERSIÓN 4.4 - MENÚ LATERAL ESTRECHO)
 import { getEntry } from 'astro:content';
 
 const contacto = await getEntry('informacion-de-contacto', 'general');
@@ -18,10 +18,10 @@ const navLinks = [
 ---
 
 {/* Header V4.1 (absolute) */}
-<header id="main-header" class="absolute top-0 left-0 w-full z-50 transition-colors duration-300 ease-in-out">
-  <div class="container mx-auto flex justify-between items-center p-4">
-    <a href="/" class="ml-5 md:ml-16 no-underline hover:no-underline ">
-      <img class="max-h-14 md:max-h-20" src="/assets/uploads/Logo-Elevawod-Horizontal-trasnparente.png" alt="Logo Elevawod" />
+<header id="main-header" class="absolute top-0 left-0 right-0 w-full z-50 transition-colors duration-300 ease-in-out">
+  <div class="container lg:w-[95%] 2xl:w-[80%] mx-auto flex justify-between items-center p-0 md:p-4">
+    <a href="/" class="ml-5 sm:ml-0 no-underline hover:no-underline mt-5">
+      <img class="max-h-24 md:max-h-32" src="/assets/uploads/Logo-transparente-text.png" alt="Logo Elevawod" />
     </a>
 
     
@@ -41,21 +41,24 @@ const navLinks = [
     </nav>
 
     {/* Botón de hamburguesa visible siempre (V4.0) */}
-    <button id="mobile-menu-button" class="block text-white z-50 mr-5 md:mr-16">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+    <button id="mobile-menu-button" class="block text-white z-60 mr-5 sm:mr-0">
+      <svg class="w-11 h-11" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
     </button>
   </div>
 
-    {/* CORREGIDO V4.2: Se eliminó 'md:hidden'.
-      Este div DEBE existir en todos los tamaños de pantalla
-      para que el script pueda encontrarlo y mostrarlo.
-    */}
-    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-primary/95 backdrop-blur-sm flex flex-col items-center justify-center space-y-8 transform -translate-x-full transition-transform duration-300 ease-in-out">
+  {/* CORREGIDO V4.4: Menú lateral estrecho que se desliza desde la derecha */}
+  <div id="mobile-menu" class="fixed top-0 right-0 w-72 bg-primary/95 backdrop-blur-sm flex flex-col items-start justify-start py-8 px-6 transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto z-80">
+    <div class="flex justify-between items-center w-full mb-8">
+      <h3 class="text-white text-xl font-bold">Menú</h3>
+      <button id="close-mobile-menu" class="text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
     {navLinks.map(link => 
-      <a href={link.href} class="text-white text-3xl font-sans mobile-link">{link.text}</a>
+      <a href={link.href} class="text-white text-lg font-sans mobile-link w-full py-2 border-b border-white/10">{link.text}</a>
     )}
     {waHref && (
-      <a href={waHref} target="_blank" rel="noopener noreferrer" class="bg-accent text-primary font-bold py-3 px-8 text-lg mt-8">Contacto</a>
+      <a href={waHref} target="_blank" rel="noopener noreferrer" class="bg-accent text-primary font-bold py-3 px-6 text-lg mt-8 w-full text-center">Contacto</a>
     )}
   </div>
 </header>
@@ -85,9 +88,9 @@ const navLinks = [
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // Script de menú móvil (sin cambios)
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
+    const closeMobileMenuButton = document.getElementById('close-mobile-menu');
 
     if (!mobileMenuButton || !mobileMenu) {
       return; 
@@ -98,14 +101,33 @@ const navLinks = [
     // Toggle mobile menu
     mobileMenuButton.addEventListener('click', (e) => {
       e.stopPropagation();
-      mobileMenu.classList.toggle('-translate-x-full');
+      mobileMenu.classList.remove('translate-x-full');
     });
 
-    // Close mobile menu when a link is clicked
+    // Close mobile menu when a link is clicked or close button is clicked
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.classList.add('-translate-x-full');
+        mobileMenu.classList.add('translate-x-full');
       });
+    });
+
+    if (closeMobileMenuButton) {
+      closeMobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.add('translate-x-full');
+      });
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (
+        mobileMenu &&
+        target instanceof Node &&
+        !mobileMenu.contains(target) && 
+        (!mobileMenuButton || !mobileMenuButton.contains(target))
+      ) {
+        mobileMenu.classList.add('translate-x-full');
+      }
     });
   });
 </script>

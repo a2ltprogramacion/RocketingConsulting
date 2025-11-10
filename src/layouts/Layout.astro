@@ -50,7 +50,7 @@ const email = c.email;
 		)}
 
     </head>
-	<body class="bg-secondary text-text-base font-sans">
+	<body class="bg-secondary font-sans">
 		<Header />
 		<main class="w-full">
 			<slot />
@@ -75,8 +75,8 @@ const email = c.email;
     </div>
 
     {/* Footer V4.0 */}
-		<footer class="bg-primary text-text-inverted py-16 px-8">
-			<div class="container mx-auto text-center max-w-4xl">
+		<footer id="footer" class="bg-primary text-text-inverted py-16 px-8">
+			<div id="contacto" class="container mx-auto text-center max-w-4xl">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
           {c.contact_heading ?? '¿Listo para empezar?'}
         </h2>

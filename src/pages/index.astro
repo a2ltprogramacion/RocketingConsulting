@@ -81,21 +81,20 @@ const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
     {hero.show_section && (
       <section 
         id="inicio" 
-        class="relative min-h-screen flex items-center bg-accent text-text-inverted"
+        class="relative min-h-screen flex items-center bg-accent text-text-inverted pt-10 md:pt-0 prose-color"
       >
         <div class="w-full max-w-screen-xl mx-auto px-8 py-20 md:py-32 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           
           <div class="relative z-10 animate-fade-in-up">
             
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">
-              <span class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-5xl md:text-6xl"
-                    set:html={heroTitleHtml}>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 ">
+              <span class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-5xl md:text-6xl"                    set:html={heroTitleHtml}>
               </span>
             </h1>
 
             {hero.subtitle && (
               <p class="mb-4">
-                <span class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-xl"
+                <span class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-xl" 
                       set:html={heroSubtitleHtml}>
                 </span>
               </p>
@@ -108,7 +107,7 @@ const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
             {hero.cta_text && (
               <a 
                 href={hero.cta_url ?? "#contacto"}  
-                class="bg-primary text-text-inverted font-bold py-3 px-8 text-lg transition-all duration-300 ease-in-out hover:bg-white hover:text-primary mt-8 inline-block"
+                class="bg-primary text-text-inverted font-bold py-3 px-8 text-lg hover:bg-accent hover:text-primary hover:border-2 inline-block hover:no-underline"
               >
                 <span class="prose prose-invert max-w-none prose-strong:text-accent prose-unsize text-lg" 
                       set:html={heroCtaTextHtml} />
@@ -121,15 +120,15 @@ const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
             {hero.image_logo && (
               <img 
                 src={hero.image_logo} 
-                alt="Logo Elevawod" 
-                class="absolute inset-0 w-full h-full object-contain opacity-20 transform scale-125"
+                alt="Logo" 
+                class="absolute inset-0 w-full h-full object-contain transform scale-100"
               />
             )}
             {hero.image_main && (
               <img 
                 src={hero.image_main} 
                 alt="Imagen Hero" 
-                class="relative z-10 w-full max-w-md object-cover shadow-2xl"
+                class="relative z-10 min-w-72 max-w-md object-cover shadow-2xl"
               />
             )}
             {!hero.image_logo && !hero.image_main && (
@@ -149,8 +148,7 @@ const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
         class="relative py-24 bg-cover bg-center bg-no-repeat"
         style={nosotros.background_image ? 'background-image: url(' + nosotros.background_image + ')' : 'background-color: #eee;'}
       >
-        {/* (Tu margen 'lg:-mt-60' se conserva intacta) */}
-        <div class="relative w-full max-w-screen-xl mx-auto px-8 lg:-mt-60">
+        <div class="relative w-full max-w-screen-xl mx-auto px-8 lg:-mt-36">
           <div class="w-full md:w-1/2 lg:w-2/5 mr-auto">
             <div class="bg-primary text-text-inverted p-8 md:p-12 shadow-xl">
               
