@@ -21,7 +21,7 @@ hero:
     inversión **(ROAS)** que puedas ver."
   cta_text: Solicita tu Diagnóstico Gratuito
   cta_url: "#contacto"
-  show_section: false
+  show_section: true
   image_logo: /assets/uploads/logo-trasnparente.png
   image_main: /assets/uploads/hero.png
 nosotros:
@@ -82,7 +82,7 @@ servicios:
         prospectos, informan a tus clientes de novedades y generan ventas
         recurrentes, todo mientras tú te enfocas en dirigir tu negocio.
       image: /assets/uploads/gemini_generated_image_47fe5h47fe5h47fe.png
-  show_section: false
+  show_section: true
 clientes:
   title: Clientes
   show_section: true
@@ -100,7 +100,7 @@ clientes:
       client_name: Naruta
       url: https://natura.web
 testimonios:
-  show_section: false
+  show_section: true
   title: Lo que dicen nuestros socios
   lista:
     - quote: '"Antes de **ELEVAWOD**, invertir en publicidad era como tirar dinero a
