@@ -59,7 +59,7 @@ clientes:
       client_name: Naruta
       url: https://natura.web
 testimonios:
-  show_section: true
+  show_section: false
   title: Lo que dicen nuestros socios
 image: /ruta/a/imagen-ejemplo.jpg
 description: En ELEVAWOD, creamos estrategias de marketing digital para PYMES.
@@ -79,7 +79,7 @@ nosotros:
 
 
     **Tu éxito es nuestro éxito.** Estamos aquí para ser el socio que te acompaña, te entiende y te ayuda a escalar.
-  show_section: true
+  show_section: false
   background_image: /assets/uploads/proyectos.png
 servicios:
   title: Soluciones diseñadas para tu crecimiento
