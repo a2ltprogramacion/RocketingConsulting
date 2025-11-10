@@ -20,7 +20,7 @@ hero:
     inversión **(ROAS)** que puedas ver."
   cta_text: Solicita tu Diagnóstico Gratuito
   cta_url: "#contacto"
-  show_section: true
+  show_section: false
   image_logo: /assets/uploads/logo-trasnparente.png
   image_main: /assets/uploads/hero.png
 clientes:
@@ -79,7 +79,7 @@ nosotros:
 
 
     **Tu éxito es nuestro éxito.** Estamos aquí para ser el socio que te acompaña, te entiende y te ayuda a escalar.
-  show_section: false
+  show_section: true
   background_image: /assets/uploads/proyectos.png
 servicios:
   title: Soluciones diseñadas para tu crecimiento
