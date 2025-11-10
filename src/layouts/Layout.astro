@@ -10,7 +10,7 @@ export interface Props {
   
 }
 
-const { title, description, brand_name: siteName} = Astro.props;
+const { title, description, brand_name} = Astro.props;
 const gaId = import.meta.env.PUBLIC_GA_ID || 'G-1A2B3C4D5E';
 // Datos de contacto
 const contacto = await getEntry('informacion-de-contacto', 'general');
@@ -109,7 +109,7 @@ const email = c.email;
         {/* Copyright */}
         <div class="mt-16 border-t border-white/10 pt-8">
           <p class="text-sm text-text-inverted/60">
-            &copy; {new Date().getFullYear()} {siteName}, Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} {brand_name}, Todos los derechos reservados.
             <span class="block md:inline-block md:ml-2">
               Diseño: <span class="font-bold text-accent hover:text-white transition-colors duration-300">A2LT Soluciones Integrales</span>
             </span>

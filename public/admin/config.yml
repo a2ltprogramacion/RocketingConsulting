@@ -10,7 +10,7 @@ display_url: https://elevawod.netlify.app
 
 collections:
 
-  # 1. Configuración de la Página Principal (Home)
+  # 0. Configuración del SEOS
   - name: 'seo_content'
     label: 'SEO Head'
     files:
