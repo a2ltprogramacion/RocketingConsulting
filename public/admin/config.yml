@@ -1,4 +1,4 @@
-# public/admin/config.yml (VERSIÓN 4.1.1 - Habilitado Dev Mode)
+# public/admin/config.yml (VERSIÓN 4.1.13 - CON CAMBIOS PARA BRAND NAME)
 backend:
   name: git-gateway
   branch: main
@@ -6,21 +6,21 @@ backend:
 
 media_folder: "public/assets/uploads"
 public_folder: "/assets/uploads"
-display_url: https://elevawod.netlify.app
+display_url: https://elevawod.netlify.app  
 
 collections:
 
-  # 0. Configuración del SEOS
-  - name: 'seo_content'
-    label: 'SEO Head'
+  # 1. Configuración del SEO y Marca (Todo en una sola colección para home.md)
+  - name: 'home_content'
+    label: 'Contenido Página Principal (Incluye SEO y Marca)'
     files:
       - file: "src/content/pages/home.md"
-        label: "Contenido del SEO del Head"
-        name: "seo_head"
+        label: "Contenido de la Home"
+        name: "home_page"
         fields:
-          # --- SEO (Sin cambios) ---
+          # --- Datos de Marca (Agregado aquí)
           - {label: "Plantilla", name: "template", widget: "hidden", default: "home"}
-          - {label: "Nombre", name: "brand_name", widget: "string", required: true, hint: "Nombre de la Empresa o Marca."}
+          - {label: "Nombre de la Marca", name: "brand_name", widget: "string", required: true, hint: "Nombre de la Empresa o Marca."}
           - {label: "Título SEO", name: "title", widget: "string"}
           - {label: "Meta Descripción", name: "description", widget: "text"}
           - {label: "URL Canónica", name: "canonical_url", widget: "string", required: false}
@@ -31,14 +31,6 @@ collections:
               {label: "Imagen OG", name: "image", widget: "image", required: false}
             ]}
 
-  # 1. Configuración de la Página Principal (Home)
-  - name: 'home_content'
-    label: 'Contenido Página Principal'
-    files:
-      - file: "src/content/pages/home.md"
-        label: "Contenido de la Home"
-        name: "home_page"
-        fields:
           # --- Hero V4.0 (Sin cambios) ---
           - label: "Sección Hero"
             name: "hero"
