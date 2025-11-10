@@ -13,6 +13,7 @@ const allProyectos = await getCollection('proyectos');
 const contacto = await getEntry('informacion-de-contacto', 'general');
 
 // Validar datos con placeholders (SEO)
+const brand_name = home?.data.brand_name ?? 'Elevawod';
 const title = home?.data.title ?? 'Elevawod - Agencia de Marketing';
 const description = home?.data.description ?? 'Estrategias de marketing para PYMES.';
 
@@ -74,7 +75,7 @@ type Testimonio = {
 const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} brand_name={brand_name}>
   <main>
 
     <!-- Sección Hero -->
@@ -372,7 +373,7 @@ const testimoniosLista: Testimonio[] = home?.data.testimonios?.lista ?? [];
 
       let index: number = 0;
       let timer: number | null = null;
-      const interval = 5000;
+      const interval = 10000;
 
       function goTo(i: number) {
         index = (i + total) % total;

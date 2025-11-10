@@ -20,6 +20,7 @@ collections:
         fields:
           # --- SEO (Sin cambios) ---
           - {label: "Plantilla", name: "template", widget: "hidden", default: "home"}
+          - {label: "Nombre", name: "brand_name", widget: "string", required: true, hint: "Nombre de la Empresa o Marca."}
           - {label: "Título SEO", name: "title", widget: "string"}
           - {label: "Meta Descripción", name: "description", widget: "text"}
           - {label: "URL Canónica", name: "canonical_url", widget: "string", required: false}
