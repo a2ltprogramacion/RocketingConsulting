@@ -20,7 +20,7 @@ hero:
     inversión **(ROAS)** que puedas ver."
   cta_text: Solicita tu Diagnóstico Gratuito
   cta_url: "#contacto"
-  show_section: false
+  show_section: true
   image_logo: /assets/uploads/logo-trasnparente.png
   image_main: /assets/uploads/hero.png
 clientes:
@@ -59,7 +59,7 @@ clientes:
       client_name: Naruta
       url: https://natura.web
 testimonios:
-  show_section: false
+  show_section: true
   title: Lo que dicen nuestros socios
 image: /ruta/a/imagen-ejemplo.jpg
 description: En ELEVAWOD, creamos estrategias de marketing digital para PYMES.
