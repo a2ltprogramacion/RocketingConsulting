@@ -18,7 +18,7 @@ hero:
     enfocamos en resultados reales: más clientes, más ventas y un retorno de
     inversión **(ROAS)** que puedas ver."
   cta_text: Solicita tu Diagnóstico Gratuito
-  cta_url: /contacto
+  cta_url: "#contacto"
   show_section: true
   image_logo: /assets/uploads/logo-trasnparente.png
   image_main: /assets/uploads/hero.png
