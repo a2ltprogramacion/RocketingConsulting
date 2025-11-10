@@ -1,4 +1,4 @@
-// @src/content/config.ts (VERSIÓN 4.13 - REVERTIDO)
+// @src/content/config.ts (VERSIÓN 4.14 - SEO SEPARADO)
 import { z, defineCollection } from 'astro:content';
 
 // CORREGIDO V4.13: Se eliminan los campos alucinados (summary, icon, etc.)
@@ -15,16 +15,9 @@ const serviciosCollection = defineCollection({
 const paginasCollection = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string().optional(),
-    description: z.string().optional(),
-    canonical_url: z.string().optional(),
-    robots: z.string().optional(),
-    og: z.object({
-      title: z.string().optional(),
-      description: z.string().optional(),
-      image: z.string().optional(),
-    }).optional(),
-    
+    // --- CAMPOS DE SEO Y MARCA MOVIDOS A 'ajustesCollection' ---
+    template: z.string().optional(), // Campo 'hidden' que estaba en config.yml
+
     hero: z.object({
       show_section: z.boolean().optional().default(true), 
       title: z.string().optional(),
@@ -94,6 +87,17 @@ const proyectosCollection = defineCollection({
 const ajustesCollection = defineCollection({
   type: 'data',
   schema: z.object({
+    // --- CAMPOS MOVIDOS DESDE 'paginasCollection' ---
+    brand_name: z.string().optional(),
+    title: z.string().optional(),
+    description: z.string().optional(),
+    canonical_url: z.string().optional(),
+    robots: z.string().optional(),
+    og: z.object({
+      title: z.string().optional(),
+      description: z.string().optional(),
+      image: z.string().optional(),
+    }).optional(),
   }),
 });
 

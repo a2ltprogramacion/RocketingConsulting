@@ -1,4 +1,4 @@
-# public/admin/config.yml (VERSIÓN 4.1.13 - CON CAMBIOS PARA BRAND NAME)
+# public/admin/config.yml (VERSIÓN 4.1.14 - SEO SEPARADO)
 backend:
   name: git-gateway
   branch: main
@@ -10,28 +10,36 @@ display_url: https://elevawod.netlify.app
 
 collections:
 
-  # 1. Configuración del SEO y Marca (Todo en una sola colección para home.md)
-  - name: 'home_content'
-    label: 'Contenido Página Principal (Incluye SEO y Marca)'
+  # 1. Ajustes SEO Y Marca
+  - name: 'ajustes'
+    label: 'Ajustes Globales y SEO (Home)'
     files:
-      - file: "src/content/pages/home.md"
-        label: "Contenido de la Home"
-        name: "home_page"
+      - file: "src/content/ajustes/home.yml"
+        label: "Ajustes Globales y SEO (Home)" 
+        name: "global_settings"
         fields:
-          # --- Datos de Marca (Agregado aquí)
-          - {label: "Plantilla", name: "template", widget: "hidden", default: "home"}
           - {label: "Nombre de la Marca", name: "brand_name", widget: "string", required: true, hint: "Nombre de la Empresa o Marca."}
-          - {label: "Título SEO", name: "title", widget: "string"}
-          - {label: "Meta Descripción", name: "description", widget: "text"}
-          - {label: "URL Canónica", name: "canonical_url", widget: "string", required: false}
-          - {label: "Meta Robots", name: "robots", widget: "string", required: false}
-          - {label: "Open Graph", name: "og", widget: "object", required: false, fields: [
+          - {label: "Título SEO (Home)", name: "title", widget: "string"}
+          - {label: "Meta Descripción (Home)", name: "description", widget: "text"}
+          - {label: "URL Canónica (Home)", name: "canonical_url", widget: "string", required: false}
+          - {label: "Meta Robots (Home)", name: "robots", widget: "string", required: false}
+          - {label: "Open Graph (Home)", name: "og", widget: "object", required: false, fields: [
               {label: "Título OG", name: "title", widget: "string", required: false},
               {label: "Descripción OG", name: "description", widget: "text", required: false},
               {label: "Imagen OG", name: "image", widget: "image", required: false}
             ]}
 
-          # --- Hero V4.0 (Sin cambios) ---
+  # 2. Contenido del home
+  - name: 'home_content'
+    label: 'Contenido Página Principal (Secciones)'
+    files:
+      - file: "src/content/pages/home.md"
+        label: "Contenido de la Home"
+        name: "home_page"
+        fields:
+          - {label: "Plantilla", name: "template", widget: "hidden", default: "home"}
+
+          # --- Hero ---
           - label: "Sección Hero"
             name: "hero"
             widget: "object"
@@ -46,7 +54,7 @@ collections:
               - {label: "Logo Blanco (Superpuesto)", name: "image_logo", widget: "image", required: false}
               - {label: "Imagen Principal (Superpuesta)", name: "image_main", widget: "image", required: false}
 
-          # --- Nosotros V4.0 (Sin cambios) ---
+          # --- Nosotros ---
           - label: "Sección Nosotros"
             name: "nosotros"
             widget: "object"
@@ -57,7 +65,7 @@ collections:
               - {label: "Título (Nosotros)", name: "title", widget: "markdown", required: false}
               - {label: "Descripción (Nosotros)", name: "content", widget: "markdown", required: false}
 
-          # --- Servicios V4.0 (Sin cambios) ---
+          # --- Servicios ---
           - label: "Sección Servicios (Home)"
             name: "servicios"
             widget: "object"
@@ -67,7 +75,7 @@ collections:
               - {label: "Título (Servicios)", name: "title", widget: "text", required: false}
               - {label: "Subtítulo (Servicios)", name: "subtitle", widget: "text", required: false}
 
-          # --- Proyectos V4.0 (Sin cambios) ---
+          # --- Proyectos ---
           - label: "Sección Proyectos (Home)"
             name: "proyectos"
             widget: "object"
@@ -94,7 +102,7 @@ collections:
                   - {label: "Nombre del Cliente (para Alt)", name: "client_name", widget: "string", required: false, hint: "Ej: Nombre del Cliente"}
                   - {label: "URL (Enlace del Cliente)", name: "url", widget: "string", required: false, hint: "Ej: https://cliente.com"}
 
-          # --- Testimonios V4.0 (Sin cambios) ---
+          # --- Testimonios ---
           - label: "Sección Testimonios (Carrusel)"
             name: "testimonios"
             widget: "object"
@@ -111,7 +119,7 @@ collections:
                   - {label: "Autor", name: "author", widget: "text", required: false}
                   - {label: "Google Review Embed (HTML)", name: "google_review_embed", widget: "text", required: false}
 
-  # 2. Colección de Servicios (CORREGIDO V4.13)
+  # 3. Colección de Servicios
   - name: 'servicios'
     label: 'Colección de Servicios'
     folder: 'src/content/servicios'
@@ -124,7 +132,7 @@ collections:
       - {label: "Descripción (Texto de la tarjeta)", name: "description", widget: "markdown", required: false}
       - {label: "Imagen (Opcional, mitad superior)", name: "image", widget: "image", required: false}
 
-  # 3. Colección de Proyectos (Sin cambios)
+  # 4. Colección de Proyectos
   - name: 'proyectos'
     label: 'Proyectos / Portafolio'
     folder: 'src/content/proyectos'
@@ -142,17 +150,7 @@ collections:
       - {label: "Imagen de Fondo (Tarjeta)", name: "image", widget: "image", required: false, hint: "Imagen principal que se usará de fondo en la tarjeta del proyecto."}
       - {label: "Galería de Fotos (Página Interna)", name: "gallery", widget: "list", required: false, fields: [{label: "Imagen", name: "image_path", widget: "image"}]}
 
-  # 4. Ajustes (Sin cambios)
-  - name: 'ajustes'
-    label: 'Ajustes Globales (V4.0)'
-    files:
-      - file: "src/content/ajustes/home.yml"
-        label: "Ajustes Globales" 
-        name: "global_settings"
-        fields:
-          - {label: "Placeholder", name: "info", widget: "string", default: "Esta sección puede usarse para ajustes futuros."}
-
-  # 5. Información de Contacto (Sin cambios)
+  # 5. Información de Contacto
   - name: 'informacion-de-contacto'
     label: 'Información de Contacto'
     files:
