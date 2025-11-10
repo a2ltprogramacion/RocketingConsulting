@@ -1,4 +1,9 @@
 ---
+brand_name: ELEVAWOD
+title: Agencia de Marketing Digital para PYMES y Emprendedores | ELEVAWOD
+description: En ELEVAWOD, creamos estrategias de marketing digital para PYMES.
+  Nos enfocamos en resultados medibles y un retorno de inversión (ROAS) real
+  para escalar tu negocio. ¡Solicita un diagnóstico gratuito!
 canonical_url: https://elevawod.cl/
 robots: index, follow
 proyectos:
@@ -11,34 +16,6 @@ og:
   description: No somos la típica agencia. Combinamos estrategia profesional con
     un trato humano para potenciar a PYMES y emprendedores. Resultados reales,
     sin la complejidad. ¡Descubre cómo lo hacemos!
-title: Agencia de Marketing Digital para PYMES y Emprendedores | ELEVAWOD
-hero:
-  background_image: https://zerotrust.mx/wp-content/uploads/2023/08/Dimensiones-personalizadas-1000x600-px.jpg
-  title: "**Convertimos** estrategias **en impacto**"
-  subtitle: "No somos la típica agencia. Dejamos la complejidad a un lado y nos
-    enfocamos en resultados reales: más clientes, más ventas y un retorno de
-    inversión **(ROAS)** que puedas ver."
-  cta_text: Solicita tu Diagnóstico Gratuito
-  cta_url: "#contacto"
-  show_section: true
-  image_logo: /assets/uploads/logo-trasnparente.png
-  image_main: /assets/uploads/hero.png
-clientes:
-  title: Clientes
-  show_section: true
-  logos:
-    - logo: /assets/uploads/gemini_generated_image_wbf0ybwbf0ybwbf0.png
-      client_name: Genericorp
-      url: https://genericorp.com
-    - logo: /assets/uploads/gemini_generated_image_oxi8zuoxi8zuoxi8.png
-      client_name: GlobalSolutions
-      url: https://globalsolutions.org
-    - logo: /assets/uploads/gemini_generated_image_v41rwov41rwov41r.png
-      client_name: NEXUS
-      url: https://nexus.corp
-    - logo: /assets/uploads/gemini_generated_image_r60dffr60dffr60d.png
-      client_name: Naruta
-      url: https://natura.web
 testimonios:
   show_section: true
   title: Lo que dicen nuestros socios
@@ -61,26 +38,34 @@ testimonios:
         presentaron una estrategia simple, un plan de acción concreto y, lo más
         importante, lo cumplieron. ¡Por fin entendemos hacia dónde vamos!"'
       author: Carolina Rivas, Gerente de Servicios Integrales R&G
-image: /ruta/a/imagen-ejemplo.jpg
-description: En ELEVAWOD, creamos estrategias de marketing digital para PYMES.
-  Nos enfocamos en resultados medibles y un retorno de inversión (ROAS) real
-  para escalar tu negocio. ¡Solicita un diagnóstico gratuito!
-nosotros:
-  title: "Sobre Nosotros: El Arquitecto Asistente"
-  image: /assets/uploads/logo.jpg
-  content: >-
-    Sabemos que el mundo digital puede ser abrumador y que muchas agencias te
-    tratan como un número más. **ELEVAWOD** nació de una idea simple: hacer la
-    digitalización estratégica verdaderamente accesible para los emprendedores y
-    dueños de PYMES.
-
-
-    No solo nos enfocamos en métricas y campañas; **construimos relaciones**. Somos un equipo de estrategas y creativos que se involucra de verdad con tu negocio, porque entendemos el esfuerzo que hay detrás de cada emprendimiento. Creemos que la colaboración y la empatía son las herramientas más poderosas para lograr resultados extraordinarios.
-
-
-    **Tu éxito es nuestro éxito.** Estamos aquí para ser el socio que te acompaña, te entiende y te ayuda a escalar.
+clientes:
+  title: Clientes
   show_section: true
-  background_image: /assets/uploads/proyectos.png
+  logos:
+    - logo: /assets/uploads/gemini_generated_image_wbf0ybwbf0ybwbf0.png
+      client_name: Genericorp
+      url: https://genericorp.com
+    - logo: /assets/uploads/gemini_generated_image_oxi8zuoxi8zuoxi8.png
+      client_name: GlobalSolutions
+      url: https://globalsolutions.org
+    - logo: /assets/uploads/gemini_generated_image_v41rwov41rwov41r.png
+      client_name: NEXUS
+      url: https://nexus.corp
+    - logo: /assets/uploads/gemini_generated_image_r60dffr60dffr60d.png
+      client_name: Naruta
+      url: https://natura.web
+hero:
+  background_image: https://zerotrust.mx/wp-content/uploads/2023/08/Dimensiones-personalizadas-1000x600-px.jpg
+  title: "**Convertimos** estrategias **en impacto**"
+  subtitle: "No somos la típica agencia. Dejamos la complejidad a un lado y nos
+    enfocamos en resultados reales: más clientes, más ventas y un retorno de
+    inversión **(ROAS)** que puedas ver."
+  cta_text: Solicita tu Diagnóstico Gratuito
+  cta_url: "#contacto"
+  show_section: true
+  image_logo: /assets/uploads/logo-trasnparente.png
+  image_main: /assets/uploads/hero.png
+image: /ruta/a/imagen-ejemplo.jpg
 servicios:
   title: Soluciones diseñadas para tu crecimiento
   subtitle: Dejamos la jerga técnica a un lado para ofrecerte rutas claras y
@@ -124,4 +109,20 @@ servicios:
         recurrentes, todo mientras tú te enfocas en dirigir tu negocio.
       image: /assets/uploads/gemini_generated_image_47fe5h47fe5h47fe.png
   show_section: false
+nosotros:
+  title: "Sobre Nosotros: El Arquitecto Asistente"
+  image: /assets/uploads/logo.jpg
+  content: >-
+    Sabemos que el mundo digital puede ser abrumador y que muchas agencias te
+    tratan como un número más. **ELEVAWOD** nació de una idea simple: hacer la
+    digitalización estratégica verdaderamente accesible para los emprendedores y
+    dueños de PYMES.
+
+
+    No solo nos enfocamos en métricas y campañas; **construimos relaciones**. Somos un equipo de estrategas y creativos que se involucra de verdad con tu negocio, porque entendemos el esfuerzo que hay detrás de cada emprendimiento. Creemos que la colaboración y la empatía son las herramientas más poderosas para lograr resultados extraordinarios.
+
+
+    **Tu éxito es nuestro éxito.** Estamos aquí para ser el socio que te acompaña, te entiende y te ayuda a escalar.
+  show_section: true
+  background_image: /assets/uploads/proyectos.png
 ---
