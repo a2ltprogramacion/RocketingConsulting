@@ -40,7 +40,7 @@ clientes:
       client_name: Naruta
       url: https://natura.web
 testimonios:
-  show_section: false
+  show_section: true
   title: Lo que dicen nuestros socios
   lista:
     - quote: '"Antes de ELEVAWOD, invertir en publicidad era como tirar dinero a un
@@ -79,7 +79,7 @@ nosotros:
 
 
     **Tu éxito es nuestro éxito.** Estamos aquí para ser el socio que te acompaña, te entiende y te ayuda a escalar.
-  show_section: false
+  show_section: true
   background_image: /assets/uploads/proyectos.png
 servicios:
   title: Soluciones diseñadas para tu crecimiento
