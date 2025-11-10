@@ -1,5 +1,5 @@
 ---
-canonical_url: https://elevawod.cl/
+canonical_url: https://elevawod.cl/  
 robots: index, follow
 proyectos:
   show_section: true
@@ -13,7 +13,7 @@ og:
     sin la complejidad. ¡Descubre cómo lo hacemos!
 title: Agencia de Marketing Digital para PYMES y Emprendedores | ELEVAWOD
 hero:
-  background_image: https://zerotrust.mx/wp-content/uploads/2023/08/Dimensiones-personalizadas-1000x600-px.jpg
+  background_image: https://zerotrust.mx/wp-content/uploads/2023/08/Dimensiones-personalizadas-1000x600-px.jpg  
   title: "**Convertimos** estrategias **en impacto**"
   subtitle: "No somos la típica agencia. Dejamos la complejidad a un lado y nos
     enfocamos en resultados reales: más clientes, más ventas y un retorno de
@@ -25,7 +25,24 @@ hero:
   image_main: /assets/uploads/hero.png
 clientes:
   title: Clientes
-  lista:
+  show_section: true
+  logos:
+    - logo: /assets/uploads/gemini_generated_image_wbf0ybwbf0ybwbf0.png
+      client_name: Genericorp
+      url: https://genericorp.com  
+    - logo: /assets/uploads/gemini_generated_image_oxi8zuoxi8zuoxi8.png
+      client_name: GlobalSolutions
+      url: https://globalsolutions.org  
+    - logo: /assets/uploads/gemini_generated_image_v41rwov41rwov41r.png
+      client_name: NEXUS
+      url: https://nexus.corp  
+    - logo: /assets/uploads/gemini_generated_image_r60dffr60dffr60d.png
+      client_name: Naruta
+      url: https://natura.web  
+testimonios:
+  show_section: true
+  title: Lo que dicen nuestros socios
+  lista: # <-- Añadir esta propiedad
     - quote: '"Antes de ELEVAWOD, invertir en publicidad era como tirar dinero a un
         pozo sin fondo. Ellos no solo optimizaron nuestro presupuesto, sino que
         triplicaron el retorno de nuestra inversión en menos de tres meses. Por
@@ -44,23 +61,6 @@ clientes:
         presentaron una estrategia simple, un plan de acción concreto y, lo más
         importante, lo cumplieron. ¡Por fin entendemos hacia dónde vamos!"'
       author: Carolina Rivas, Gerente de Servicios Integrales R&G
-  show_section: true
-  logos:
-    - logo: /assets/uploads/gemini_generated_image_wbf0ybwbf0ybwbf0.png
-      client_name: Genericorp
-      url: https://genericorp.com
-    - logo: /assets/uploads/gemini_generated_image_oxi8zuoxi8zuoxi8.png
-      client_name: GlobalSolutions
-      url: https://globalsolutions.org
-    - logo: /assets/uploads/gemini_generated_image_v41rwov41rwov41r.png
-      client_name: NEXUS
-      url: https://nexus.corp
-    - logo: /assets/uploads/gemini_generated_image_r60dffr60dffr60d.png
-      client_name: Naruta
-      url: https://natura.web
-testimonios:
-  show_section: true
-  title: Lo que dicen nuestros socios
 image: /ruta/a/imagen-ejemplo.jpg
 description: En ELEVAWOD, creamos estrategias de marketing digital para PYMES.
   Nos enfocamos en resultados medibles y un retorno de inversión (ROAS) real
@@ -125,4 +125,3 @@ servicios:
       image: /assets/uploads/gemini_generated_image_47fe5h47fe5h47fe.png
   show_section: true
 ---
-Nuestra experiencia en **Python/Django** nos permite construir soluciones robustas con una visión resolutiva. **TEST**

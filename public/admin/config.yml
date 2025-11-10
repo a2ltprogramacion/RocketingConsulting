@@ -9,13 +9,14 @@ public_folder: "/assets/uploads"
 display_url: https://elevawod.netlify.app
 
 collections:
+
   # 1. Configuración de la Página Principal (Home)
-  - name: 'home_content'
-    label: 'Contenido Página Principal'
+  - name: 'seo_content'
+    label: 'SEO Head'
     files:
       - file: "src/content/pages/home.md"
-        label: "Contenido de la Home"
-        name: "home_page"
+        label: "Contenido del SEO del Head"
+        name: "seo_head"
         fields:
           # --- SEO (Sin cambios) ---
           - {label: "Plantilla", name: "template", widget: "hidden", default: "home"}
@@ -28,7 +29,15 @@ collections:
               {label: "Descripción OG", name: "description", widget: "text", required: false},
               {label: "Imagen OG", name: "image", widget: "image", required: false}
             ]}
-          
+
+  # 1. Configuración de la Página Principal (Home)
+  - name: 'home_content'
+    label: 'Contenido Página Principal'
+    files:
+      - file: "src/content/pages/home.md"
+        label: "Contenido de la Home"
+        name: "home_page"
+        fields:
           # --- Hero V4.0 (Sin cambios) ---
           - label: "Sección Hero"
             name: "hero"
