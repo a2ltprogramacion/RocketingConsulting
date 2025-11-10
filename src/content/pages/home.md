@@ -25,7 +25,7 @@ hero:
   image_main: /assets/uploads/hero.png
 clientes:
   title: Clientes
-  show_section: false
+  show_section: true
   logos:
     - logo: /assets/uploads/gemini_generated_image_wbf0ybwbf0ybwbf0.png
       client_name: Genericorp
