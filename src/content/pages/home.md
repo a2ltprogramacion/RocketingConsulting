@@ -43,10 +43,10 @@ testimonios:
   show_section: true
   title: Lo que dicen nuestros socios
   lista:
-    - quote: '"Antes de ELEVAWOD, invertir en publicidad era como tirar dinero a un
-        pozo sin fondo. Ellos no solo optimizaron nuestro presupuesto, sino que
-        triplicaron el retorno de nuestra inversión en menos de tres meses. Por
-        primera vez, vemos resultados claros y un crecimiento real en las
+    - quote: '"Antes de **ELEVAWOD**, invertir en publicidad era como tirar dinero a
+        un pozo sin fondo. Ellos no solo optimizaron nuestro presupuesto, sino
+        que triplicaron el retorno de nuestra inversión en menos de tres meses.
+        Por primera vez, vemos resultados claros y un crecimiento real en las
         ventas. Son indispensables."'
       author: Sofía Calderón, Fundadora de Tienda Aura
     - quote: '"Como emprendedor, uno hace de todo. Estaba perdido con el marketing
