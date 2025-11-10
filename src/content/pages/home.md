@@ -2,7 +2,7 @@
 canonical_url: https://elevawod.cl/
 robots: index, follow
 proyectos:
-  show_section: false
+  show_section: true
   title: Proyectos
   subtitle: Somos Exito a tu alcanse
 og:
