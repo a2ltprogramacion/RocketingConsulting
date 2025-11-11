@@ -104,6 +104,11 @@ clientes:
     - logo: /assets/uploads/gemini_generated_image_r60dffr60dffr60d.png
       client_name: Naruta
       url: https://natura.web
+  show_scroller: true
+  lista_destacados:
+    - Genericorp
+    - Global Solutions
+    - Natura
 testimonios:
   show_section: true
   title: Lo que dicen nuestros socios
