@@ -1,7 +1,7 @@
-// @src/content/config.ts (VERSIÓN 4.14 - SEO SEPARADO)
+// @src/content/config.ts (VERSIÓN 4.17.2 - Toggle Scroller)
 import { z, defineCollection } from 'astro:content';
 
-// CORREGIDO V4.13: Se eliminan los campos alucinados (summary, icon, etc.)
+// 1. Colección Servicios
 const serviciosCollection = defineCollection({
   type: 'content',
   schema: z.object({
@@ -12,11 +12,11 @@ const serviciosCollection = defineCollection({
   }),
 });
 
+// 2. Colección Páginas (Home)
 const paginasCollection = defineCollection({
   type: 'content',
   schema: z.object({
-    // --- CAMPOS DE SEO Y MARCA MOVIDOS A 'ajustesCollection' ---
-    template: z.string().optional(), // Campo 'hidden' que estaba en config.yml
+    template: z.string().optional(), // Campo 'hidden'
 
     hero: z.object({
       show_section: z.boolean().optional().default(true), 
@@ -46,16 +46,14 @@ const paginasCollection = defineCollection({
       show_section: z.boolean().optional().default(true),
       title: z.string().optional(),
       subtitle: z.string().optional(),
+      lista_destacados: z.array(z.string()).optional(), // Relación de Proyectos
     }).optional(),
 
     clientes: z.object({
       show_section: z.boolean().optional().default(true), 
       title: z.string().optional(),
-      logos: z.array(z.object({ 
-        logo: z.string(),
-        client_name: z.string().optional(), 
-        url: z.string().optional(), 
-      })).optional(),
+      lista_destacados: z.array(z.string()).optional(), // Relación de Clientes
+      show_scroller: z.boolean().optional().default(true), // <-- CAMPO AÑADIDO
     }).optional(),
 
     testimonios: z.object({ 
@@ -70,6 +68,7 @@ const paginasCollection = defineCollection({
   }),
 });
 
+// 3. Colección Proyectos
 const proyectosCollection = defineCollection({
   type: 'content',
   schema: z.object({
@@ -84,10 +83,21 @@ const proyectosCollection = defineCollection({
   }),
 });
 
+// 4. Colección Clientes
+const clientesCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    // 'slug' se elimina del schema porque Astro lo maneja automáticamente
+    titulo: z.string(), // Nombre del cliente
+    logo: z.string(),   // Path a la imagen
+    url: z.string().url().optional(), // URL Opcional
+  }),
+});
+
+// 5. Colección Ajustes
 const ajustesCollection = defineCollection({
   type: 'data',
   schema: z.object({
-    // --- CAMPOS MOVIDOS DESDE 'paginasCollection' ---
     brand_name: z.string().optional(),
     title: z.string().optional(),
     description: z.string().optional(),
@@ -101,6 +111,7 @@ const ajustesCollection = defineCollection({
   }),
 });
 
+// 6. Colección Contacto
 const contactoCollection = defineCollection({
   type: 'data',
   schema: z.object({
@@ -115,10 +126,12 @@ const contactoCollection = defineCollection({
   }),
 });
 
+// --- Exportaciones ---
 export const collections = {
   'servicios': serviciosCollection,
   'pages': paginasCollection,
   'proyectos': proyectosCollection,
+  'clientes': clientesCollection,
   'ajustes': ajustesCollection,
   'informacion-de-contacto': contactoCollection,
 };
