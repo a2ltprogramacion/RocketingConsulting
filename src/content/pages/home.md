@@ -109,7 +109,6 @@ clientes:
     - Genericorp
     - Global Solutions
     - Natura
-    - Nexus
 testimonios:
   show_section: true
   title: Lo que dicen nuestros socios
