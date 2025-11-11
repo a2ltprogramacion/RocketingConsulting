@@ -6,6 +6,13 @@ proyectos:
   show_section: true
   title: Proyectos
   subtitle: Somos Exito a tu alcanse
+  lista_destacados:
+    - "Construyendo Confianza desde Cero: Lanzamiento de Marca para FinTech Nova"
+    - "De Seguidores a Fans: Creando una Comunidad Fiel para Café Origen"
+    - "De la Duda a la Ganancia: Triplicando el Retorno de Inversión para Tienda
+      Aura"
+    - Modernización y Generación de Leads de Calidad para el Sector B2B
+    - Más Consultas y Menos Esfuerzo para Asesorías Legales
 og:
   image: /assets/uploads/logo.jpg
   title: "ELEVAWOD: Tu Socio Estratégico en Marketing Digital para PYMES"
