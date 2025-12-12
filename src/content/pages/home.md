@@ -30,7 +30,6 @@ hero:
   cta_text: "Contactar para más información "
   description: |-
     No somos tu agencia de marketing.
-
     ¡Somos la parte del equipo que no sabías que necesitabas!
   image_main: /assets/uploads/hero.png
 nosotros:
