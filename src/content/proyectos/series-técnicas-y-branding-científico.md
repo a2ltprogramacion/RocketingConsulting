@@ -12,20 +12,18 @@ project_details: >-
   comerciales y de divulgación especializada dentro de la industria acuícola.
 
 
-  Servicios:
 
 
-  Guiones científicos
+  **Servicios Realizados:**
 
 
-  Branding técnico
+  * Guiones científicos
 
+  * Branding técnico
 
-  Comunicación en RRSS
+  * Comunicación en RRSS
 
+  * Diseño de series audiovisuales
 
-  Diseño de series audiovisuales
-
-
-  Plan de comunicación anual.
+  * Plan de comunicación anual.
 ---
