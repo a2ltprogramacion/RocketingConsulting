@@ -32,11 +32,9 @@ nosotros:
   title: ¿Quienes somos?
   image: /assets/uploads/logo.jpg
   content: >-
-    Somos una agencia de marketing y
-
-    comunicaciones cercana, práctica y comprometida que ayuda a las empresas B2B a
-
-    comunicar con estrategia, propósito y claridad. 
+    Somos una agencia de marketing y comunicaciones cercana, práctica y
+    comprometida que ayuda a las empresas B2B a comunicar con estrategia,
+    propósito y claridad. 
 
 
     No hacemos **“más publicaciones”**, construimos mensajes que generan confianza y resultados reales.
