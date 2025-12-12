@@ -178,7 +178,7 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
                 <img
                   src={hero.image_main}
                   alt="Imagen Hero"
-                  class="relative z-10 min-w-72 max-w-md object-cover shadow-2xl"
+                  class="relative z-10 min-w-72 max-w-md object-cover"
                 />
               )}
               {!hero.image_logo && !hero.image_main && (
@@ -196,7 +196,7 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
       nosotros.show_section && (
         <section
           id="nosotros"
-          class="relative py-24 bg-cover bg-center bg-no-repeat"
+          class="relative py-24 bg-cover bg-center bg-no-repeat md:h-[600px]"
           style={
             nosotros.background_image
               ? "background-image: url(" + nosotros.background_image + ")"
@@ -205,7 +205,7 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
         >
           <div class="relative w-full max-w-screen-xl mx-auto px-8 lg:-mt-36">
             <div class="w-full md:w-1/2 lg:w-2/5 mr-auto">
-              <div class="bg-primary text-text-inverted p-8 md:p-12 shadow-xl">
+              <div class="bg-primary text-text-inverted md:w-[600px] p-8 md:p-12 shadow-xl">
                 <h2 class="mb-4">
                   <span
                     class="prose prose-invert max-w-none prose-strong:text-accent prose-unsize text-4xl"
