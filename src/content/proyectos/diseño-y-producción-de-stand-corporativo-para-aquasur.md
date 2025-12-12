@@ -1,5 +1,5 @@
 ---
-slug: /proyectos/stand-aquasur-sociber-2024
+slug: stand-aquasur-sociber-2024
 client_name: Sociber
 titulo: Diseño y Producción de Stand Corporativo para AquaSur
 date: 2024-07-17
