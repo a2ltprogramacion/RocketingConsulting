@@ -28,7 +28,7 @@ hero:
   subtitle: No somos tu agencia de marketing.
   title: "**Convertimos** estrategias **en impacto**"
   cta_text: "Contactar para más información "
-  description: ¡Somos la parte del equipo que no sabías que necesitabas!
+  description: ¡Somos la parte del equipo que no sabías que necesitabas!.
   image_main: /assets/uploads/hero.png
 nosotros:
   title: ¿Quienes somos?
