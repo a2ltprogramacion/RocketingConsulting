@@ -25,10 +25,13 @@ hero:
   show_section: true
   background_image: https://zerotrust.mx/wp-content/uploads/2023/08/Dimensiones-personalizadas-1000x600-px.jpg
   image_logo: /assets/uploads/logo-trasnparente.png
-  subtitle: No somos tu agencia de marketing.
+  subtitle: ""
   title: "**Convertimos** estrategias **en impacto**"
   cta_text: "Contactar para más información "
-  description: ¡Somos la parte del equipo que no sabías que necesitabas!
+  description: |-
+    No somos tu agencia de marketing.
+
+    ¡Somos la parte del equipo que no sabías que necesitabas!
   image_main: /assets/uploads/hero.png
 nosotros:
   title: ¿Quienes somos?
