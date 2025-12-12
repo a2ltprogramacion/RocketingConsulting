@@ -146,7 +146,7 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
               {hero.subtitle && (
                 <p class="mb-4">
                   <span
-                    class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-xl"
+                    class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-2xl"
                     set:html={heroSubtitleHtml}
                   ></span>
                 </p>
@@ -154,11 +154,11 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
 
               {hero.description && (
                 <div
-                  class="prose prose-xl prose-invert max-w-none prose-strong:text-primary prose-unsize text-lg"
+                  class="prose prose-xl prose-invert max-w-none prose-strong:text-primary prose-unsize text-2xl"
                   set:html={heroDescriptionHtml}
                 />
               )}
-
+                  <br>
               {hero.cta_text && (
                 <a
                   href={hero.cta_url ?? "#contacto"}
