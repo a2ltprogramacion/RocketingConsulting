@@ -99,12 +99,19 @@ const proyectosParaMostrar =
 // 1. Lógica para la Rejilla 3x4
 const titulosClientesDestacados: string[] =
   home?.data.clientes?.lista_destacados ?? [];
-const clientesParaGrid =
-  titulosClientesDestacados.length > 0
-    ? allClientes.filter((cliente) =>
-        titulosClientesDestacados.includes(cliente.data.titulo),
-      )
-    : allClientes.slice(0, 12); // Fallback: Muestra los primeros 12
+
+let clientesParaGrid: CollectionEntry<"clientes">[] = [];
+
+if (titulosClientesDestacados.length > 0) {
+  // ESTRATEGIA: Mapeo Directo (Preserva el orden del array 'titulosClientesDestacados')
+  clientesParaGrid = titulosClientesDestacados
+    .map((titulo) => allClientes.find((c) => c.data.titulo === titulo))
+    // Filtramos 'undefined' por si acaso borraste un cliente de la DB pero sigue seleccionado en el Home
+    .filter((c): c is CollectionEntry<"clientes"> => c !== undefined);
+} else {
+  // Fallback: Si no hay selección, mostramos los 12 primeros por defecto
+  clientesParaGrid = allClientes.slice(0, 12);
+}
 
 // 2. Lógica para el Scroller (Llenado de 18 slots)
 const TARGET_FILL_COUNT = 18; // El número de logos que queremos ver
@@ -314,13 +321,13 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
                       href={cliente.data.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="block text-center opacity-70 transition-opacity duration-300 hover:opacity-100"
+                      class="block text-center opacity-70 transition-opacity duration-300 hover:opacity-100 hover:bg-white"
                       title={cliente.data.titulo}
                     >
                       <img
                         src={cliente.data.logo}
                         alt={cliente.data.titulo}
-                        class="h-72 w-auto object-contain mx-auto"
+                        class="h-72 w-72 object-contain mx-auto"
                       />
                     </a>
                   ) : (
