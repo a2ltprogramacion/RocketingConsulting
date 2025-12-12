@@ -102,13 +102,6 @@ clientes:
   show_scroller: true
   lista_destacados:
     - Deep Trekker
-    - Net Zero Salmon
-    - Naval Energy Summit
-    - Sociber
-    - Hendrix Genetics
-    - Imenco
-    - Luxmeter
-    - Phibro
 testimonios:
   show_section: false
   title: Lo que dicen nuestros socios
