@@ -2,7 +2,7 @@
 slug: hendrix-genetics-marketing-comunicaciones-chile
 client_name: Hendrix Genetics Chile
 titulo: Gestión Estratégica de Marketing, Comunicaciones y contenido técnico
-date: 2024-07-16
+date: ""
 summary: Acompañamos a Hendrix Genetics en la estructura completa de sus
   comunicaciones en Chile, alineando ciencia, marca global y operación local.
 project_details: >-
