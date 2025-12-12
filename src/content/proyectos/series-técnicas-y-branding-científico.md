@@ -1,7 +1,7 @@
 ---
 slug: mnl-group-futerpenol-futermaqui
 client_name: "MNL Group "
-titulo: Series Técnicas y Branding Científico
+titulo: "Guiones Científicos para Acuicultura: Inmunología y Sanidad del Salmón"
 summary: Guionización técnica y científica sobre inmunología y patógenos en
   salmones para herramientas audiovisuales de capacitación y ventas.
 project_details: >-
