@@ -27,18 +27,5 @@ project_details: >-
 
   * Plan anual de comunicaciones
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  Supervisión editorial web e intranet
+  * Supervisión editorial web e intranet
 ---
