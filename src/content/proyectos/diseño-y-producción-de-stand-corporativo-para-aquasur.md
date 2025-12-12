@@ -2,7 +2,7 @@
 slug: stand-aquasur-sociber-2024
 client_name: Sociber
 titulo: Diseño y Producción de Stand Corporativo para AquaSur
-date: 2024-07-17
+date: ""
 summary: Desarrollamos un stand corporativo moderno, técnico y alineado con la
   identidad visual de Sociber para su participación en AquaSur, priorizando
   claridad visual, flujo de visitantes y exhibición de capacidades portuarias.
