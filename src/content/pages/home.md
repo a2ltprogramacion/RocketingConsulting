@@ -6,11 +6,7 @@ proyectos:
   show_section: true
   title: Proyectos
   subtitle: ""
-  lista_destacados:
-    - "Construyendo Confianza desde Cero: Lanzamiento de Marca para FinTech Nova"
-    - "De Seguidores a Fans: Creando una Comunidad Fiel para Café Origen"
-    - "De la Duda a la Ganancia: Triplicando el Retorno de Inversión para Tienda
-      Aura"
+  lista_destacados: []
 og:
   image: /assets/uploads/logo.jpg
   title: "ELEVAWOD: Tu Socio Estratégico en Marketing Digital para PYMES"
@@ -100,7 +96,7 @@ clientes:
   show_scroller: true
   lista_destacados: []
 testimonios:
-  show_section: true
+  show_section: false
   title: Lo que dicen nuestros socios
   lista: []
 image: /ruta/a/imagen-ejemplo.jpg
