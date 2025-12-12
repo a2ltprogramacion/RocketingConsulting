@@ -100,7 +100,16 @@ clientes:
       client_name: Naruta
       url: https://natura.web
   show_scroller: true
-  lista_destacados: []
+  lista_destacados:
+    - Deep Trekker
+    - Hendrix Genetics
+    - Imenco
+    - Luxmeter
+    - MNL Group
+    - Naval Energy Summit
+    - Net Zero Salmon
+    - Phibro
+    - Sociber
 testimonios:
   show_section: false
   title: Lo que dicen nuestros socios
