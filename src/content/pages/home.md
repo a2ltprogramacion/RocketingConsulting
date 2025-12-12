@@ -105,11 +105,6 @@ clientes:
     - Hendrix Genetics
     - Imenco
     - Luxmeter
-    - MNL Group
-    - Naval Energy Summit
-    - Net Zero Salmon
-    - Phibro
-    - Sociber
 testimonios:
   show_section: false
   title: Lo que dicen nuestros socios
