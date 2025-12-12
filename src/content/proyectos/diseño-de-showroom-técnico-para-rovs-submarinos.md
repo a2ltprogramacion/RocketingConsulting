@@ -2,7 +2,6 @@
 slug: showroom-deep-trekker-chile
 client_name: Deep Trekker Chile
 titulo: Diseño de Showroom Técnico para ROVs Submarinos
-date: ""
 summary: Creamos un showroom completamente operativo para exhibición de ROVs,
   con espacios demostrativos, ambientación moderna y zonas técnicas para
   charlas.

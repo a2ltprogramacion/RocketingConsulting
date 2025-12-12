@@ -3,7 +3,6 @@ slug: luxmeter-marketing-b2b
 client_name: Luxmeter Energy
 titulo: Comunicaciones estratégicas para tecnologías de eficiencia energética y
   fotoperíodo
-date: ""
 summary: Desarrollamos posicionamiento técnico sobre fotoperiodo, eficiencia
   energética e innovación en salmonicultura.
 project_details: >-
