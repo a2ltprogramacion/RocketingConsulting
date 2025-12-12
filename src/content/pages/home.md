@@ -6,7 +6,13 @@ proyectos:
   show_section: true
   title: Proyectos
   subtitle: ""
-  lista_destacados: []
+  lista_destacados:
+    - "Guiones Científicos para Acuicultura: Inmunología y Sanidad del Salmón"
+    - Producción de Evento Técnico Net Zero Salmon 2024
+    - Organización del Naval Energy Summit 2025
+    - Gestión Estratégica de Marketing, Comunicaciones y contenido técnico
+    - Diseño y Producción de Stand Corporativo para AquaSur
+    - Diseño de Showroom Técnico para ROVs Submarinos
 og:
   image: /assets/uploads/logo.jpg
   title: "ELEVAWOD: Tu Socio Estratégico en Marketing Digital para PYMES"
