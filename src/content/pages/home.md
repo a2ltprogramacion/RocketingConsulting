@@ -101,10 +101,10 @@ clientes:
       url: https://natura.web
   show_scroller: true
   lista_destacados:
-    - Deep Trekker
     - Naval Energy Summit
     - Sociber
     - Net Zero Salmon
+    - Deep Trekker
     - Hendrix Genetics
     - Imenco
     - MNL Group
