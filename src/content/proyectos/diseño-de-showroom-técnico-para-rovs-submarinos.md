@@ -1,5 +1,5 @@
 ---
-slug: /proyectos/showroom-deep-trekker-chile
+slug: showroom-deep-trekker-chile
 client_name: Deep Trekker Chile
 titulo: Diseño de Showroom Técnico para ROVs Submarinos
 date: 2024-06-19
