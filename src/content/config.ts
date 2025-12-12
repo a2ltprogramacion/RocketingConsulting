@@ -76,7 +76,7 @@ const proyectosCollection = defineCollection({
     titulo: z.string(), 
     services_list: z.array(z.string()).optional(),
     image: z.string().optional(), 
-    date: z.date().optional(),
+    date: z.coerce.date().optional(),
     summary: z.string().optional(), 
     project_details: z.string().optional(),    
     gallery: z.array(z.object({ image_path: z.string() })).optional(),
