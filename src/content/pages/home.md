@@ -102,6 +102,13 @@ clientes:
   show_scroller: true
   lista_destacados:
     - Deep Trekker
+    - Naval Energy Summit
+    - Sociber
+    - Net Zero Salmon
+    - Hendrix Genetics
+    - Imenco
+    - MNL Group
+    - Phibro
 testimonios:
   show_section: false
   title: Lo que dicen nuestros socios
