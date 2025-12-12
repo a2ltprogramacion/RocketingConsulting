@@ -5,7 +5,7 @@ robots: index, follow
 proyectos:
   show_section: true
   title: Proyectos
-  subtitle: Somos Exito a tu alcanse
+  subtitle: ""
   lista_destacados:
     - "Construyendo Confianza desde Cero: Lanzamiento de Marca para FinTech Nova"
     - "De Seguidores a Fans: Creando una Comunidad Fiel para Café Origen"
@@ -19,37 +19,32 @@ og:
     sin la complejidad. ¡Descubre cómo lo hacemos!
 title: Agencia de Marketing Digital para PYMES y Emprendedores | ELEVAWOD
 hero:
-  background_image: https://zerotrust.mx/wp-content/uploads/2023/08/Dimensiones-personalizadas-1000x600-px.jpg
-  title: "**Convertimos** estrategias **en impacto**"
-  subtitle: "No somos la típica agencia. Dejamos la complejidad a un lado y nos
-    enfocamos en resultados reales: más clientes, más ventas y un retorno de
-    inversión **(ROAS)** que puedas ver."
-  cta_text: Solicita tu Diagnóstico Gratuito
-  cta_url: "#contacto"
+  cta_url: https://wa.me/56969026931
   show_section: true
+  background_image: https://zerotrust.mx/wp-content/uploads/2023/08/Dimensiones-personalizadas-1000x600-px.jpg
   image_logo: /assets/uploads/logo-trasnparente.png
+  subtitle: No somos tu agencia de marketing.
+  title: "**Convertimos** estrategias **en impacto**"
+  cta_text: "Contactar para más información "
+  description: ¡Somos la parte del equipo que no sabías que necesitabas!
   image_main: /assets/uploads/hero.png
 nosotros:
-  title: "Sobre Nosotros: El Arquitecto Asistente"
+  title: ¿Quienes somos?
   image: /assets/uploads/logo.jpg
   content: >-
-    Sabemos que el mundo digital puede ser abrumador y que muchas agencias te
-    tratan como un número más. **ELEVAWOD** nació de una idea simple: hacer la
-    digitalización estratégica verdaderamente accesible para los emprendedores y
-    dueños de PYMES.
+    Somos una agencia de marketing y
+
+    comunicaciones cercana, práctica y comprometida que ayuda a las empresas B2B a
+
+    comunicar con estrategia, propósito y claridad. 
 
 
-    No solo nos enfocamos en métricas y campañas; **construimos relaciones**. Somos un equipo de estrategas y creativos que se involucra de verdad con tu negocio, porque entendemos el esfuerzo que hay detrás de cada emprendimiento. Creemos que la colaboración y la empatía son las herramientas más poderosas para lograr resultados extraordinarios.
-
-
-    **Tu éxito es nuestro éxito.** Estamos aquí para ser el socio que te acompaña, te entiende y te ayuda a escalar.
+    No hacemos **“más publicaciones”**, construimos mensajes que generan confianza y resultados reales.
   show_section: true
   background_image: /assets/uploads/proyectos.png
 servicios:
-  title: Soluciones diseñadas para tu crecimiento
-  subtitle: Dejamos la jerga técnica a un lado para ofrecerte rutas claras y
-    efectivas. Cada servicio está pensado para generar un impacto real y medible
-    en tu negocio.
+  title: "Nuestros servicios:"
+  subtitle: ""
   lista:
     - title: Publicidad Digital con Retorno (ROAS)
       subtitle: Inversión inteligente para resultados visibles.
@@ -105,33 +100,11 @@ clientes:
       client_name: Naruta
       url: https://natura.web
   show_scroller: true
-  lista_destacados:
-    - Genericorp
-    - Global Solutions
-    - Natura
-    - Nexus
+  lista_destacados: []
 testimonios:
   show_section: true
   title: Lo que dicen nuestros socios
-  lista:
-    - quote: '"Antes de **ELEVAWOD**, invertir en publicidad era como tirar dinero a
-        un pozo sin fondo. Ellos no solo optimizaron nuestro presupuesto, sino
-        que triplicaron el retorno de nuestra inversión en menos de tres meses.
-        Por primera vez, vemos resultados claros y un crecimiento real en las
-        ventas. Son indispensables."'
-      author: Sofía Calderón, Fundadora de Tienda Aura
-    - quote: '"Como emprendedor, uno hace de todo. Estaba perdido con el marketing
-        digital hasta que encontré a ELEVAWOD. Más que una agencia, sentí que
-        eran una extensión de mi equipo. Su apoyo, claridad y empatía fueron
-        clave para organizar nuestra estrategia y dar el siguiente paso.
-        Realmente se preocupan por tu negocio."'
-      author: Javier Mendoza, CEO de Café Origen
-    - quote: '"Habíamos trabajado con otras agencias y siempre terminábamos
-        confundidos con informes llenos de jerga técnica y sin resultados
-        claros. El equipo de ELEVAWOD fue diferente desde el día uno. Nos
-        presentaron una estrategia simple, un plan de acción concreto y, lo más
-        importante, lo cumplieron. ¡Por fin entendemos hacia dónde vamos!"'
-      author: Carolina Rivas, Gerente de Servicios Integrales R&G
+  lista: []
 image: /ruta/a/imagen-ejemplo.jpg
 description: En ELEVAWOD, creamos estrategias de marketing digital para PYMES.
   Nos enfocamos en resultados medibles y un retorno de inversión (ROAS) real
