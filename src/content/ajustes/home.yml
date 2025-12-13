@@ -1,13 +1,13 @@
-brand_name: ARGENIS
+brand_name: ELEVAWOOD
 title: ELEVAWOOD
-description: En ELEVAWOD, creamos estrategias de marketing digital para PYMES.
-  Nos enfocamos en resultados medibles y un retorno de inversión (ROAS) real
-  para escalar tu negocio. Solicita un diagnóstico gratuito!
-canonical_url: https://elevawod.netlify.app/
+description: Somos una agencia de marketing y comunicaciones cercana, práctica y
+  comprometida que ayuda a las empresas B2B a comunicar con estrategia,
+  propósito y claridad.
+canonical_url: https://elevawod.cl/
 robots: index, follow
 og:
-  title: "ELEVAWOD: Tu Socio Estratégico en Marketing Digital para PYMES"
-  description: En ELEVAWOD, creamos estrategias de marketing digital para PYMES.
-    Nos enfocamos en resultados medibles y un retorno de inversión (ROAS) real
-    para escalar tu negocio. Solicita un diagnóstico gratuito!
+  title: "ELEVAWOD: Tu Socio Estratégico en Marketing Digital para Empresas "
+  description: "Somos una agencia de marketing y comunicaciones cercana, práctica
+    y comprometida que ayuda a las empresas B2B a comunicar con estrategia,
+    propósito y claridad. "
   image: /assets/uploads/logo.jpg
