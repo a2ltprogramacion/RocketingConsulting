@@ -12,7 +12,7 @@
   for = "/*"
     [headers.values]
     # Permitimos 'unsafe-eval' globalmente para evitar el error en consola
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://identity.netlify.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://identity.netlify.com https://www.google-analytics.com;"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://identity.netlify.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://identity.netlify.com https://www.google-analytics.com https://elevawod.netlify.app;"
 
 # REDIRECCIONES / REESCRITURAS
 # CRÍTICO: Estas reglas le dicen a Netlify cómo manejar las URLs.
