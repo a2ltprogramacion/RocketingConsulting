@@ -140,7 +140,7 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
                 <span
                   class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-5xl md:text-6xl"
                   set:html={heroTitleHtml}
-                ></span>
+                />
               </h1>
 
               {hero.subtitle && (
@@ -148,7 +148,7 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
                   <span
                     class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-2xl"
                     set:html={heroSubtitleHtml}
-                  ></span>
+                  />
                 </p>
               )}
 
@@ -158,7 +158,7 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
                   set:html={heroDescriptionHtml}
                 />
               )}
-                  <br>
+              <br />
               {hero.cta_text && (
                 <a
                   href={hero.cta_url ?? "#contacto"}
@@ -217,7 +217,7 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
                   <span
                     class="prose prose-invert max-w-none prose-strong:text-accent prose-unsize text-4xl"
                     set:html={nosotrosTitleHtml}
-                  ></span>
+                  />
                 </h2>
 
                 <div class="prose prose-lg prose-invert max-w-none prose-strong:text-accent prose-unsize text-lg">
@@ -238,7 +238,7 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
               <span
                 class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-5xl"
                 set:html={serviciosTitleHtml}
-              ></span>
+              />
             </h2>
 
             {servicios.subtitle && (
@@ -246,7 +246,7 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
                 <span
                   class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize text-2xl"
                   set:html={serviciosSubtitleHtml}
-                ></span>
+                />
               </p>
             )}
             {/* REVERTIDO: Servicios - Vuelve a la configuración original de grid */}
@@ -262,21 +262,21 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
 
     {
       proyectos.show_section && (
-        <section id="proyectos" class="py-20 px-8 bg-secondary">
+        <section id="proyectos" class="py-20 px-8 bg-primary">
           <div class="w-full max-w-screen-desktop-lg mx-auto text-center">
-            <h2 class="mb-4 text-primary">
+            <h2 class="mb-4 text-text-inverted">
               <span
-                class="prose max-w-none prose-strong:text-accent prose-unsize prose-invert text-7xl text-primary"
+                class="prose prose-invert max-w-none prose-strong:text-accent prose-unsize text-7xl text-text-inverted"
                 set:html={proyectosTitleHtml}
-              ></span>
+              />
             </h2>
 
             {proyectos.subtitle && (
               <p class="max-w-2xl mx-auto mb-12">
                 <span
-                  class="prose max-w-none prose-strong:text-accent prose-unsize text-2xl"
+                  class="prose prose-invert max-w-none prose-strong:text-accent prose-unsize text-2xl"
                   set:html={proyectosSubtitleHtml}
-                ></span>
+                />
               </p>
             )}
 
@@ -289,7 +289,7 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
             <div class="mt-12">
               <a
                 href="/proyectos"
-                class="bg-primary text-text-inverted font-bold py-3 px-8 text-lg hover:bg-accent hover:text-primary hover:border-2 inline-block hover:no-underline"
+                class="bg-secondary text-primary font-bold py-3 px-8 text-lg hover:bg-accent hover:text-primary hover:border-2 inline-block hover:no-underline"
               >
                 Ver Todos los Proyectos
               </a>
@@ -302,16 +302,16 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
     {
       clientes.show_section && (
         <section id="clientes" class="pt-20">
-          <div class="bg-accent text-text-inverted py-16 text-center">
+          <div class="bg-secondary text-primary text-center">
             <h2 class="font-bold ">
               <span
-                class="prose prose-invert max-w-none prose-strong:text-primary prose-unsize prose-invert text-7xl"
+                class="prose max-w-none prose-strong:text-accent prose-unsize text-7xl text-primary"
                 set:html={clientesTitleHtml}
-              ></span>
+              />
             </h2>
           </div>
 
-          <div class="bg-primary py-20">
+          <div class="bg-secondary py-20">
             <div class="w-full max-w-screen-2xl mx-auto px-8">
               {/* Clientes Grid - Se mantiene el flex-wrap justify-center que funciona bien aquí */}
               <div class="flex flex-wrap justify-center gap-x-4 gap-y-4 max-w-7xl mx-auto">
@@ -321,7 +321,7 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
                       href={cliente.data.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="block text-center opacity-70 transition-opacity duration-300 hover:opacity-100 hover:bg-white"
+                      class="block text-center opacity-70 transition-opacity duration-300 hover:opacity-100"
                       title={cliente.data.titulo}
                     >
                       <img
@@ -345,7 +345,7 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
                 )}
               </div>
               {clientesParaGrid.length === 0 && (
-                <p class="text-text-inverted/50 text-center mt-8">
+                <p class="text-primary/50 text-center mt-8">
                   Logos de clientes destacados se mostrarán aquí.
                 </p>
               )}
@@ -391,7 +391,7 @@ if (clientCount > 0 && clientCount < TARGET_FILL_COUNT) {
               <span
                 class="prose max-w-none prose-strong:text-accent prose-unsize text-5xl"
                 set:html={testimoniosTitleHtml}
-              ></span>
+              />
             </h2>
 
             {testimoniosLista.length > 0 ? (
