@@ -29,4 +29,7 @@ project_details: >-
   * Asesoría estética y funcional
 
   * Sala de prensa a showroom
+image: /assets/uploads/deep_trekker_05.jpeg
+gallery:
+  - image_path: /assets/uploads/deep_trekker_05.jpeg
 ---
