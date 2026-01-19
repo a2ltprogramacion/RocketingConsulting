@@ -28,4 +28,6 @@ project_details: >-
 
   * Supervisión editorial web e intranet
 image: /assets/uploads/luxmeter_cmncnl.jpg
+gallery:
+  - image_path: /assets/uploads/luxmeter_cmncnl.jpg
 ---
