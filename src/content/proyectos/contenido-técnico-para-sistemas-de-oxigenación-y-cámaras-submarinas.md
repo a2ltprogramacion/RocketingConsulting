@@ -28,4 +28,7 @@ project_details: >-
   * Cobertura y acompañamiento de eventos
 
   * Plan anual de comunicaciones
+image: /assets/uploads/imenco_cmncnal.jpg
+gallery:
+  - image_path: /assets/uploads/imenco_cmncnal.jpg
 ---
