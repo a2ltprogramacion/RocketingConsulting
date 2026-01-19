@@ -27,4 +27,7 @@ project_details: >-
   * Plan anual de comunicaciones
 
   * Supervisión editorial web e intranet
+image: /assets/uploads/hendrix_plan_cmuncanl.jpg
+gallery:
+  - image_path: /assets/uploads/hendrix_plan_cmuncanl.jpg
 ---
