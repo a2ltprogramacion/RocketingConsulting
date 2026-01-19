@@ -29,4 +29,7 @@ project_details: >-
   * Asesoría comunicacional
 
   * Apoyo en gestión de marketing local
+image: /assets/uploads/phibro_paq-xtract.jpg
+gallery:
+  - image_path: /assets/uploads/phibro_paq-xtract.jpg
 ---
