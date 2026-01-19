@@ -27,4 +27,5 @@ project_details: >-
   * Plan anual de comunicaciones
 
   * Supervisión editorial web e intranet
+image: /assets/uploads/luxmeter_cmncnl.jpg
 ---
