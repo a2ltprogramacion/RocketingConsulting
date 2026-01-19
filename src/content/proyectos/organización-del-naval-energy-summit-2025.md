@@ -31,4 +31,7 @@ project_details: >-
   * Material gráfico
 
   * Cobertura oficial
+image: /assets/uploads/nes2025.jpg
+gallery:
+  - image_path: /assets/uploads/nes2025.jpg
 ---
