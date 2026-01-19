@@ -26,4 +26,7 @@ project_details: >-
   * Diseño de series audiovisuales
 
   * Plan de comunicación anual.
+image: /assets/uploads/sis_mnl.png
+gallery:
+  - image_path: /assets/uploads/sis_mnl.png
 ---
