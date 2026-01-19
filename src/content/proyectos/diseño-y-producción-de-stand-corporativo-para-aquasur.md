@@ -26,4 +26,7 @@ project_details: >-
   * Coordinación logística
 
   * Supervisión de montaje en terreno
+image: /assets/uploads/sociber.jpg
+gallery:
+  - image_path: /assets/uploads/sociber.jpg
 ---
