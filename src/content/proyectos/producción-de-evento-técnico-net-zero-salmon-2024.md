@@ -14,4 +14,7 @@ project_details: |-
   * Agenda técnica
   * Difusión
   * Material corporativo
+image: /assets/uploads/1725244651610.jpg
+gallery:
+  - image_path: /assets/uploads/1725244651610.jpg
 ---
