@@ -1,34 +1,39 @@
 /* @src/styles/global.css */
-/* Importación de Google Fonts (Nunito & Red Hat Display) */
+
+/* 1. Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* 2. Motor Tailwind v4 */
+@import "tailwindcss";
 
-:root {
-  /* DEFINICIÓN DE PALETA (RGB para soporte de opacidad en Tailwind) */
+/* 3. Definición del Tema (Sustituye a tailwind.config.mjs) */
+@theme {
+  /* Tipografía */
+  --font-sans: "Nunito", sans-serif;
+  --font-heading: "Red Hat Display", sans-serif;
+
+  /* Paleta de Colores Corporativa */
+  /* Al definirlos aquí, Tailwind crea automágicamente las clases bg-primary, text-primary, border-primary, etc. */
+  --color-primary: #FF7300;
+  --color-accent: #FF7300;
   
-  /* Naranja (Primary & Accent) - Vibrante */
-  --color-primary: 255 115 0;   /* #FF7300 */
-  --color-accent: 255 115 0;    /* Mismo que primary para consistencia en botones */
-
-  /* Teal (Secondary) - Fresco */
-  --color-secondary: 20 184 166; /* #14B8A6 */
-
-  /* Tema Oscuro Base */
-  --color-background: 15 23 42;  /* #0F172A (Slate 950 - Fondo profundo) */
-  --color-surface: 30 41 59;     /* #1E293B (Slate 800 - Tarjetas/Modales) */
-  --color-text: 245 245 245;     /* #F5F5F5 (White Smoke) */
+  --color-secondary: #14B8A6;
+  
+  --color-background: #0F172A; /* Slate 950 */
+  --color-surface: #1E293B;    /* Slate 800 */
+  --color-text: #F5F5F5;       /* White Smoke */
 }
 
-/* Reset básico para asegurar el tema oscuro por defecto */
-body {
-  background-color: rgb(var(--color-background));
-  color: rgb(var(--color-text));
-  font-family: 'Nunito', sans-serif;
-}
+/* 4. Estilos Base y Reset */
+@layer base {
+  body {
+    /* Aplicamos las variables directamente */
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Red Hat Display', sans-serif;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
 }
