@@ -1,0 +1,63 @@
+---
+// @src/components/organisms/AboutSection.astro
+import { marked } from "marked"; // Necesitaremos instalar esto: npm install marked
+
+interface Props {
+  data: {
+    title: string;
+    business_bio: string; // Markdown content
+    stat_1?: string;
+    stat_2?: string;
+  };
+}
+
+const { data } = Astro.props;
+const bioHtml = marked.parse(data.business_bio);
+---
+
+<section class="py-20 bg-surface/50">
+  <div class="container mx-auto px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">
+          {data.title}
+        </h2>
+        <div class="h-1 w-20 bg-secondary mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 items-center">
+        <div class="md:col-span-2 prose prose-invert prose-lg text-gray-300">
+          <div set:html={bioHtml} />
+        </div>
+
+        <div class="space-y-6">
+          {
+            data.stat_1 && (
+              <div class="bg-surface p-6 rounded-xl border border-white/5 text-center">
+                <span class="block text-3xl font-heading font-black text-primary mb-1">
+                  {data.stat_1}
+                </span>
+                <span class="text-sm text-gray-400 uppercase tracking-wider">
+                  Experiencia
+                </span>
+              </div>
+            )
+          }
+
+          {
+            data.stat_2 && (
+              <div class="bg-surface p-6 rounded-xl border border-white/5 text-center">
+                <span class="block text-3xl font-heading font-black text-secondary mb-1">
+                  {data.stat_2}
+                </span>
+                <span class="text-sm text-gray-400 uppercase tracking-wider">
+                  Resultados
+                </span>
+              </div>
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

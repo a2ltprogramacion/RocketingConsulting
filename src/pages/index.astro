@@ -1,0 +1,59 @@
+---
+// @src/pages/index.astro
+import { getEntry, getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+// Importación de Organismos
+import HeroSection from "../components/organisms/HeroSection.astro";
+import AboutSection from "../components/organisms/AboutSection.astro";
+import ServicesGrid from "../components/organisms/ServicesGrid.astro";
+import FaqSection from "../components/organisms/FaqSection.astro";
+import ContactFooter from "../components/organisms/ContactFooter.astro";
+
+// 1. Obtención de Datos (Data Fetching)
+const homePage = await getEntry("pages", "home");
+const services = await getCollection("services");
+
+// 2. Validación de Datos (Defensive Rendering)
+// Si el usuario no ha guardado nada en el CMS aún, 'homePage' podría ser undefined o estar vacío.
+const data = homePage?.data;
+
+// Si no hay datos, usamos valores por defecto para que el build no falle en el primer arranque
+const hasData = !!data;
+---
+
+<Layout seo={data?.seo}>
+  {
+    hasData ? (
+      <main>
+        {data.hero && <HeroSection data={data.hero} />}
+
+        <ServicesGrid services={services} />
+
+        {data.about && <AboutSection data={data.about} />}
+
+        {data.faq && <FaqSection data={data.faq} />}
+
+        {data.contact && <ContactFooter data={data.contact} />}
+      </main>
+    ) : (
+      /* ESTADO CERO: Pantalla de Bienvenida al Desarrollador/Cliente */
+      <div class="min-h-screen flex flex-col items-center justify-center text-center p-6 bg-background">
+        <div class="bg-surface p-8 rounded-2xl border border-primary/20 max-w-lg">
+          <h1 class="text-3xl font-heading font-bold text-white mb-4">
+            ¡Sistema A2LT Iniciado! 🚀
+          </h1>
+          <p class="text-gray-400 mb-6">
+            La estructura técnica está lista, pero falta el contenido.
+          </p>
+          <a
+            href="/admin/"
+            class="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-colors"
+          >
+            Ir al CMS y crear contenido
+          </a>
+        </div>
+      </div>
+    )
+  }
+</Layout>

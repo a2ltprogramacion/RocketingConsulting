@@ -1,0 +1,203 @@
+# @public/admin/config.yml
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+site_url: "https://a2lt-vcard-prototype.netlify.app"
+
+# Branding del Panel Admin
+display_url: "https://a2lt-vcard-prototype.netlify.app"
+logo_url: "/images/logo-admin.png"
+locale: "es"
+
+collections:
+  # -----------------------------------------------------------------
+  # COLECCIÓN 1: PÁGINAS ESTRUCTURALES (Singular Files)
+  # -----------------------------------------------------------------
+  - name: "pages"
+    label: "⚙️ Configuración del Negocio"
+    files:
+      - name: "home"
+        label: "Página de Inicio (V-Card)"
+        file: "src/content/pages/home.md"
+        fields:
+          # --- BLOQUE 1: IDENTIDAD & SEO (CRÍTICO) ---
+          - label: "1. Identidad & SEO (Motor de Búsqueda)"
+            name: "seo"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {
+                  label: "Nombre del Negocio / Marca",
+                  name: "site_name",
+                  widget: "string",
+                  hint: "Ej: A2LT Soluciones",
+                }
+              - {
+                  label: "Meta Título (Browser Tab)",
+                  name: "meta_title",
+                  widget: "string",
+                  hint: "Título atractivo para Google. Max 60 car.",
+                }
+              - {
+                  label: "Meta Descripción",
+                  name: "meta_description",
+                  widget: "text",
+                  hint: "Resumen para Google. Max 160 car.",
+                }
+              - {
+                  label: "Imagen Social (OG Image)",
+                  name: "social_image",
+                  widget: "image",
+                  hint: "Imagen que sale al compartir en WhatsApp/LinkedIn.",
+                }
+
+          # --- BLOQUE 2: HERO (LA PROMESA) ---
+          - label: "2. Pantalla Principal (Hero)"
+            name: "hero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {
+                  label: "Logotipo / Imagen Principal",
+                  name: "image",
+                  widget: "image",
+                }
+              - {
+                  label: "Texto Alternativo (Alt)",
+                  name: "image_alt",
+                  widget: "string",
+                  hint: "Describe la imagen para ciegos y Google.",
+                }
+              - {
+                  label: "Titular de Impacto (H1)",
+                  name: "title",
+                  widget: "string",
+                  hint: "La promesa principal del negocio.",
+                }
+              - {
+                  label: "Bajada / Slogan",
+                  name: "subtitle",
+                  widget: "text",
+                  required: false,
+                }
+              - {
+                  label: "Texto Botón Acción",
+                  name: "cta_text",
+                  widget: "string",
+                  default: "Cotizar Servicios",
+                }
+              - {
+                  label: "Enlace Botón Acción",
+                  name: "cta_link",
+                  widget: "string",
+                  hint: "WhatsApp o Link Externo",
+                }
+
+          # --- BLOQUE 3: SOBRE EL NEGOCIO ---
+          - label: "3. La Empresa / Propuesta de Valor"
+            name: "about"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {
+                  label: "Título de Sección",
+                  name: "title",
+                  widget: "string",
+                  default: "Nuestra Propuesta",
+                }
+              - {
+                  label: "Descripción del Negocio",
+                  name: "business_bio",
+                  widget: "markdown",
+                  hint: "Explica qué hace tu negocio único.",
+                }
+              - {
+                  label: "Dato Clave 1 (Ej: +100 Clientes)",
+                  name: "stat_1",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Dato Clave 2 (Ej: Garantía 100%)",
+                  name: "stat_2",
+                  widget: "string",
+                  required: false,
+                }
+
+          # --- BLOQUE 4: FAQ (OBJECIONES) ---
+          - label: "4. Preguntas Frecuentes"
+            name: "faq"
+            widget: "list"
+            collapsed: true
+            fields:
+              - { label: "Pregunta", name: "question", widget: "string" }
+              - { label: "Respuesta", name: "answer", widget: "text" }
+
+          # --- BLOQUE 5: CONTACTO ---
+          - label: "5. Contacto & Pie de Página"
+            name: "contact"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Email Corporativo", name: "email", widget: "string" }
+              - {
+                  label: "Teléfono / WhatsApp",
+                  name: "phone",
+                  widget: "string",
+                }
+              - {
+                  label: "Dirección (Opcional)",
+                  name: "address",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Legal / Copyright",
+                  name: "copyright",
+                  widget: "string",
+                }
+
+  # -----------------------------------------------------------------
+  # COLECCIÓN 2: SERVICIOS (PRODUCTOS / SOLUCIONES)
+  # -----------------------------------------------------------------
+  - name: "services"
+    label: "🛠️ Catálogo de Servicios"
+    label_singular: "Servicio"
+    folder: "src/content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Icono / Imagen Representativa",
+          name: "icon",
+          widget: "image",
+        }
+      - {
+          label: "Texto Alt del Icono",
+          name: "icon_alt",
+          widget: "string",
+          default: "Icono de servicio",
+        }
+      - { label: "Nombre del Servicio", name: "title", widget: "string" }
+      - {
+          label: "Descripción Comercial",
+          name: "description",
+          widget: "text",
+          hint: "Beneficio principal del servicio.",
+        }
+      - {
+          label: "Precio / Desde (Opcional)",
+          name: "price",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Orden de Prioridad",
+          name: "order",
+          widget: "number",
+          default: 0,
+          value_type: "int",
+        }
