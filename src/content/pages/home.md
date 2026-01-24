@@ -14,13 +14,13 @@ seo:
   social_image: ../../assets/uploads/demo-logo.jpg
   favicon: ""
 hero:
-  image: ""
+  image: ../../assets/uploads/demo-hero.jpg
   image_alt: ""
   title: Transformamos Ideas en Código
   subtitle: Arquitectura de Software y Consultoría Estratégica para negocios digitales.
   cta_text: Iniciar Proyecto
   cta_link: "#contacto"
-  bg_variant: color
+  bg_variant: image
   bg_color: "#c91717"
 clients:
   - logo: ../../assets/uploads/demo-logo-cliente.jpg
