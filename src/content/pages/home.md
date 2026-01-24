@@ -41,4 +41,8 @@ contact:
   address: Valencia, Carabobo
   copyright: © 2026 A2LT Soluciones
   footer_logo: ../../assets/uploads/demo-logo.jpg
+  social:
+    facebook: https://facebook.com
+    instagram: https://instagram.com
+    twitter: https://x.com
 ---
