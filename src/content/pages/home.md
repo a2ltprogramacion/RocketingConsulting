@@ -36,5 +36,5 @@ contact:
   phone: +58 412 1234567
   address: Valencia, Carabobo
   copyright: © 2026 A2LT Soluciones
-  footer_logo: /images/uploads/test1-32.png
+  footer_logo: ""
 ---
