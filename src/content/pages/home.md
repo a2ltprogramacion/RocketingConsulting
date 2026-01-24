@@ -10,17 +10,10 @@ seo:
   site_name: A2LT Demo
   meta_title: A2LT Soluciones | V-Card Demo
   meta_description: Esta es una demostración técnica del sistema V-Card Nivel 1.
-<<<<<<< HEAD
-  social_image: ../../assets/uploads/demo.jpg
-  favicon: ""
-hero:
-  image: ../../assets/uploads/test1-32.png
-=======
   social_image: /images/uploads/demo-logo.jpg
   favicon: ""
 hero:
   image: /images/uploads/demo-hero.jpg
->>>>>>> 805ef69a74b8083e21712461fff10c21d4cb2366
   image_alt: Retrato profesional
   title: Transformamos Ideas en Código
   subtitle: Arquitectura de Software y Consultoría Estratégica para negocios digitales.
@@ -48,9 +41,5 @@ contact:
   phone: +58 412 1234567
   address: Valencia, Carabobo
   copyright: © 2026 A2LT Soluciones
-<<<<<<< HEAD
-  footer_logo: ../../assets/uploads/test1-32.png
-=======
   footer_logo: /images/uploads/demo-logo.jpg
->>>>>>> 805ef69a74b8083e21712461fff10c21d4cb2366
 ---
