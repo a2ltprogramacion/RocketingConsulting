@@ -212,6 +212,20 @@ collections:
             widget: "object"
             collapsed: true
             fields:
+              - {
+                  label: "Título de Sección",
+                  name: "heading",
+                  widget: "string",
+                  default: "¿Listo para comenzar?",
+                  required: false,
+                }
+              - {
+                  label: "Descripción de Sección",
+                  name: "subheading",
+                  widget: "text",
+                  default: "Hablemos sobre tu próximo proyecto.",
+                  required: false,
+                }
               - { label: "Email Corporativo", name: "email", widget: "string" }
               - {
                   label: "Teléfono / WhatsApp",
@@ -224,6 +238,41 @@ collections:
                   widget: "string",
                   required: false,
                 }
+              - label: "Redes Sociales"
+                name: "social"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - {
+                      label: "Facebook (URL)",
+                      name: "facebook",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Instagram (URL)",
+                      name: "instagram",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "LinkedIn (URL)",
+                      name: "linkedin",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "X / Twitter (URL)",
+                      name: "twitter",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "YouTube (URL)",
+                      name: "youtube",
+                      widget: "string",
+                      required: false,
+                    }
               - {
                   label: "Legal / Copyright",
                   name: "copyright",

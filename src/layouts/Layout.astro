@@ -4,7 +4,6 @@ import SeoHead from "../components/atoms/SeoHead.astro";
 import "../styles/global.css";
 
 interface Props {
-  // Aceptamos el objeto SEO completo del CMS o valores sueltos
   seo?: {
     site_name: string;
     meta_title: string;
@@ -12,29 +11,26 @@ interface Props {
     social_image?: any;
     favicon?: any;
   };
-  // Fallbacks por si se usa en páginas que no vienen del CMS
   title?: string;
   description?: string;
 }
 
 const { seo, title, description } = Astro.props;
 
-// Lógica de Prioridad: CMS > Props Directas > Defaults
 const finalTitle = seo?.meta_title || title || "A2LT V-Card";
 const finalDescription =
   seo?.meta_description || description || "Servicios Profesionales";
-const finalImage = seo?.social_image || undefined;
 
-// 1. Definir la URL del Favicon
-// Prioridad: 1. CMS (seo.favicon) -> 2. Archivo PNG local -> 3. Fallback SVG de Astro
-// Si quieres que tu default sea 'favicon.png', asegúrate de que exista en /public/favicon.png
-const faviconUrl = seo?.favicon || "/favicon.png";
+// --- FIX: Extraer .src del objeto de imagen para SEO ---
+const finalImage = seo?.social_image?.src || undefined;
 
-// 2. Detectar el tipo MIME correcto para evitar conflictos
+// --- FIX: Extraer .src para el favicon ---
+const faviconUrl = seo?.favicon?.src || "/favicon.svg";
+
 const getFaviconType = (url: string) => {
   if (url.endsWith(".svg")) return "image/svg+xml";
   if (url.endsWith(".ico")) return "image/x-icon";
-  return "image/png"; // Asumimos PNG para todo lo demás
+  return "image/png";
 };
 
 const faviconType = getFaviconType(faviconUrl);
@@ -43,6 +39,12 @@ const faviconType = getFaviconType(faviconUrl);
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline' 'unsafe-eval';"
+    />
+
     <SeoHead
       title={finalTitle}
       description={finalDescription}
@@ -59,7 +61,6 @@ const faviconType = getFaviconType(faviconUrl);
     class="bg-background text-text font-sans antialiased min-h-screen flex flex-col"
   >
     <slot />
-
     <script is:inline>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", (user) => {

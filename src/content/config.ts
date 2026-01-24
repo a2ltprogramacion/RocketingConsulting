@@ -72,14 +72,24 @@ const pagesCollection = defineCollection({
       })
     ).optional().describe("Lista de preguntas para derribar objeciones de venta."),
 
-    // 6. Contacto & Legal
+    // 6. Contacto & Legal (SINCRONIZADO CON CMS)
     // -------------------------------------------------------------
     contact: z.object({
+      heading: z.string().optional(), // Nuevo: Permite editar el título "¿Listo para comenzar?"
+      subheading: z.string().optional(), // Nuevo: Permite editar el subtítulo del footer
       email: z.string().email({
         message: "El formato del correo electrónico no es válido.",
       }),
       phone: z.string(),
       address: z.string().optional(),
+      // Nuevo: Objeto social para validar las URLs de redes sociales 
+      social: z.object({
+        facebook: z.string().optional(),
+        instagram: z.string().optional(),
+        linkedin: z.string().optional(),
+        twitter: z.string().optional(),
+        youtube: z.string().optional(),
+      }).optional(),
       footer_logo: image().optional(),
       copyright: z.string(),
     }),
