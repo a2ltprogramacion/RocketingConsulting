@@ -7,7 +7,7 @@ modules:
   show_about: true
   show_faq: true
 seo:
-  site_name: A2LT Demo
+  site_name: A2LT Soluciones Demo
   meta_title: A2LT Soluciones | V-Card Demo
   meta_description: Esta es una demostración técnica del sistema V-Card Nivel 1.
   social_image: ../../assets/uploads/demo-logo.jpg
@@ -24,8 +24,7 @@ clients:
     name: APEX CORE
 about:
   title: Nuestra Esencia
-  business_bio:
-    Somos una firma de ingeniería dedicada a la excelencia operativa.
+  business_bio: Somos una firma de ingeniería dedicada a la excelencia operativa.
     **Utilizamos tecnología de punta** para resolver problemas complejos de
     negocio.
   stat_1: +10 Años
