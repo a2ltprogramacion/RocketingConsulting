@@ -11,7 +11,7 @@ seo:
   meta_title: A2LT Soluciones | V-Card Demo
   meta_description: Esta es una demostración técnica del sistema V-Card Nivel 1.
   social_image: /images/uploads/demo.jpg
-  favicon: /images/uploads/test1-32.png
+  favicon: ""
 hero:
   image: /images/uploads/demo-hero.jpg
   image_alt: Retrato profesional
