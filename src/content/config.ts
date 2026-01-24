@@ -6,7 +6,17 @@ import { defineCollection, z } from 'astro:content';
 // -----------------------------------------------------------------
 const pagesCollection = defineCollection({
   type: 'content',
-  schema: () => z.object({
+  schema: ({ image }) => z.object({
+
+    // 0. Control de Módulos
+    modules: z.object({
+      show_hero: z.boolean().default(true),
+      show_services: z.boolean().default(true),
+      show_clients: z.boolean().default(false),
+      show_testimonials: z.boolean().default(false),
+      show_about: z.boolean().default(true),
+      show_faq: z.boolean().default(true),
+    }).optional(),
     
     // 1. SEO & Identidad (OBLIGATORIO)
     // -------------------------------------------------------------
@@ -20,15 +30,14 @@ const pagesCollection = defineCollection({
       meta_description: z.string().max(160, {
         message: "⚠️ SEO Warning: La Meta Descripción supera los 160 caracteres y Google la cortará.",
       }),
-      social_image: z.string().optional().describe("URL de la imagen para compartir en Redes (OG Image)."),
+      social_image: image().optional().describe("URL de la imagen para compartir en Redes (OG Image)."),
+      favicon: image().optional(), 
     }),
 
     // 2. Hero (La Promesa de Valor)
     // -------------------------------------------------------------
     hero: z.object({
-      image: z.string({
-        required_error: "La imagen principal del Hero es obligatoria.",
-      }),
+      image: image().optional(),
       image_alt: z.string().min(5, {
         message: "🚫 A11Y Error: El texto alternativo (Alt) es obligatorio y debe ser descriptivo.",
       }),
@@ -38,16 +47,23 @@ const pagesCollection = defineCollection({
       cta_link: z.string(),
     }),
 
-    // 3. About (La Autoridad)
+    // 3. Clientes
+    clients: z.array(z.object({
+      logo: image().optional(),
+      name: z.string(),
+    })).optional(),
+
+    // 4. About (La Autoridad)
     // -------------------------------------------------------------
     about: z.object({
       title: z.string(),
+      image: image().optional(),
       business_bio: z.string().describe("Markdown soportado para negritas y énfasis."),
       stat_1: z.string().optional().describe("Dato duro 1 (Ej: +10 Años)"),
       stat_2: z.string().optional().describe("Dato duro 2 (Ej: 100% Garantizado)"),
     }),
 
-    // 4. FAQ (Manejo de Objeciones)
+    // 5. FAQ (Manejo de Objeciones)
     // -------------------------------------------------------------
     faq: z.array(
       z.object({
@@ -56,7 +72,7 @@ const pagesCollection = defineCollection({
       })
     ).optional().describe("Lista de preguntas para derribar objeciones de venta."),
 
-    // 5. Contacto & Legal
+    // 6. Contacto & Legal
     // -------------------------------------------------------------
     contact: z.object({
       email: z.string().email({
@@ -64,6 +80,7 @@ const pagesCollection = defineCollection({
       }),
       phone: z.string(),
       address: z.string().optional(),
+      footer_logo: image().optional(),
       copyright: z.string(),
     }),
   }),
@@ -74,10 +91,8 @@ const pagesCollection = defineCollection({
 // -----------------------------------------------------------------
 const servicesCollection = defineCollection({
   type: 'content',
-  schema: () => z.object({
-    icon: z.string({
-      required_error: "Se requiere un icono o imagen para la tarjeta.",
-    }),
+  schema: ({ image }) => z.object({
+    icon: image().optional(),
     icon_alt: z.string().default("Icono representativo del servicio"),
     title: z.string(),
     description: z.string().max(200, {
@@ -88,8 +103,22 @@ const servicesCollection = defineCollection({
   }),
 });
 
+// -----------------------------------------------------------------
+// COLECCIÓN DE TESTIMONIOS (El testimonio es la autoridad)
+// -----------------------------------------------------------------
+const testimonialsCollection = defineCollection({
+  type: 'content',
+  schema: () => z.object({
+    author: z.string(),
+    role: z.string().optional(),
+    content: z.string().max(300, { message: "El testimonio es muy largo (máx 300 car)." }),
+    order: z.number().default(0),
+  }),
+});
+
 // Exportación Pública
 export const collections = {
   'pages': pagesCollection,
   'services': servicesCollection,
+  'testimonials': testimonialsCollection, 
 };

@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  services: CollectionEntry<"services">[];
+  services: any[];
 }
 
 const { services } = Astro.props;
@@ -28,7 +28,7 @@ const sortedServices = services.sort((a, b) => a.data.order - b.data.order);
           <article class="bg-surface rounded-2xl p-8 border border-white/5 hover:border-primary/50 transition-colors group">
             <div class="w-16 h-16 bg-background rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
               <Image
-                src={service.data.icon}
+                src={service.data.icon as any}
                 alt={service.data.icon_alt}
                 width={64}
                 height={64}

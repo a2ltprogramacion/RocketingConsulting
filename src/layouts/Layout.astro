@@ -9,7 +9,8 @@ interface Props {
     site_name: string;
     meta_title: string;
     meta_description: string;
-    social_image?: string;
+    social_image?: any;
+    favicon?: any;
   };
   // Fallbacks por si se usa en páginas que no vienen del CMS
   title?: string;
@@ -23,6 +24,20 @@ const finalTitle = seo?.meta_title || title || "A2LT V-Card";
 const finalDescription =
   seo?.meta_description || description || "Servicios Profesionales";
 const finalImage = seo?.social_image || undefined;
+
+// 1. Definir la URL del Favicon
+// Prioridad: 1. CMS (seo.favicon) -> 2. Archivo PNG local -> 3. Fallback SVG de Astro
+// Si quieres que tu default sea 'favicon.png', asegúrate de que exista en /public/favicon.png
+const faviconUrl = seo?.favicon || "/favicon.png";
+
+// 2. Detectar el tipo MIME correcto para evitar conflictos
+const getFaviconType = (url: string) => {
+  if (url.endsWith(".svg")) return "image/svg+xml";
+  if (url.endsWith(".ico")) return "image/x-icon";
+  return "image/png"; // Asumimos PNG para todo lo demás
+};
+
+const faviconType = getFaviconType(faviconUrl);
 ---
 
 <!doctype html>
@@ -33,6 +48,7 @@ const finalImage = seo?.social_image || undefined;
       description={finalDescription}
       image={finalImage}
     />
+    <link rel="icon" type={faviconType} href={faviconUrl} />
     <meta
       name="author"
       content="Ing. Angel Argenis León Torres - A2LT Soluciones"

@@ -4,53 +4,101 @@ import { getEntry, getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 
 // Importación de Organismos
+import Navbar from "../components/organisms/Navbar.astro";
 import HeroSection from "../components/organisms/HeroSection.astro";
+import ClientsSection from "../components/organisms/ClientsSection.astro";
 import AboutSection from "../components/organisms/AboutSection.astro";
 import ServicesGrid from "../components/organisms/ServicesGrid.astro";
+import TestimonialsSection from "../components/organisms/TestimonialsSection.astro";
 import FaqSection from "../components/organisms/FaqSection.astro";
 import ContactFooter from "../components/organisms/ContactFooter.astro";
 
-// 1. Obtención de Datos (Data Fetching)
+// 1. Data Fetching
 const homePage = await getEntry("pages", "home");
 const services = await getCollection("services");
+const testimonials = await getCollection("testimonials");
 
-// 2. Validación de Datos (Defensive Rendering)
-// Si el usuario no ha guardado nada en el CMS aún, 'homePage' podría ser undefined o estar vacío.
 const data = homePage?.data;
-
-// Si no hay datos, usamos valores por defecto para que el build no falle en el primer arranque
 const hasData = !!data;
+
+// 2. Control de Visibilidad (Fallback a TRUE si no está configurado)
+const show = data?.modules || {
+  show_hero: true,
+  show_services: true,
+  show_clients: false, // Por defecto oculto hasta que carguen logos
+  show_testimonials: false,
+  show_about: true,
+  show_faq: true,
+};
+
+const cleanPhone = data?.contact?.phone.replace(/[^0-9]/g, "") || "";
+const waLink = `https://wa.me/${cleanPhone}`;
 ---
 
 <Layout seo={data?.seo}>
   {
     hasData ? (
       <main>
-        {data.hero && <HeroSection data={data.hero} />}
+        <Navbar siteName={data.seo.site_name} whatsappLink={waLink} />
 
-        <ServicesGrid services={services} />
+        {/* 1. HERO */}
+        {show.show_hero && data.hero && (
+          <div id="inicio">
+            <HeroSection data={data.hero} />
+          </div>
+        )}
 
-        {data.about && <AboutSection data={data.about} />}
+        {/* 2. CLIENTES (Nuevo) */}
+        {show.show_clients && data.clients && data.clients.length > 0 && (
+          <ClientsSection clients={data.clients} />
+        )}
 
-        {data.faq && <FaqSection data={data.faq} />}
+        {/* 3. SERVICIOS */}
+        {show.show_services && (
+          <div id="servicios">
+            <ServicesGrid services={services} />
+          </div>
+        )}
 
-        {data.contact && <ContactFooter data={data.contact} />}
+        {/* 4. NOSOTROS (Ahora con imagen izquierda) */}
+        {show.show_about && data.about && (
+          <div id="nosotros">
+            <AboutSection data={data.about} />
+          </div>
+        )}
+
+        {/* 5. TESTIMONIOS (Nuevo) */}
+        {show.show_testimonials && testimonials.length > 0 && (
+          <div id="testimonios">
+            <TestimonialsSection testimonials={testimonials} />
+          </div>
+        )}
+
+        {/* 6. FAQ */}
+        {show.show_faq && data.faq && (
+          <div id="faq">
+            <FaqSection data={data.faq} />
+          </div>
+        )}
+
+        {/* 7. CONTACTO */}
+        <div id="contacto">
+          {data.contact && <ContactFooter data={data.contact} />}
+        </div>
       </main>
     ) : (
-      /* ESTADO CERO: Pantalla de Bienvenida al Desarrollador/Cliente */
+      /* ESTADO CERO */
       <div class="min-h-screen flex flex-col items-center justify-center text-center p-6 bg-background">
         <div class="bg-surface p-8 rounded-2xl border border-primary/20 max-w-lg">
           <h1 class="text-3xl font-heading font-bold text-white mb-4">
             ¡Sistema A2LT Iniciado! 🚀
           </h1>
-          <p class="text-gray-400 mb-6">
-            La estructura técnica está lista, pero falta el contenido.
-          </p>
+          <p class="text-gray-400 mb-6">Falta contenido en el CMS.</p>
           <a
             href="/admin/"
             class="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-colors"
           >
-            Ir al CMS y crear contenido
+            Ir al CMS
           </a>
         </div>
       </div>

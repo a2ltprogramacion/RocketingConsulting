@@ -2,14 +2,15 @@
 backend:
   name: git-gateway
   branch: main
+  squash_merges: true
 
-media_folder: "public/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "src/assets/uploads"
+public_folder: "../../assets/uploads"
 site_url: "https://a2lt-vcard-prototype.netlify.app"
 
 # Branding del Panel Admin
 display_url: "https://a2lt-vcard-prototype.netlify.app"
-logo_url: "/images/logo-admin.png"
+logo_url: "/images/logo-a2lt-soluciones.png"
 locale: "es"
 
 collections:
@@ -23,6 +24,48 @@ collections:
         label: "Página de Inicio (V-Card)"
         file: "src/content/pages/home.md"
         fields:
+          # --- BLOQUE 0. PANEL DE CONTROL ---
+          - label: "🎛️ Panel de Control (Visibilidad)"
+            name: "modules"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {
+                  label: "Mostrar Hero",
+                  name: "show_hero",
+                  widget: "boolean",
+                  default: true,
+                }
+              - {
+                  label: "Mostrar Servicios",
+                  name: "show_services",
+                  widget: "boolean",
+                  default: true,
+                }
+              - {
+                  label: "Mostrar Clientes",
+                  name: "show_clients",
+                  widget: "boolean",
+                  default: false,
+                }
+              - {
+                  label: "Mostrar Testimonios",
+                  name: "show_testimonials",
+                  widget: "boolean",
+                  default: false,
+                }
+              - {
+                  label: "Mostrar Nosotros",
+                  name: "show_about",
+                  widget: "boolean",
+                  default: true,
+                }
+              - {
+                  label: "Mostrar FAQ",
+                  name: "show_faq",
+                  widget: "boolean",
+                  default: true,
+                }
           # --- BLOQUE 1: IDENTIDAD & SEO (CRÍTICO) ---
           - label: "1. Identidad & SEO (Motor de Búsqueda)"
             name: "seo"
@@ -51,7 +94,14 @@ collections:
                   label: "Imagen Social (OG Image)",
                   name: "social_image",
                   widget: "image",
-                  hint: "Imagen que sale al compartir en WhatsApp/LinkedIn.",
+                  hint: "Imagen que sale al compartir en WhatsApp/LinkedIn. Rec: 1200x630px. JPG/PNG. Peso ideal: <200KB.",
+                }
+              - {
+                  label: "Favicon (Icono Pestaña)",
+                  name: "favicon",
+                  widget: "image",
+                  required: false,
+                  hint: "Icono de Pestaña del navegador. Formato recomendado: SVG o PNG (32x32px).",
                 }
 
           # --- BLOQUE 2: HERO (LA PROMESA) ---
@@ -64,6 +114,7 @@ collections:
                   label: "Logotipo / Imagen Principal",
                   name: "image",
                   widget: "image",
+                  hint: "Logotipo o imagen principal. Rec: 1920x1080px (Paisaje). JPG/WebP. Peso ideal: <300KB.",
                 }
               - {
                   label: "Texto Alternativo (Alt)",
@@ -95,9 +146,21 @@ collections:
                   widget: "string",
                   hint: "WhatsApp o Link Externo",
                 }
-
-          # --- BLOQUE 3: SOBRE EL NEGOCIO ---
-          - label: "3. La Empresa / Propuesta de Valor"
+          # --- BLOQUE 3: CARTERA DE CLIENTES ---
+          - label: "3. Cartera de Clientes (Logos)"
+            name: "clients"
+            widget: "list"
+            collapsed: true
+            fields:
+              - {
+                  label: "Logo del Cliente",
+                  name: "logo",
+                  widget: "image",
+                  hint: "Logo del cliente. Rec: 250px ancho. PNG/SVG (Fondo Transparente). Peso: <50KB.",
+                }
+              - { label: "Nombre Empresa", name: "name", widget: "string" }
+          # --- BLOQUE 4: SOBRE EL NEGOCIO ---
+          - label: "4. La Empresa / Propuesta de Valor"
             name: "about"
             widget: "object"
             collapsed: true
@@ -107,6 +170,13 @@ collections:
                   name: "title",
                   widget: "string",
                   default: "Nuestra Propuesta",
+                }
+              - {
+                  label: "Imagen Descriptiva (Izquierda)",
+                  name: "image",
+                  widget: "image",
+                  required: false,
+                  hint: "Se ajustará al ancho de la columna. Ancho mín: 600px. Alto: Automático (Máx 550px). JPG/WebP. Peso: <250KB.",
                 }
               - {
                   label: "Descripción del Negocio",
@@ -127,8 +197,8 @@ collections:
                   required: false,
                 }
 
-          # --- BLOQUE 4: FAQ (OBJECIONES) ---
-          - label: "4. Preguntas Frecuentes"
+          # --- BLOQUE 5: FAQ (OBJECIONES) ---
+          - label: "5. Preguntas Frecuentes"
             name: "faq"
             widget: "list"
             collapsed: true
@@ -136,8 +206,8 @@ collections:
               - { label: "Pregunta", name: "question", widget: "string" }
               - { label: "Respuesta", name: "answer", widget: "text" }
 
-          # --- BLOQUE 5: CONTACTO ---
-          - label: "5. Contacto & Pie de Página"
+          # --- BLOQUE 6: CONTACTO & PIE DE PÁGINA ---
+          - label: "6. Contacto & Pie de Página"
             name: "contact"
             widget: "object"
             collapsed: true
@@ -159,6 +229,13 @@ collections:
                   name: "copyright",
                   widget: "string",
                 }
+              - {
+                  label: "Logo para Footer (Versión Oscura)",
+                  name: "footer_logo",
+                  widget: "image",
+                  required: false,
+                  hint: "Se recomienda un logo blanco/claro con fondo transparente. Ancho aprox: 150px.",
+                }
 
   # -----------------------------------------------------------------
   # COLECCIÓN 2: SERVICIOS (PRODUCTOS / SOLUCIONES)
@@ -174,6 +251,7 @@ collections:
           label: "Icono / Imagen Representativa",
           name: "icon",
           widget: "image",
+          hint: "Icono o imagen representativa de servicio. Rec: 128x128px (Cuadrado). PNG/SVG. Peso: <50KB.",
         }
       - {
           label: "Texto Alt del Icono",
@@ -196,6 +274,37 @@ collections:
         }
       - {
           label: "Orden de Prioridad",
+          name: "order",
+          widget: "number",
+          default: 0,
+          value_type: "int",
+        }
+
+  # -----------------------------------------------------------------
+  # COLECCIÓN 3: TESTIMONIOS
+  # -----------------------------------------------------------------
+  - name: "testimonials"
+    label: "⭐ Testimonios de Clientes"
+    label_singular: "Testimonio"
+    folder: "src/content/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nombre del Cliente", name: "author", widget: "string" }
+      - {
+          label: "Cargo / Empresa",
+          name: "role",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Testimonio",
+          name: "content",
+          widget: "text",
+          hint: "Cita textual del cliente.",
+        }
+      - {
+          label: "Orden",
           name: "order",
           widget: "number",
           default: 0,

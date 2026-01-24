@@ -1,11 +1,13 @@
 ---
 // @src/components/organisms/AboutSection.astro
-import { marked } from "marked"; // Necesitaremos instalar esto: npm install marked
+import { Image } from "astro:assets";
+import { marked } from "marked";
 
 interface Props {
   data: {
     title: string;
-    business_bio: string; // Markdown content
+    image?: any; // Nuevo campo
+    business_bio: string;
     stat_1?: string;
     stat_2?: string;
   };
@@ -15,48 +17,81 @@ const { data } = Astro.props;
 const bioHtml = marked.parse(data.business_bio);
 ---
 
-<section class="py-20 bg-surface/50">
+<section class="py-20 bg-surface/50 overflow-hidden">
   <div class="container mx-auto px-6">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">
-          {data.title}
-        </h2>
-        <div class="h-1 w-20 bg-secondary mx-auto rounded-full"></div>
+    <div class="text-center mb-12 lg:hidden">
+      <h2 class="text-3xl font-heading font-bold text-white mb-4">
+        {data.title}
+      </h2>
+      <div class="h-1 w-20 bg-secondary mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-4 relative">
+        <div
+          class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
+        >
+          {
+            data.image ? (
+              <Image
+                src={data.image}
+                alt="Nosotros"
+                width={600}
+                height={800}
+                class="w-full h-auto max-h-[550px] object-cover"
+              />
+            ) : (
+              /* LÓGICA RESPONSIVE MEJORADA:
+                 w-full: Llena el ancho de la columna disponible.
+                 h-auto: Mantiene la proporción original de la foto.
+                 max-h-[550px]: Si es muy alta, la frena en 550px.
+                 object-cover: Si la frena, recorta los excesos en lugar de aplastar la foto.
+              */
+              <div class="w-full h-64 bg-surface flex items-center justify-center text-gray-500 italic p-4 text-center">
+                Imagen no configurada
+              </div>
+            )
+          }
+        </div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8 items-center">
-        <div class="md:col-span-2 prose prose-invert prose-lg text-gray-300">
+      <div class="lg:col-span-5">
+        <h2
+          class="hidden lg:block text-4xl font-heading font-bold text-white mb-6"
+        >
+          {data.title}
+        </h2>
+        <div class="prose prose-invert prose-lg text-gray-300">
           <div set:html={bioHtml} />
         </div>
+      </div>
 
-        <div class="space-y-6">
-          {
-            data.stat_1 && (
-              <div class="bg-surface p-6 rounded-xl border border-white/5 text-center">
-                <span class="block text-3xl font-heading font-black text-primary mb-1">
-                  {data.stat_1}
-                </span>
-                <span class="text-sm text-gray-400 uppercase tracking-wider">
-                  Experiencia
-                </span>
-              </div>
-            )
-          }
+      <div class="lg:col-span-3 flex flex-col gap-6">
+        {
+          data.stat_1 && (
+            <div class="bg-surface p-6 rounded-xl border border-white/5 text-center shadow-lg hover:border-primary/30 transition-colors">
+              <span class="block text-4xl font-heading font-black text-primary mb-1">
+                {data.stat_1}
+              </span>
+              <span class="text-sm text-gray-400 uppercase tracking-wider">
+                Experiencia
+              </span>
+            </div>
+          )
+        }
 
-          {
-            data.stat_2 && (
-              <div class="bg-surface p-6 rounded-xl border border-white/5 text-center">
-                <span class="block text-3xl font-heading font-black text-secondary mb-1">
-                  {data.stat_2}
-                </span>
-                <span class="text-sm text-gray-400 uppercase tracking-wider">
-                  Resultados
-                </span>
-              </div>
-            )
-          }
-        </div>
+        {
+          data.stat_2 && (
+            <div class="bg-surface p-6 rounded-xl border border-white/5 text-center shadow-lg hover:border-secondary/30 transition-colors">
+              <span class="block text-4xl font-heading font-black text-secondary mb-1">
+                {data.stat_2}
+              </span>
+              <span class="text-sm text-gray-400 uppercase tracking-wider">
+                Resultados
+              </span>
+            </div>
+          )
+        }
       </div>
     </div>
   </div>
