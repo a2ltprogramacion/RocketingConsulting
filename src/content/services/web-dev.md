@@ -1,5 +1,5 @@
 ---
-icon: /images/uploads/demo-service.jpg
+icon: ../../assets/uploads/demo-service.jpg
 icon_alt: Icono de código
 title: Desarrollo Web Full Stack
 description: Sitios web de alto rendimiento construidos con Astro y Tailwind.
