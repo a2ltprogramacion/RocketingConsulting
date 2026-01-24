@@ -14,7 +14,7 @@ seo:
   social_image: ../../assets/uploads/demo-logo.jpg
   favicon: ""
 hero:
-  image: ../../assets/uploads/demo-hero.jpg
+  image: ""
   image_alt: Retrato profesional
   title: Transformamos Ideas en Código
   subtitle: Arquitectura de Software y Consultoría Estratégica para negocios digitales.
