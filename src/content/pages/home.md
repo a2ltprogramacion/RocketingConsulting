@@ -15,7 +15,7 @@ seo:
   favicon: ""
 hero:
   image: ""
-  image_alt: Retrato profesional
+  image_alt: ""
   title: Transformamos Ideas en Código
   subtitle: Arquitectura de Software y Consultoría Estratégica para negocios digitales.
   cta_text: Iniciar Proyecto
