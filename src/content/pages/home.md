@@ -45,4 +45,8 @@ contact:
     facebook: https://facebook.com
     instagram: https://instagram.com
     twitter: https://x.com
+    youtube: https://youtube.com
+    linkedin: https://linkedin.com
+  heading: Comencemos
+  subheading: Hablemos de negocios
 ---
