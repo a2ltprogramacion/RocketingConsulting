@@ -2,6 +2,9 @@
 // @src/pages/index.astro
 import { getEntry, getCollection, type CollectionEntry } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+// Corrección de ruta: de pages/ subes a src/ con ../
+import miLogo from "../assets/uploads/logo-tranparency.png";
 
 // --- IMPORTANTE: Eliminamos Navbar y ContactFooter de aquí ---
 // (El Layout se encarga de ellos ahora, evitando duplicidad)
@@ -77,9 +80,15 @@ const show = data?.modules || {
           <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-7xl mx-auto bg-surface/10 border border-white/10 rounded-3xl p-8 md:p-16 backdrop-blur-sm text-center">
               {/* Logo Superior */}
-              <div class="mb-8 flex justify-center">
-                <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center glow-emerald">
-                  <span class="text-3xl font-black text-white">R</span>
+              <div class="flex justify-center">
+                <div class="flex items-center justify-center">
+                  <Image
+                    src={miLogo}
+                    alt="Logo de Rocketing"
+                    width={256}
+                    height={256}
+                    class="w-40 h-40 object-contain"
+                  />
                 </div>
               </div>
 

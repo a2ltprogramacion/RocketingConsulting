@@ -754,7 +754,7 @@ collections:
           label: "Testimonio",
           name: "content",
           widget: "text",
-          hint: "Cita textual. Máx 300 caracteres.",
+          hint: "Cita textual. Máx 600 caracteres.",
         }
       - {
           label: "Orden",

@@ -158,7 +158,7 @@ const testimonialsCollection = defineCollection({
   schema: () => z.object({
     author: z.string(),
     role: z.string().optional(),
-    content: z.string().max(300, { message: "El testimonio es muy largo (máx 300 car)." }),
+    content: z.string().max(600, { message: "El testimonio es muy largo (máx 600 car)." }),
     order: z.number().default(0),
   }),
 });

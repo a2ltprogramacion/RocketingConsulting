@@ -17,29 +17,32 @@ const { data } = Astro.props;
 
 <section id="nosotros" class="py-24 bg-surface/30 border-y border-white/5">
   <div
-    class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
+    class="container mx-auto px-6 flex flex-col md:flex-row gap-8 lg:gap-12 items-center max-w-7xl"
   >
-    <div class="relative group">
+    <div class="relative group w-fit mx-auto lg:mx-0 align-center">
       <div
         class="absolute -inset-1 bg-linear-to-r from-primary to-secondary rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"
       >
       </div>
+
       <div
-        class="relative rounded-2xl overflow-hidden border border-white/10 aspect-4/3"
+        class="relative rounded-2xl overflow-hidden border border-white/10 w-fit"
       >
         {
           data.image && (
             <Image
               src={data.image}
               alt={data.image_alt || "Imagen corporativa"}
-              class="w-full h-full object-cover"
+              width={800}
+              height={1000}
+              class="block w-auto h-auto max-h-[600px] object-contain"
             />
           )
         }
       </div>
     </div>
 
-    <div>
+    <div class="flex-1 text-center md:text-left">
       <h2 class="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
         {data.title}
       </h2>
