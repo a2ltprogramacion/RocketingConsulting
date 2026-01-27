@@ -10,9 +10,7 @@ modules:
 seo:
   site_name: Rocketing Consulting
   meta_title: Rocketing Consulting | Estrategia y Transformación Digital
-  meta_description: Consultoría especializada en Marketing Digital, Desarrollo Web
-    y Branding. Impulsamos el crecimiento de tu empresa con soluciones
-    tecnológicas y creativas de alto impacto.
+  meta_description: Consultoría en Marketing Digital, Web y Branding. Impulsamos el crecimiento de tu empresa con tecnología y creatividad de alto impacto.
   social_image: ../../assets/uploads/logo-black.jpeg
   social_image_alt: Logotipo de Rocketing Consulting en dorado y negro,
     transmitiendo elegancia, autoridad y vanguardia tecnológica.
@@ -34,7 +32,8 @@ about:
   image: ../../assets/uploads/demo-about.jpg
   image_alt: Fotografía profesional de los socios fundadores de Rocketing
     Consulting, proyectando confianza, experiencia y liderazgo.
-  business_bio: Rocketing Consulting nace en Venezuela con la misión de elevar el
+  business_bio:
+    Rocketing Consulting nace en Venezuela con la misión de elevar el
     estándar de la ejecución digital. No solo asesoramos; nos integramos en la
     estructura de nuestros clientes para resolver problemas complejos de
     visibilidad, tecnología y posicionamiento de marca, convirtiendo desafíos
@@ -43,7 +42,8 @@ about:
   stat_2: Visión Disruptiva
 faq:
   - question: ¿Cómo inician el proceso de consultoría?
-    answer: Realizamos un diagnóstico inicial de 360° para identificar cuellos de
+    answer:
+      Realizamos un diagnóstico inicial de 360° para identificar cuellos de
       botella y oportunidades de mejora antes de proponer una hoja de ruta.
   - question: ¿Trabajan con proyectos internacionales?
     answer: Sí, nuestra metodología de trabajo remoto nos permite asesorar a
