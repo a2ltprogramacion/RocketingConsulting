@@ -3,13 +3,13 @@ modules:
   show_hero: true
   show_services: true
   show_knowledge: true
-  show_clients: true
+  show_clients: false
   show_testimonials: true
   show_about: true
   show_faq: true
 seo:
-  site_name: A2LT Soluciones
-  meta_title: Transformación Digital y Consultoría Tecnológica
+  site_name: Rocketing Consulting
+  meta_title: Rocketing Consulting | Home
   meta_description: Impulsamos tu negocio con soluciones de ingeniería, desarrollo
     web y automatización de procesos.
   social_image: ../../assets/uploads/demo-hero.jpg
