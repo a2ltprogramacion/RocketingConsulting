@@ -2,58 +2,59 @@
 modules:
   show_hero: true
   show_services: true
-  show_clients: false
+  show_knowledge: true
+  show_clients: true
   show_testimonials: true
   show_about: true
   show_faq: true
-  show_knowledge: true
 seo:
-  site_name: Rocketing Consulting
-  meta_title: Rocketing Consulting
-  meta_description: Esta es una demostración técnica de la página Rocketing Consulting
-  social_image: ../../assets/uploads/logo-black.jpeg
-  favicon: ../../assets/uploads/logo-tranparency-icon.png
-  social_image_alt: Logo Rocketing Consulting
+  site_name: A2LT Soluciones
+  meta_title: Transformación Digital y Consultoría Tecnológica
+  meta_description: Impulsamos tu negocio con soluciones de ingeniería, desarrollo
+    web y automatización de procesos.
+  social_image: ../../assets/uploads/demo-hero.jpg
+  social_image_alt: Portada A2LT Soluciones
 hero:
-  image: ../../assets/uploads/hero-consultoria-ejecutivos-alta-tecnologia-negocios.png
-  image_alt: Hero, Consultoría, Ejecutivos, Mesa de Trabajo, Alta Tecnología de Negocios
-  title: "Rocketing: Impulsa tu futuro digital"
-  subtitle: Arquitectura y Consultoría Estratégica para negocios digitales.
-  cta_text: Explora Nuestras Opciones
-  cta_link: "#contacto"
   bg_variant: image
-  bg_color: "#c91717"
+  bg_color: "#943a3a"
+  image: ../../assets/uploads/demo-hero.jpg
+  image_alt: Oficina tecnológica moderna
+  title: Soluciones que Transforman
+  subtitle: Ingeniería y estrategia digital para el crecimiento de tu empresa.
+  cta_text: Cotizar Proyecto
+  cta_link: "#contacto"
 clients:
   - logo: ../../assets/uploads/demo-logo-cliente.jpg
-    name: APEX CORE
-    logo_alt: alt text de prueba
+    logo_alt: Logo Cliente 1
+    name: Empresa Alpha
 about:
-  title: Nuestra Esencia
-  business_bio: Somos una firma de ingeniería dedicada a la excelencia operativa.
-    **Utilizamos tecnología de punta** para resolver problemas complejos de
-    negocio.
-  stat_1: +10 Años
-  stat_2: 100% Éxito
+  title: Nuestra Filosofía
   image: ../../assets/uploads/demo-about.jpg
-  image_alt: alt text de prueba
+  image_alt: Equipo de trabajo A2LT
+  business_bio: En A2LT combinamos la experiencia en infraestructura crítica con
+    la innovación del desarrollo moderno.  Nuestro objetivo es ser tu socio
+    estratégico en la era digital.
+  stat_1: +10 Años Exp.
+  stat_2: 100% Calidad
 faq:
-  - question: ¿Qué tecnologías usan?
-    answer: Utilizamos Astro, Tailwind y React para máxima velocidad.
-  - question: ¿Tiempos de entrega?
-    answer: Entre 1 y 2 semanas dependiendo del alcance.
+  - question: ¿Qué servicios ofrecen?
+    answer: Ofrecemos desarrollo web, consultoría SAP y automatización.
+  - question: ¿Tienen soporte?
+    answer: Sí, contamos con planes de mantenimiento 24/7.
 contact:
-  heading: Comencemos
-  subheading: Hablemos de negocios
-  copyright: © 2026 A2LT Soluciones
+  heading: Hablemos de tu Futuro
+  subheading: Agenda una consultoría gratuita hoy mismo.
+  copyright: © 2026 A2LT Soluciones. Todos los derechos reservados.
   social:
     facebook: https://facebook.com
     instagram: https://instagram.com
-    twitter: https://x.com
-    youtube: https://youtube.com
     linkedin: https://linkedin.com
-  phone: +58 412 1234567
+    twitter: https://x.vom
+    youtube: https://youtube.com
+    tiktok: https://tiktok.com
+  phone: "+584121234567"
   footer_logo: ../../assets/uploads/demo-logo.jpg
-  address: Valencia, Carabobo
-  footer_logo_alt: alt text de prueba
+  address: Valencia, Venezuela
+  footer_logo_alt: Logo A2LT Blanco
   email: contacto@a2lt.com
 ---

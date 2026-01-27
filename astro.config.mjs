@@ -9,7 +9,7 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   // 1. AGREGA ESTA LÍNEA (Vital para solucionar el error "Invalid URL")
-  site: 'https://a2lt-vcard-demo.netlify.app',
+  site: 'https://a2lt-authority.netlify.app',
 
   vite: {
     plugins: [tailwindcss()]

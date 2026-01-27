@@ -1,39 +1,58 @@
 /* @src/styles/global.css */
-
-/* 1. Fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
-
-/* 2. Motor Tailwind v4 */
 @import "tailwindcss";
 
-/* 3. Definición del Tema (Sustituye a tailwind.config.mjs) */
 @theme {
-  /* Tipografía */
   --font-sans: "Nunito", sans-serif;
   --font-heading: "Red Hat Display", sans-serif;
 
-  /* Paleta de Colores Corporativa */
-  /* Al definirlos aquí, Tailwind crea automágicamente las clases bg-primary, text-primary, border-primary, etc. */
-  --color-primary: #FF7300;
-  --color-accent: #FF7300;
+  /* --- PALETA ADAPTADA AL CLIENTE --- */
+  /* Primary: Verde Esmeralda Brillante */
+  --color-primary: #10B981;
+  --color-primary-dark: #022A21;
   
-  --color-secondary: #14B8A6;
+  /* Secondary: Amarillo Cítrico (Para negritas) */
+  --color-secondary: #FDE047; 
   
-  --color-background: #0F172A; /* Slate 950 */
-  --color-surface: #1E293B;    /* Slate 800 */
-  --color-text: #F5F5F5;       /* White Smoke */
+  /* Accent: Naranja Cítrico (Para botones/CTAs) */
+  --color-accent: #F97316; 
+
+  /* Detalle Púrpura (Para acentos sutiles/glows) */
+  --color-purple-accent: #A855F7;
+  
+  /* Backgrounds: Profundidad Esmeralda Oscura */
+  --color-background: #070E1B; /* Verde bosque muy oscuro */
+  --color-surface: #1E293B;    /* Esmeralda profundo */
+  --color-text: #F8FAFC;       
 }
 
-/* 4. Estilos Base y Reset */
-@layer base {
-  body {
-    /* Aplicamos las variables directamente */
-    background-color: var(--color-background);
-    color: var(--color-text);
-    font-family: var(--font-sans);
+@layer utilities {
+
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  }
+  .glow-emerald {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+  }
+  /* --- ANIMACIÓN DE REVELACIÓN --- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    visibility: hidden; /* Evita interacciones antes de mostrarse */
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
+  /* Esta clase la inyectará el JS */
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+/* Forzar que las negritas en toda la web sean el amarillo cítrico */
+@layer base {
+  strong, b {
+    color: var(--color-secondary);
+    font-weight: 700;
   }
 }
