@@ -2,23 +2,24 @@
 modules:
   show_hero: true
   show_services: true
-  show_clients: true
+  show_clients: false
   show_testimonials: true
   show_about: true
   show_faq: true
   show_knowledge: true
 seo:
-  site_name: A2LT Soluciones Demo
-  meta_title: A2LT Soluciones | V-Card Demo
-  meta_description: Esta es una demostración técnica del sistema V-Card Nivel 1.
-  social_image: ../../assets/uploads/demo-logo.jpg
-  favicon: ""
+  site_name: Rocketing Consulting
+  meta_title: Rocketing Consulting
+  meta_description: Esta es una demostración técnica de la página Rocketing Consulting
+  social_image: ../../assets/uploads/logo-black.jpeg
+  favicon: ../../assets/uploads/logo-tranparency-icon.png
+  social_image_alt: Logo Rocketing Consulting
 hero:
-  image: ../../assets/uploads/demo-hero.jpg
-  image_alt: ""
-  title: Transformamos Ideas en Código
-  subtitle: Arquitectura de Software y Consultoría Estratégica para negocios digitales.
-  cta_text: Iniciar Proyecto
+  image: ../../assets/uploads/hero-consultoria-ejecutivos-alta-tecnologia-negocios.png
+  image_alt: Hero, Consultoría, Ejecutivos, Mesa de Trabajo, Alta Tecnología de Negocios
+  title: "Rocketing: Impulsa tu futuro digital"
+  subtitle: Arquitectura y Consultoría Estratégica para negocios digitales.
+  cta_text: Explora Nuestras Opciones
   cta_link: "#contacto"
   bg_variant: image
   bg_color: "#c91717"
