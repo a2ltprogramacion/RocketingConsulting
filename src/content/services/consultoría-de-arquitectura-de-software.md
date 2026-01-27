@@ -1,33 +1,48 @@
 ---
-title: Consultoría de Arquitectura de Software
-main_image: ../../assets/uploads/demo-about.jpg
-main_image_alt: Ingenieros analizando planos de software en una mesa.
-description: Auditoría técnica profunda y diseño de arquitecturas escalables
-  para empresas que buscan modernizar su stack tecnológico sin deuda técnica.
+title: Innovación Continua.
+main_image: ../../assets/uploads/1-innovación-continua.png
+main_image_alt: Ícono de un bombillo azul brillante con un engranaje en su
+  interior sobre un fondo de circuito digital, simbolizando la innovación
+  tecnológica y la ejecución estratégica.
+description: Implementamos metodologías y herramientas de vanguardia para
+  asegurar que tu estrategia digital esté siempre un paso adelante y nunca se
+  vuelva obsoleta.
 content_blocks:
-  p1_image_alt: Gráficos de rendimiento en monitor.
-  p2_image_alt: Diagrama de flujo de datos en pizarra.
-  p3_image_alt: Equipo celebrando lanzamiento.
+  p1_image_alt: Un equipo diverso de profesionales colaborando en una oficina
+    moderna, utilizando pantallas táctiles gigantes para interactuar con
+    tableros de gestión de proyectos ágiles y visualizaciones de datos.
+  p2_image_alt: Primer plano de las manos de una persona sosteniendo una tableta
+    que muestra un tablero de análisis avanzado con modelos de inteligencia
+    artificial, gráficos de datos globales y métricas de rendimiento.
+  p3_image_alt: Un equipo de consultoría presentando una estrategia a prueba de
+    futuro a un cliente en una sala de juntas moderna con vistas panorámicas de
+    la ciudad, mostrando una línea de tiempo de crecimiento estratégico en una
+    pantalla grande.
   p3_text: >-
-    **Acompañamiento en la Implementación:**
+    **Estrategias a Prueba de Futuro:**
 
 
-    No te entregamos un PDF y nos vamos. Trabajamos codo a codo con tu equipo durante la fase crítica de despliegue, asegurando que las mejores prácticas de DevOps y CI/CD queden instaladas en tu cultura corporativa.
+
+    El objetivo final de la innovación no es solo resolver los problemas de hoy, sino prepararte para los desafíos de mañana. Nuestras estrategias están diseñadas con una visión a largo plazo, incorporando la flexibilidad necesaria para evolucionar junto con las tendencias tecnológicas y del mercado. No te entregamos una solución estática, sino una hoja de ruta dinámica que te permite anticiparte a los cambios, aprovechar las nuevas oportunidades y asegurar la sostenibilidad de tu negocio en el futuro digital.
   p2_text: >-
-    **Estrategia de Modernización:**
+    **Herramientas de Última Generación:**
 
 
-    Diseñamos una hoja de ruta para migrar tus sistemas legados a tecnologías modernas como Astro, Python y Cloud Computing. Priorizamos soluciones Open Source para eliminar costos de licencias innecesarios y garantizarte la soberanía de tus datos.
+
+    No solo hablamos de innovación, la vivimos. Nuestro arsenal tecnológico incluye las herramientas más avanzadas del mercado, desde plataformas de análisis predictivo impulsadas por inteligencia artificial hasta software de automatización de marketing de primer nivel. Estas herramientas nos permiten procesar grandes volúmenes de datos para descubrir insights ocultos, automatizar tareas repetitivas y personalizar la experiencia del cliente a una escala inimaginable hace unos años. Al integrar estas tecnologías en tu estrategia, no solo optimizamos tus procesos, sino que te damos una ventaja competitiva decisiva.
   p1_text: >-
-    **Diagnóstico de Infraestructura:**
+    **Metodologías Ágiles y Colaborativas:**
 
 
-    Iniciamos con una inmersión total en tu código actual. Identificamos cuellos de botella, vulnerabilidades de seguridad y procesos manuales que están frenando tu crecimiento. No solo buscamos errores, buscamos oportunidades de automatización inmediata.
-  p1_image: ../../assets/uploads/demo-service.jpg
-  p2_image: ../../assets/uploads/demo-hero.jpg
-  conclusion: Transforma tu tecnología de un centro de costos a una ventaja
-    competitiva real. ¿Hablamos?
-  p3_image: ../../assets/uploads/demo-about.jpg
-price: ~$1.200 USD
+
+    En un entorno digital que cambia a la velocidad de la luz, la rigidez es el enemigo del progreso. Por eso, adoptamos metodologías ágiles que nos permiten iterar rápidamente, adaptarnos a los cambios del mercado y fomentar una colaboración fluida. Nuestros equipos trabajan en sprints, utilizando tableros visuales y sesiones de retroalimentación constante para garantizar que cada paso de tu proyecto esté alineado con tus objetivos comerciales. Esta flexibilidad nos permite pivotar estrategias en tiempo real, asegurando que siempre estemos en el camino más eficiente hacia el éxito.
+  p1_image: ../../assets/uploads/2-metodologías-ágiles-colaborativas.png
+  p2_image: ../../assets/uploads/3-herramientas-última-generación.png
+  conclusion: En un mundo donde la única constante es el cambio, la innovación
+    continua no es un lujo, es una necesidad para la supervivencia y el
+    crecimiento empresarial. En Rocketing Consulting, nos aseguramos de que tu
+    empresa no solo se mantenga al día, sino que lidere el camino.
+  p3_image: ../../assets/uploads/4-estrategias-prueba-futuro.png
+price: ""
 order: 1
 ---
