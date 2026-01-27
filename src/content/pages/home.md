@@ -9,42 +9,53 @@ modules:
   show_faq: true
 seo:
   site_name: Rocketing Consulting
-  meta_title: Rocketing Consulting | Home
-  meta_description: Impulsamos tu negocio con soluciones de ingeniería, desarrollo
-    web y automatización de procesos.
-  social_image: ../../assets/uploads/demo-hero.jpg
-  social_image_alt: Portada A2LT Soluciones
+  meta_title: Rocketing Consulting | Estrategia y Transformación Digital
+  meta_description: Consultoría especializada en Marketing Digital, Desarrollo Web
+    y Branding. Impulsamos el crecimiento de tu empresa con soluciones
+    tecnológicas y creativas de alto impacto.
+  social_image: ../../assets/uploads/logo-black.jpeg
+  social_image_alt: Logotipo de Rocketing Consulting en dorado y negro,
+    transmitiendo elegancia, autoridad y vanguardia tecnológica.
+  favicon: ../../assets/uploads/logo-tranparency-icon.png
 hero:
   bg_variant: image
   bg_color: "#943a3a"
   image: ../../assets/uploads/demo-hero.jpg
-  image_alt: Oficina tecnológica moderna
-  title: Soluciones que Transforman
-  subtitle: Ingeniería y estrategia digital para el crecimiento de tu empresa.
-  cta_text: Cotizar Proyecto
+  image_alt: Consultores expertos en una oficina moderna analizando métricas de
+    crecimiento y dashboards tecnológicos.
+  title: Impulsa tu Futuro Digital con Consultoría de Élite.
+  subtitle: Transformamos modelos de negocio a través de estrategias
+    personalizadas en marketing, tecnología y diseño visual de vanguardia.
+  cta_text: Explorar Servicios de Consultoría
   cta_link: "#contacto"
-clients:
-  - logo: ../../assets/uploads/demo-logo-cliente.jpg
-    logo_alt: Logo Cliente 1
-    name: Empresa Alpha
+clients: []
 about:
-  title: Nuestra Filosofía
+  title: Aliados Estratégicos en la Era de la Innovación
   image: ../../assets/uploads/demo-about.jpg
-  image_alt: Equipo de trabajo A2LT
-  business_bio: En A2LT combinamos la experiencia en infraestructura crítica con
-    la innovación del desarrollo moderno.  Nuestro objetivo es ser tu socio
-    estratégico en la era digital.
-  stat_1: +10 Años Exp.
-  stat_2: 100% Calidad
+  image_alt: Fotografía profesional de los socios fundadores de Rocketing
+    Consulting, proyectando confianza, experiencia y liderazgo.
+  business_bio: Rocketing Consulting nace en Venezuela con la misión de elevar el
+    estándar de la ejecución digital. No solo asesoramos; nos integramos en la
+    estructura de nuestros clientes para resolver problemas complejos de
+    visibilidad, tecnología y posicionamiento de marca, convirtiendo desafíos
+    técnicos en ventajas competitivas.
+  stat_1: Excelencia Operativa
+  stat_2: Visión Disruptiva
 faq:
-  - question: ¿Qué servicios ofrecen?
-    answer: Ofrecemos desarrollo web, consultoría SAP y automatización.
-  - question: ¿Tienen soporte?
-    answer: Sí, contamos con planes de mantenimiento 24/7.
+  - question: ¿Cómo inician el proceso de consultoría?
+    answer: Realizamos un diagnóstico inicial de 360° para identificar cuellos de
+      botella y oportunidades de mejora antes de proponer una hoja de ruta.
+  - question: ¿Trabajan con proyectos internacionales?
+    answer: Sí, nuestra metodología de trabajo remoto nos permite asesorar a
+      clientes en toda Latinoamérica y Estados Unidos con estándares globales.
+  - question: ¿Qué tiempo dura una asesoría estratégica?
+    answer: Depende de la complejidad, pero típicamente establecemos ciclos de
+      optimización mensual para asegurar resultados sostenibles.
 contact:
-  heading: Hablemos de tu Futuro
-  subheading: Agenda una consultoría gratuita hoy mismo.
-  copyright: © 2026 A2LT Soluciones. Todos los derechos reservados.
+  heading: ¿Listo para escalar tu modelo de negocio?
+  subheading: Agenda una sesión estratégica con nuestros expertos y toma el
+    control de tu presencia digital hoy mismo.
+  copyright: © 2026 Rocketing Consulting. Todos los derechos reservados.
   social:
     facebook: https://facebook.com
     instagram: https://instagram.com
@@ -52,9 +63,10 @@ contact:
     twitter: https://x.vom
     youtube: https://youtube.com
     tiktok: https://tiktok.com
-  phone: "+584121234567"
-  footer_logo: ../../assets/uploads/demo-logo.jpg
+  phone: "+584122184596"
+  footer_logo: ../../assets/uploads/logo-tranparency.png
   address: Valencia, Venezuela
-  footer_logo_alt: Logo A2LT Blanco
-  email: contacto@a2lt.com
+  footer_logo_alt: Logotipo de Rocketing Consulting en dorado y negro,
+    transmitiendo elegancia, autoridad y vanguardia tecnológica.
+  email: contacto@rocketingconsulting.com
 ---
