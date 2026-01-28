@@ -8,8 +8,7 @@ description: No se trata de estar en internet, sino de conquistar tu mercado.
   Transformamos tus objetivos comerciales en un plan de acción digital medible,
   escalable y enfocado en el retorno de inversión (ROI).
 content_blocks:
-  p1_image_alt:
-    Un equipo de consultores en una sala de juntas moderna analizando
+  p1_image_alt: Un equipo de consultores en una sala de juntas moderna analizando
     datos de marketing y rendimiento en una gran pantalla táctil.
   p2_image_alt: Un consultor senior presentando una hoja de ruta estratégica
     (roadmap) a un cliente en una sala de reuniones, con un enfoque claro en
@@ -34,6 +33,12 @@ content_blocks:
 
 
 
+    Cualquier estrategia exitosa comienza con entender dónde estás y a dónde quieres llegar. Realizamos una auditoría exhaustiva de tu presencia digital actual, incluyendo el rendimiento de tu sitio web, análisis de SEO técnico, presencia en redes sociales y la efectividad de tus campañas publicitarias. Estudiamos a tu competencia y definimos con precisión a tu cliente ideal (buyer persona). Este diagnóstico profundo nos permite identificar los cuellos de botella que frenan tu crecimiento y las oportunidades ocultas que aún no has explotado, sentando una base sólida para el plan de acción.
+  p1_video_url: https://www.youtube.com/watch?v=ZdFpM6cOlpQ
+  p1_media_type: video
+  p1_title: Análisis y Diagnóstico 360°
+  p1_content: >-
+    
     Cualquier estrategia exitosa comienza con entender dónde estás y a dónde quieres llegar. Realizamos una auditoría exhaustiva de tu presencia digital actual, incluyendo el rendimiento de tu sitio web, análisis de SEO técnico, presencia en redes sociales y la efectividad de tus campañas publicitarias. Estudiamos a tu competencia y definimos con precisión a tu cliente ideal (buyer persona). Este diagnóstico profundo nos permite identificar los cuellos de botella que frenan tu crecimiento y las oportunidades ocultas que aún no has explotado, sentando una base sólida para el plan de acción.
   p1_image: ../../assets/uploads/2-análisis-y-diagnóstico-360.png
   p2_image: ../../assets/uploads/3-estrategia-personalizada-y-hoja-de-ruta.png
