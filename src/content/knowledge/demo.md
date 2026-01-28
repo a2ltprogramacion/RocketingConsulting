@@ -43,7 +43,7 @@ content_blocks:
     plazo.
   p3_image: ../../assets/uploads/4-ejecución-medición-y-optimización-continua.png
 category: Curso
-order: 2
+order: 0
 ---
 
 Contenido de prueba.
