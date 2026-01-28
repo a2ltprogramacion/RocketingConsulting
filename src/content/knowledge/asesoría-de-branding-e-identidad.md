@@ -31,10 +31,11 @@ content_blocks:
 
 
     Traducimos tu estrategia en un lenguaje visual impactante. Creamos (o rediseñamos) los elementos clave de tu identidad: un logotipo memorable, una paleta de colores que evoque las emociones correctas, y una selección tipográfica que refleje tu personalidad. Desarrollamos un sistema visual completo que se adapte a todos tus puntos de contacto, desde tu sitio web y redes sociales hasta tus tarjetas de presentación y empaques, asegurando que tu marca se vea profesional y coherente en cualquier contexto.
+  p1_video_url: https://www.youtube.com/watch?v=1kcxUhjuW_0
+  p1_media_type: video
+  p1_title: Estrategia y Fundamentos de Marca
   p1_content: >-
-    **Estrategia y Fundamentos de Marca:**
-
-
+    
 
     Antes de diseñar, necesitamos entender. Realizamos una inmersión profunda en la esencia de tu negocio para definir tu propósito (por qué existes), tu visión (a dónde quieres llegar), tus valores (en qué crees) y tu personalidad de marca. Analizamos a tu audiencia ideal y a tu competencia para encontrar ese espacio único en el mercado donde tu marca puede brillar con luz propia. Esta base estratégica es fundamental para asegurar que cada decisión visual y comunicacional que tomemos a continuación esté alineada con tus objetivos de negocio.
   p1_image: ../../assets/uploads/2-estrategia-y-fundamentos-de-marca.png
