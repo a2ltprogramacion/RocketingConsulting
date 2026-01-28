@@ -10,8 +10,7 @@ description: No construimos simples páginas web; desarrollamos infraestructuras
   operativas en software de alto rendimiento diseñado para crecer con tu
   negocio.
 content_blocks:
-  p1_image_alt:
-    Un desarrollador trabajando en un monitor que muestra un diagrama
+  p1_image_alt: Un desarrollador trabajando en un monitor que muestra un diagrama
     complejo de arquitectura en la nube con microservicios, bases de datos y
     balanceadores de carga.
   p2_image_alt: Un laptop, una tableta y un smartphone mostrando la misma
@@ -30,15 +29,20 @@ content_blocks:
 
 
     La programación no es solo lógica de servidor; es la interfaz con tu cliente. Asesoramos en la creación de experiencias de usuario (UX) que guían al visitante de forma natural hacia tus objetivos de negocio. Optimizamos los tiempos de carga (Core Web Vitals) y aseguramos una adaptabilidad total en dispositivos móviles. Cada componente visual se desarrolla pensando en la facilidad de uso y en minimizar la fricción en el embudo de ventas, convirtiendo el código en una herramienta de marketing directa.
-  p1_content: >-
-    **Arquitectura de Sistemas y Escalabilidad:**
-
-
-    En esta fase de la consultoría, nos enfocamos en el "motor" de tu negocio. Analizamos tus requerimientos de carga y proyecciones de crecimiento para diseñar una arquitectura que no solo funcione hoy, sino que sea capaz de escalar mañana sin degradar el rendimiento. Implementamos patrones de diseño avanzados y estructuras de bases de datos optimizadas, asegurando que cada línea de código contribuya a una plataforma rápida, estable y fácil de mantener.
+  p1_video_url: https://www.youtube.com/watch?v=QoC4RxNIs5M
+  p1_media_type: video
+  p1_title: Arquitectura de Sistemas y Escalabilidad
+  p1_content: En esta fase de la consultoría, nos enfocamos en el "motor" de tu
+    negocio. Analizamos tus requerimientos de carga y proyecciones de
+    crecimiento para diseñar una arquitectura que no solo funcione hoy, sino que
+    sea capaz de escalar mañana sin degradar el rendimiento. Implementamos
+    patrones de diseño avanzados y estructuras de bases de datos optimizadas,
+    asegurando que cada línea de código contribuya a una plataforma rápida,
+    estable y fácil de mantener.
   p1_image: ../../assets/uploads/2-arquitectura-de-sistemas-y-escalabilidad.png
   p2_image: ../../assets/uploads/3-desarrollo-orientado-a-la-conversión-u_ui-estratégico-.png
   conclusion: >-
-
+    
     Nuestra Consultoría Técnica en Programación Web eleva tu presencia digital de un sitio estándar a una solución de ingeniería de élite. Obtendrás una plataforma que no solo luce bien, sino que es el pilar tecnológico que tu empresa necesita para dominar el mercado digital con seguridad y eficiencia.
   p3_image: ../../assets/uploads/4-integraciones-apis-y-seguridad-de-grado-empresarial.png
 category: Asesoría
