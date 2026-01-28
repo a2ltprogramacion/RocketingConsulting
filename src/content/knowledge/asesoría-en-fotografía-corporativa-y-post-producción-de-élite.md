@@ -31,10 +31,10 @@ content_blocks:
   p1_video_url: https://www.youtube.com/watch?v=gBujdv65g54
   p1_media_type: video
   p1_title: Dirección de Arte y Composición Estratégica
-  p1_content: >-
-    
-
-    Una gran imagen nace en la planificación. Asesoramos en la creación de una narrativa visual coherente, donde cada ángulo y encuadre responda a los objetivos de posicionamiento de tu empresa, eliminando la improvisación y garantizando un impacto visual inmediato.
+  p1_content: Una gran imagen nace en la planificación. Asesoramos en la creación
+    de una narrativa visual coherente, donde cada ángulo y encuadre responda a
+    los objetivos de posicionamiento de tu empresa, eliminando la improvisación
+    y garantizando un impacto visual inmediato.
   p1_image: ../../assets/uploads/2-dirección-de-arte-y-composición-estratégica.png
   p2_image: ../../assets/uploads/3-dominio-de-la-iluminación-técnica.png
   conclusion: Esta asesoría dota a tu empresa de una identidad visual propia y
