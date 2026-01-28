@@ -14,7 +14,8 @@ content_blocks:
   p2_image_alt: Consultor de fotografía explicando esquemas de iluminación
     profesional a un cliente corporativo en una oficina, demostrando dominio
     técnico.
-  p3_image_alt: Proceso de retoque digital de alta gama en un monitor profesional,
+  p3_image_alt:
+    Proceso de retoque digital de alta gama en un monitor profesional,
     mostrando técnicas avanzadas de edición de piel y color en Photoshop.
   p3_text: >-
     Post-Producción y Retoque de Alta Gama:
@@ -41,6 +42,6 @@ content_blocks:
     estableciendo un estándar de calidad que tus clientes percibirán como
     excelencia absoluta.
   p3_image: ../../assets/uploads/4-post-producción-y-retoque-de-alta-gama.png
-category: Curso
+category: Asesoría
 order: 5
 ---
