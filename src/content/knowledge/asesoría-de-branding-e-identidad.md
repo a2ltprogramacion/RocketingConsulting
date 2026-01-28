@@ -46,5 +46,5 @@ content_blocks:
     sostenible de tu negocio.
   p3_image: ../../assets/uploads/4-voz-y-mensaje-de-marca.png
 category: Curso
-order: 3
+order: 4
 ---
