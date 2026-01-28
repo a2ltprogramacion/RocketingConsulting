@@ -28,13 +28,13 @@ content_blocks:
 
 
     Basados en los datos del diagnóstico, diseñamos un plan de marketing digital a la medida de tu negocio. No creemos en soluciones genéricas; cada acción está alineada con tus KPIs y presupuesto. Definimos los canales más efectivos (SEO, SEM, redes sociales, email marketing), creamos un plan de contenidos relevante para tu audiencia y establecemos un embudo de conversión (funnel) optimizado para maximizar las ventas. Te entregamos una hoja de ruta clara, con fases de implementación y objetivos trimestrales, para que siempre sepas cuál es el siguiente paso hacia el éxito.
-  p1_content: >-
+  p1_text: >-
     **Análisis y Diagnóstico 360°:**
 
 
 
     Cualquier estrategia exitosa comienza con entender dónde estás y a dónde quieres llegar. Realizamos una auditoría exhaustiva de tu presencia digital actual, incluyendo el rendimiento de tu sitio web, análisis de SEO técnico, presencia en redes sociales y la efectividad de tus campañas publicitarias. Estudiamos a tu competencia y definimos con precisión a tu cliente ideal (buyer persona). Este diagnóstico profundo nos permite identificar los cuellos de botella que frenan tu crecimiento y las oportunidades ocultas que aún no has explotado, sentando una base sólida para el plan de acción.
-  p1_video_url: https://www.youtube.com/watch?v=ZdFpM6cOlpQ
+  p1_video_url: https://www.youtube.com/watch?v=Ctd6BTuZmjA
   p1_media_type: video
   p1_title: Análisis y Diagnóstico 360°
   p1_content: >-
