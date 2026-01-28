@@ -8,7 +8,8 @@ description: No se trata de estar en internet, sino de conquistar tu mercado.
   Transformamos tus objetivos comerciales en un plan de acción digital medible,
   escalable y enfocado en el retorno de inversión (ROI).
 content_blocks:
-  p1_image_alt: Un equipo de consultores en una sala de juntas moderna analizando
+  p1_image_alt:
+    Un equipo de consultores en una sala de juntas moderna analizando
     datos de marketing y rendimiento en una gran pantalla táctil.
   p2_image_alt: Un consultor senior presentando una hoja de ruta estratégica
     (roadmap) a un cliente en una sala de reuniones, con un enfoque claro en
@@ -42,7 +43,7 @@ content_blocks:
     activo digital sostenible que impulse el crecimiento de tu empresa a largo
     plazo.
   p3_image: ../../assets/uploads/4-ejecución-medición-y-optimización-continua.png
-category: Curso
+category: Asesoría
 order: 0
 ---
 

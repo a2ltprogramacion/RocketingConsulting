@@ -10,7 +10,8 @@ description: No construimos simples páginas web; desarrollamos infraestructuras
   operativas en software de alto rendimiento diseñado para crecer con tu
   negocio.
 content_blocks:
-  p1_image_alt: Un desarrollador trabajando en un monitor que muestra un diagrama
+  p1_image_alt:
+    Un desarrollador trabajando en un monitor que muestra un diagrama
     complejo de arquitectura en la nube con microservicios, bases de datos y
     balanceadores de carga.
   p2_image_alt: Un laptop, una tableta y un smartphone mostrando la misma
@@ -37,9 +38,9 @@ content_blocks:
   p1_image: ../../assets/uploads/2-arquitectura-de-sistemas-y-escalabilidad.png
   p2_image: ../../assets/uploads/3-desarrollo-orientado-a-la-conversión-u_ui-estratégico-.png
   conclusion: >-
-    
+
     Nuestra Consultoría Técnica en Programación Web eleva tu presencia digital de un sitio estándar a una solución de ingeniería de élite. Obtendrás una plataforma que no solo luce bien, sino que es el pilar tecnológico que tu empresa necesita para dominar el mercado digital con seguridad y eficiencia.
   p3_image: ../../assets/uploads/4-integraciones-apis-y-seguridad-de-grado-empresarial.png
-category: Curso
+category: Asesoría
 order: 4
 ---

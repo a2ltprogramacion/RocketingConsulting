@@ -45,6 +45,6 @@ content_blocks:
     competencia y cobrar lo que realmente vales, impulsando el crecimiento
     sostenible de tu negocio.
   p3_image: ../../assets/uploads/4-voz-y-mensaje-de-marca.png
-category: Curso
+category: Asesoría
 order: 4
 ---
