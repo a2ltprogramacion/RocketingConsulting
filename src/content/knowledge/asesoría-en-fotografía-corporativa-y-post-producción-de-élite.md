@@ -14,8 +14,7 @@ content_blocks:
   p2_image_alt: Consultor de fotografía explicando esquemas de iluminación
     profesional a un cliente corporativo en una oficina, demostrando dominio
     técnico.
-  p3_image_alt:
-    Proceso de retoque digital de alta gama en un monitor profesional,
+  p3_image_alt: Proceso de retoque digital de alta gama en un monitor profesional,
     mostrando técnicas avanzadas de edición de piel y color en Photoshop.
   p3_text: >-
     Post-Producción y Retoque de Alta Gama:
@@ -29,10 +28,11 @@ content_blocks:
 
 
     La luz es el lenguaje de la autoridad. Te asesoramos en el uso de esquemas de iluminación complejos para entornos corporativos, logrando que tus retratos y productos proyecten una estética premium, nítida y profesional en cualquier condición ambiental.
+  p1_video_url: https://www.youtube.com/watch?v=gBujdv65g54
+  p1_media_type: video
+  p1_title: Dirección de Arte y Composición Estratégica
   p1_content: >-
-    Dirección de Arte y Composición Estratégica:
-
-
+    
 
     Una gran imagen nace en la planificación. Asesoramos en la creación de una narrativa visual coherente, donde cada ángulo y encuadre responda a los objetivos de posicionamiento de tu empresa, eliminando la improvisación y garantizando un impacto visual inmediato.
   p1_image: ../../assets/uploads/2-dirección-de-arte-y-composición-estratégica.png
