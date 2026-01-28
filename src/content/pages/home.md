@@ -56,12 +56,12 @@ contact:
     control de tu presencia digital hoy mismo.
   copyright: © 2026 Rocketing Consulting. Todos los derechos reservados.
   social:
-    facebook: https://facebook.com
+    facebook: ""
     instagram: https://instagram.com
-    linkedin: https://linkedin.com
-    twitter: https://x.vom
-    youtube: https://youtube.com
-    tiktok: https://tiktok.com
+    linkedin: ""
+    twitter: ""
+    youtube: ""
+    tiktok: https://www.tiktok.com/@rocketing.com
   phone: "+584122184596"
   footer_logo: ../../assets/uploads/logo-tranparency.png
   address: Valencia, Venezuela
