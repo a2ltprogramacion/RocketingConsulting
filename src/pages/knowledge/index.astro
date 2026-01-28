@@ -59,8 +59,8 @@ const getCategoryColor = (category: string | undefined) => {
             src={heroBg}
             alt="Background Knowledge"
             class="w-full h-full object-cover opacity-90"
-            width={1920}
-            height={600}
+            width={2816}
+            height={1536}
           />
           <div class="absolute inset-0 bg-linear-to-t from-[#0f1115] via-[#0f1115]/80 to-transparent" />
         </div>
@@ -91,13 +91,13 @@ const getCategoryColor = (category: string | undefined) => {
             <a href={`/knowledge/${item.slug}`} class="group block h-full">
               <article class="h-full flex flex-col bg-surface/30 border border-white/5 rounded-2xl overflow-hidden hover:border-secondary/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(20,184,166,0.1)]">
                 {/* Imagen con Zoom Effect */}
-                <div class="relative aspect-4/3 overflow-hidden">
+                <div class="relative h-64 overflow-hidden">
                   <Image
                     src={item.data.main_image}
                     alt={item.data.main_image_alt || item.data.title}
                     class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
-                    width={800}
-                    height={600}
+                    width={2816}
+                    height={1536}
                   />
 
                   {/* Badge de Categoría */}

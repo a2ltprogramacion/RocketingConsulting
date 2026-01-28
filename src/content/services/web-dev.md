@@ -8,7 +8,7 @@ description: Pasamos de las métricas de vanidad al impacto de negocio real.
   Ejecutamos soluciones estratégicas diseñadas exclusivamente para alcanzar KPIs
   críticos y maximizar tu retorno de inversión (ROI).
 content_blocks:
-  p1_text: >-
+  p1_content: >-
     **Toma de Decisiones Basada en Datos (Data-Driven):**
 
 

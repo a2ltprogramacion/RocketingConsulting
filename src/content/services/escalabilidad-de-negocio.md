@@ -8,7 +8,7 @@ description: No solo te ayudamos a crecer, diseñamos la infraestructura para qu
   tu crecimiento sea sostenible y exponencial. Creamos la hoja de ruta necesaria
   para proyectar tu empresa hacia nuevas oportunidades y mercados.
 content_blocks:
-  p1_text: >-
+  p1_content: >-
     **Arquitecturas Digitales Escalables:**
 
 

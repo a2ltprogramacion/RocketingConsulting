@@ -26,12 +26,15 @@ const detailedContentSchema = ({ image }: { image: any }) => z.object({
   // 3. Estructura de Diseño en "Z" (Evolución Nivel 2: Authority)
   // -------------------------------------------------------------
   content_blocks: z.object({
-    // Bloque 1: Texto Izquierda - Imagen Derecha
-    p1_text: z.string().optional(),
+    // Bloque 1: Texto + Video o Imagen Centrado
+    p1_title: z.string().optional(),
+    p1_content: z.string().optional(),
+    p1_media_type: z.enum(["image", "video"]).default("image"), // Nuevo selector
     p1_image: image().optional(),
     p1_image_alt: z.string().optional(),
+    p1_video_url: z.string().url().optional(), // Link de YouTube
 
-    // Bloque 2: Imagen Izquierda - Texto Derecha
+    // Bloque 2:  Imagen Izquierda - Texto Derecha
     p2_text: z.string().optional(),
     p2_image: image().optional(),
     p2_image_alt: z.string().optional(),

@@ -30,7 +30,7 @@ content_blocks:
 
 
     La programación no es solo lógica de servidor; es la interfaz con tu cliente. Asesoramos en la creación de experiencias de usuario (UX) que guían al visitante de forma natural hacia tus objetivos de negocio. Optimizamos los tiempos de carga (Core Web Vitals) y aseguramos una adaptabilidad total en dispositivos móviles. Cada componente visual se desarrolla pensando en la facilidad de uso y en minimizar la fricción en el embudo de ventas, convirtiendo el código en una herramienta de marketing directa.
-  p1_text: >-
+  p1_content: >-
     **Arquitectura de Sistemas y Escalabilidad:**
 
 

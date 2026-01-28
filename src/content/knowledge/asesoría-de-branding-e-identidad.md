@@ -31,7 +31,7 @@ content_blocks:
 
 
     Traducimos tu estrategia en un lenguaje visual impactante. Creamos (o rediseñamos) los elementos clave de tu identidad: un logotipo memorable, una paleta de colores que evoque las emociones correctas, y una selección tipográfica que refleje tu personalidad. Desarrollamos un sistema visual completo que se adapte a todos tus puntos de contacto, desde tu sitio web y redes sociales hasta tus tarjetas de presentación y empaques, asegurando que tu marca se vea profesional y coherente en cualquier contexto.
-  p1_text: >-
+  p1_content: >-
     **Estrategia y Fundamentos de Marca:**
 
 

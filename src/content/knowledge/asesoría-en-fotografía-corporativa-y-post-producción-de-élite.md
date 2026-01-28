@@ -29,7 +29,7 @@ content_blocks:
 
 
     La luz es el lenguaje de la autoridad. Te asesoramos en el uso de esquemas de iluminación complejos para entornos corporativos, logrando que tus retratos y productos proyecten una estética premium, nítida y profesional en cualquier condición ambiental.
-  p1_text: >-
+  p1_content: >-
     Dirección de Arte y Composición Estratégica:
 
 

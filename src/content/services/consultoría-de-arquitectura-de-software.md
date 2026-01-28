@@ -30,7 +30,7 @@ content_blocks:
 
 
     No solo hablamos de innovación, la vivimos. Nuestro arsenal tecnológico incluye las herramientas más avanzadas del mercado, desde plataformas de análisis predictivo impulsadas por inteligencia artificial hasta software de automatización de marketing de primer nivel. Estas herramientas nos permiten procesar grandes volúmenes de datos para descubrir insights ocultos, automatizar tareas repetitivas y personalizar la experiencia del cliente a una escala inimaginable hace unos años. Al integrar estas tecnologías en tu estrategia, no solo optimizamos tus procesos, sino que te damos una ventaja competitiva decisiva.
-  p1_text: >-
+  p1_content: >-
     **Metodologías Ágiles y Colaborativas:**
 
 

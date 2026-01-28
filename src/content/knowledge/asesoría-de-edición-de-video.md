@@ -29,7 +29,7 @@ content_blocks:
 
 
     Un buen video no es solo una sucesión de imágenes bonitas; es una historia bien contada. Te ayudamos a estructurar tus videos para que tengan un inicio que enganche, un desarrollo que mantenga el interés y un cierre que llame a la acción. Trabajaremos en el ritmo, la selección musical, el uso de b-roll y la integración de gráficos para reforzar tu mensaje. Aprenderás a utilizar el lenguaje audiovisual para provocar emociones y construir una conexión auténtica con tu audiencia, diferenciando tu marca de la competencia.
-  p1_text: >-
+  p1_content: >-
     **Dominio Técnico y Flujo de Trabajo Profesional:**
 
 

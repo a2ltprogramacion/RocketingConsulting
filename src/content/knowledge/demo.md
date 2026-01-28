@@ -29,7 +29,7 @@ content_blocks:
 
 
     Basados en los datos del diagnóstico, diseñamos un plan de marketing digital a la medida de tu negocio. No creemos en soluciones genéricas; cada acción está alineada con tus KPIs y presupuesto. Definimos los canales más efectivos (SEO, SEM, redes sociales, email marketing), creamos un plan de contenidos relevante para tu audiencia y establecemos un embudo de conversión (funnel) optimizado para maximizar las ventas. Te entregamos una hoja de ruta clara, con fases de implementación y objetivos trimestrales, para que siempre sepas cuál es el siguiente paso hacia el éxito.
-  p1_text: >-
+  p1_content: >-
     **Análisis y Diagnóstico 360°:**
 
 

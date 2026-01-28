@@ -530,7 +530,7 @@ collections:
         fields:
           - {
               label: "Bloque 1: Texto",
-              name: "p1_text",
+              name: "p1_content",
               widget: "markdown",
               required: false,
               hint: "Primer párrafo detallado. Describe el problema.",
@@ -652,23 +652,29 @@ collections:
         collapsed: false
         hint: "Redacta tu caso de estudio o artículo aquí."
         fields:
+          - { label: "Bloque 1: Título", name: "p1_title", widget: "string" }
           - {
-              label: "Bloque 1: Texto",
-              name: "p1_text",
+              label: "Bloque 1: Contenido",
+              name: "p1_content",
               widget: "markdown",
-              required: false,
             }
+          - label: "Bloque 1: Tipo de Media"
+            name: "p1_media_type"
+            widget: "select"
+            options: ["image", "video"]
+            default: "image"
           - {
-              label: "Imagen Bloque 1",
+              label: "Bloque 1: Imagen",
               name: "p1_image",
               widget: "image",
               required: false,
             }
           - {
-              label: "Alt Imagen 1",
-              name: "p1_image_alt",
+              label: "Bloque 1: URL Video (YouTube)",
+              name: "p1_video_url",
               widget: "string",
               required: false,
+              hint: "Ej: https://www.youtube.com/watch?v=...",
             }
           - {
               label: "Bloque 2: Texto",

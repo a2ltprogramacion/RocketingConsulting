@@ -34,13 +34,13 @@ const featuredItems = sortedKnowledge.slice(0, 3);
         featuredItems.map((item: any) => (
           <a
             href={`/knowledge/${item.slug}`}
-            class="relative h-80 rounded-2xl overflow-hidden group border border-white/5 block hover:shadow-[0_0_30px_rgba(20,184,166,0.1)] transition-all"
+            class="relative h-64 rounded-2xl overflow-hidden group border border-white/5 block hover:shadow-[0_0_30px_rgba(20,184,166,0.1)] transition-all"
           >
             <Image
               src={item.data.main_image}
               alt={item.data.main_image_alt || item.data.title}
-              width={800}
-              height={600}
+              width={2816}
+              height={1536}
               class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />

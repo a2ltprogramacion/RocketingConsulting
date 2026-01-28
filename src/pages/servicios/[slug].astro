@@ -28,7 +28,7 @@ const {
 // 2. Data Global
 const homePage = await getEntry("pages", "home");
 const contactData = homePage?.data.contact;
-const siteName = homePage?.data.seo.site_name || "A2LT";
+const siteName = homePage?.data?.seo?.site_name || "A2LT Knowledge";
 const cleanPhone = contactData?.phone.replace(/[^0-9]/g, "") || "";
 const waLink = `https://wa.me/${cleanPhone}`;
 
@@ -77,10 +77,10 @@ const seoData = {
       content_blocks && (
         <section class="py-10 space-y-24 bg-background">
           {/* BLOQUE 1 */}
-          {content_blocks.p1_text && (
+          {content_blocks.p1_content && (
             <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div class="prose prose-invert max-w-none text-gray-400">
-                <div set:html={content_blocks.p1_text} />
+                <div set:html={content_blocks.p1_content} />
               </div>
               {content_blocks.p1_image && (
                 <div class="rounded-2xl overflow-hidden border border-white/10">
