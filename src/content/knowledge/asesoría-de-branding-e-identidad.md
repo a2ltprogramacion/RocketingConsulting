@@ -5,10 +5,10 @@ main_image_alt: Miniatura de estilo YouTube con un consultor en traje azul
   señalando una pantalla con elementos de marca (logos, tipografía, paleta de
   colores), con el texto "ASESORÍA DE BRANDING" y "CONSTRUYE UNA MARCA
   INOLVIDABLE".
-description: Una marca poderosa es mucho más que un logo bonito; es la promesa
-  que le haces a tus clientes y la experiencia que les entregas. Te ayudamos a
-  definir tu ADN corporativo, una identidad visual y comunicar tu valor único
-  para que tu negocio sea inolvidable.
+description: Una marca es mucho más que un logo bonito; es la promesa que le
+  haces a tus clientes y la experiencia que les entregas. Te ayudamos a definir
+  tu ADN corporativo, una identidad visual y comunicar tu valor único para que
+  tu negocio sea inolvidable.
 content_blocks:
   p1_image_alt: Un equipo de estrategas de marca en una oficina moderna
     discutiendo una guía de estilo de marca en un monitor grande, con paletas de
