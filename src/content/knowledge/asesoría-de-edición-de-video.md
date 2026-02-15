@@ -1,6 +1,6 @@
 ---
 title: Asesoría de Edición de Video
-main_image: ../../assets/uploads/1-asesoría-de-edición-de-video.png
+main_image: ../../assets/uploads/1-asesoría-de-edición-de-video.webp
 main_image_alt: Miniatura de estilo YouTube con un consultor en traje señalando
   una compleja línea de tiempo de edición de video en una pantalla, con el texto
   "ASESORÍA DE EDICIÓN DE VIDEO" y "NARRATIVA VISUAL DE ALTO IMPACTO"
@@ -12,7 +12,8 @@ content_blocks:
   p1_image_alt: Un editor de video profesional trabajando en una estación de
     edición con un teclado retroiluminado, una superficie de control de color y
     un monitor que muestra una línea de tiempo compleja.
-  p2_image_alt: Un consultor y un cliente revisando juntos un video corporativo en
+  p2_image_alt:
+    Un consultor y un cliente revisando juntos un video corporativo en
     una pantalla grande en una oficina moderna, discutiendo la narrativa visual.
   p3_image_alt: Una mano sosteniendo un smartphone que muestra un video de alta
     calidad en una plataforma de redes sociales como Instagram Reels, con
@@ -39,14 +40,15 @@ content_blocks:
     color, mezcla de audio y creación de efectos visuales sutiles pero
     impactantes. El objetivo es que domines las herramientas para que la técnica
     esté al servicio de tu creatividad, no sea un obstáculo.
-  p1_image: ../../assets/uploads/2-dominio-técnico-y-flujo-de-trabajo-profesional.png
-  p2_image: ../../assets/uploads/3-storytelling-y-narrativa-audiovisual.png
-  conclusion: Nuestra Asesoría de Edición de Video no se trata de enseñarte a usar
+  p1_image: ../../assets/uploads/2-dominio-técnico-y-flujo-de-trabajo-profesional.webp
+  p2_image: ../../assets/uploads/3-storytelling-y-narrativa-audiovisual.webp
+  conclusion:
+    Nuestra Asesoría de Edición de Video no se trata de enseñarte a usar
     un software, sino de empoderarte para que utilices el video como una
     herramienta estratégica de comunicación y ventas. Elevarás la calidad de tus
     producciones, contarás historias que inspiren y convertirás a tus
     espectadores en clientes leales.
-  p3_image: ../../assets/uploads/4-optimización-para-plataformas-y-formatos.png
+  p3_image: ../../assets/uploads/4-optimización-para-plataformas-y-formatos.webp
 category: Asesoría
 order: 1
 ---

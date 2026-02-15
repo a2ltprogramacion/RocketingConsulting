@@ -1,6 +1,6 @@
 ---
 title: Asesoría de Branding e Identidad
-main_image: ../../assets/uploads/1-asesoría-de-branding-e-identidad.png
+main_image: ../../assets/uploads/1-asesoría-de-branding-e-identidad.webp
 main_image_alt: Miniatura de estilo YouTube con un consultor en traje azul
   señalando una pantalla con elementos de marca (logos, tipografía, paleta de
   colores), con el texto "ASESORÍA DE BRANDING" y "CONSTRUYE UNA MARCA
@@ -35,17 +35,17 @@ content_blocks:
   p1_media_type: video
   p1_title: Estrategia y Fundamentos de Marca
   p1_content: >-
-    
+
 
     Antes de diseñar, necesitamos entender. Realizamos una inmersión profunda en la esencia de tu negocio para definir tu propósito (por qué existes), tu visión (a dónde quieres llegar), tus valores (en qué crees) y tu personalidad de marca. Analizamos a tu audiencia ideal y a tu competencia para encontrar ese espacio único en el mercado donde tu marca puede brillar con luz propia. Esta base estratégica es fundamental para asegurar que cada decisión visual y comunicacional que tomemos a continuación esté alineada con tus objetivos de negocio.
-  p1_image: ../../assets/uploads/2-estrategia-y-fundamentos-de-marca.png
-  p2_image: ../../assets/uploads/3-diseño-de-identidad-visual.png
+  p1_image: ../../assets/uploads/2-estrategia-y-fundamentos-de-marca.webp
+  p2_image: ../../assets/uploads/3-diseño-de-identidad-visual.webp
   conclusion: Con nuestra Asesoría de Branding e Identidad, dejarás de ser una
     empresa más para convertirte en una marca memorable. Construirás una base
     sólida que te permitirá atraer a los clientes correctos, diferenciarte de la
     competencia y cobrar lo que realmente vales, impulsando el crecimiento
     sostenible de tu negocio.
-  p3_image: ../../assets/uploads/4-voz-y-mensaje-de-marca.png
+  p3_image: ../../assets/uploads/4-voz-y-mensaje-de-marca.webp
 category: Asesoría
 order: 4
 ---

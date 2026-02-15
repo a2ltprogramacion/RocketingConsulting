@@ -1,0 +1,170 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Pasarela de Pago">
+  <div class="container mx-auto px-4 py-8 max-w-2xl">
+    <h1 class="text-3xl font-bold mb-8 text-center text-primary">
+      Pasarela de Pago Segura
+    </h1>
+
+    <div
+      id="payment-stage"
+      class="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700"
+    >
+      <h2 class="text-xl font-semibold mb-4">Detalles del Pago</h2>
+      <p class="mb-6 text-gray-600 dark:text-gray-300">
+        Simulación de transferencia o pago con tarjeta.
+      </p>
+
+      <form id="payment-form" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-1"
+            >Banco de Procedencia / Emisor</label
+          >
+          <input
+            required
+            type="text"
+            name="banco"
+            class="w-full p-2 border rounded dark:bg-slate-700 dark:border-gray-600"
+            placeholder="Ej. Banco Mercantil"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1"
+            >Número de Comprobante / Tarjeta</label
+          >
+          <input
+            required
+            type="text"
+            name="comprobante"
+            class="w-full p-2 border rounded dark:bg-slate-700 dark:border-gray-600"
+            placeholder="0000-1234-5678"
+          />
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">Monto ($)</label>
+            <input
+              required
+              type="number"
+              name="monto"
+              class="w-full p-2 border rounded dark:bg-slate-700 dark:border-gray-600"
+              placeholder="50.00"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Fecha</label>
+            <input
+              required
+              type="date"
+              name="fecha"
+              class="w-full p-2 border rounded dark:bg-slate-700 dark:border-gray-600"
+            />
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors mt-4"
+        >
+          Confirmar Pago
+        </button>
+      </form>
+    </div>
+
+    <div
+      id="biling-stage"
+      class="hidden bg-white dark:bg-slate-800 p-8 rounded-lg shadow-xl border border-green-500 mt-8"
+    >
+      <div class="text-center mb-6">
+        <div class="text-5xl mb-2">✅</div>
+        <h2 class="text-2xl font-bold text-green-600">¡Pago Confirmado!</h2>
+        <p class="text-gray-600">
+          Por favor cree su usuario para acceder a las consultorías.
+        </p>
+      </div>
+
+      <form id="register-form" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">Usuario</label>
+          <input
+            required
+            type="text"
+            name="username"
+            class="w-full p-2 border rounded dark:bg-slate-700 dark:border-gray-600"
+            placeholder="usuario123"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Contraseña</label>
+          <input
+            required
+            type="password"
+            name="password"
+            class="w-full p-2 border rounded dark:bg-slate-700 dark:border-gray-600"
+            placeholder="********"
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition-colors mt-4"
+        >
+          Crear Cuenta y Acceder
+        </button>
+      </form>
+      <p id="register-error" class="text-red-500 mt-2 hidden text-center"></p>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const paymentForm = document.getElementById("payment-form");
+  const paymentStage = document.getElementById("payment-stage");
+  const billingStage = document.getElementById("biling-stage");
+  const registerForm = document.getElementById("register-form");
+  const registerError = document.getElementById("register-error");
+
+  if (paymentForm && paymentStage && billingStage) {
+    paymentForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Procesando pago simulado...");
+      setTimeout(() => {
+        paymentStage.classList.add("opacity-50", "pointer-events-none");
+        billingStage.classList.remove("hidden");
+      }, 1000);
+    });
+  }
+
+  if (registerForm) {
+    registerForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      // @ts-ignore
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData);
+
+      try {
+        const response = await fetch("/api/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          window.location.href = "/login?registered=true";
+        } else {
+          const err = await response.json();
+          throw new Error(err.message || "Error al registrar");
+        }
+      } catch (error: any) {
+        if (registerError) {
+          registerError.textContent = error.message;
+          registerError.classList.remove("hidden");
+        }
+      }
+    });
+  }
+</script>

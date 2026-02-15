@@ -1,6 +1,6 @@
 ---
 title: Innovación Continua.
-main_image: ../../assets/uploads/1-innovación-continua.png
+main_image: ../../assets/uploads/1-innovación-continua.webp
 main_image_alt: Ícono de un bombillo azul brillante con un engranaje en su
   interior sobre un fondo de circuito digital, simbolizando la innovación
   tecnológica y la ejecución estratégica.
@@ -36,13 +36,13 @@ content_blocks:
 
 
     En un entorno digital que cambia a la velocidad de la luz, la rigidez es el enemigo del progreso. Por eso, adoptamos metodologías ágiles que nos permiten iterar rápidamente, adaptarnos a los cambios del mercado y fomentar una colaboración fluida. Nuestros equipos trabajan en sprints, utilizando tableros visuales y sesiones de retroalimentación constante para garantizar que cada paso de tu proyecto esté alineado con tus objetivos comerciales. Esta flexibilidad nos permite pivotar estrategias en tiempo real, asegurando que siempre estemos en el camino más eficiente hacia el éxito.
-  p1_image: ../../assets/uploads/2-metodologías-ágiles-colaborativas.png
-  p2_image: ../../assets/uploads/3-herramientas-última-generación.png
+  p1_image: ../../assets/uploads/2-metodologías-ágiles-colaborativas.webp
+  p2_image: ../../assets/uploads/3-herramientas-última-generación.webp
   conclusion: En un mundo donde la única constante es el cambio, la innovación
     continua no es un lujo, es una necesidad para la supervivencia y el
     crecimiento empresarial. En Rocketing Consulting, nos aseguramos de que tu
     empresa no solo se mantenga al día, sino que lidere el camino.
-  p3_image: ../../assets/uploads/4-estrategias-prueba-futuro.png
+  p3_image: ../../assets/uploads/4-estrategias-prueba-futuro.webp
 price: ""
 order: 1
 ---

@@ -1,6 +1,6 @@
 ---
 title: Consultoría Técnica en Programación y Arquitectura Web
-main_image: ../../assets/uploads/1-consultoría-técnica-en-programación-y-arquitectura-web.png
+main_image: ../../assets/uploads/1-consultoría-técnica-en-programación-y-arquitectura-web.webp
 main_image_alt: Miniatura de estilo YouTube con una consultora profesional en un
   centro de datos, señalando un monitor con código y un diagrama de base de
   datos, con el texto "CONSULTORÍA DE PROGRAMACIÓN WEB" y "ARQUITECTURA Y
@@ -10,7 +10,8 @@ description: No construimos simples páginas web; desarrollamos infraestructuras
   operativas en software de alto rendimiento diseñado para crecer con tu
   negocio.
 content_blocks:
-  p1_image_alt: Un desarrollador trabajando en un monitor que muestra un diagrama
+  p1_image_alt:
+    Un desarrollador trabajando en un monitor que muestra un diagrama
     complejo de arquitectura en la nube con microservicios, bases de datos y
     balanceadores de carga.
   p2_image_alt: Un laptop, una tableta y un smartphone mostrando la misma
@@ -39,12 +40,12 @@ content_blocks:
     patrones de diseño avanzados y estructuras de bases de datos optimizadas,
     asegurando que cada línea de código contribuya a una plataforma rápida,
     estable y fácil de mantener.
-  p1_image: ../../assets/uploads/2-arquitectura-de-sistemas-y-escalabilidad.png
-  p2_image: ../../assets/uploads/3-desarrollo-orientado-a-la-conversión-u_ui-estratégico-.png
+  p1_image: ../../assets/uploads/2-arquitectura-de-sistemas-y-escalabilidad.webp
+  p2_image: ../../assets/uploads/3-desarrollo-orientado-a-la-conversión-u_ui-estratégico-.webp
   conclusion: >-
-    
+
     Nuestra Consultoría Técnica en Programación Web eleva tu presencia digital de un sitio estándar a una solución de ingeniería de élite. Obtendrás una plataforma que no solo luce bien, sino que es el pilar tecnológico que tu empresa necesita para dominar el mercado digital con seguridad y eficiencia.
-  p3_image: ../../assets/uploads/4-integraciones-apis-y-seguridad-de-grado-empresarial.png
+  p3_image: ../../assets/uploads/4-integraciones-apis-y-seguridad-de-grado-empresarial.webp
 category: Asesoría
 order: 4
 ---

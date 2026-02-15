@@ -4,6 +4,12 @@ import { getCollection, getEntry } from "astro:content";
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 
+// Auth Check
+const authToken = Astro.cookies.get("auth_token");
+if (!authToken || !authToken.value) {
+  return Astro.redirect("/login");
+}
+
 // 1. Obtener Items (Artículos/Proyectos)
 const allKnowledge = await getCollection("knowledge");
 const items = allKnowledge.sort((a, b) => a.data.order - b.data.order);

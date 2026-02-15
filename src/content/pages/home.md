@@ -12,14 +12,14 @@ seo:
   meta_title: Rocketing Consulting | Estrategia y Transformación Digital
   meta_description: Consultoría en Marketing Digital, Web y Branding. Impulsamos
     el crecimiento de tu empresa con tecnología y creatividad de alto impacto.
-  social_image: ../../assets/uploads/logo-black.jpeg
+  social_image: ../../assets/uploads/logo-black.webp
   social_image_alt: Logotipo de Rocketing Consulting en dorado y negro,
     transmitiendo elegancia, autoridad y vanguardia tecnológica.
-  favicon: ../../assets/uploads/logo-tranparency-icon.png
+  favicon: ../../assets/uploads/logo-tranparency-icon.webp
 hero:
   bg_variant: image
   bg_color: "#943a3a"
-  image: ../../assets/uploads/demo-hero.jpg
+  image: ../../assets/uploads/demo-hero.webp
   image_alt: Consultores expertos en una oficina moderna analizando métricas de
     crecimiento y dashboards tecnológicos.
   title: Impulsa tu Futuro Digital con Consultoría de Élite.
@@ -30,10 +30,11 @@ hero:
 clients: []
 about:
   title: Aliados Estratégicos en la Era de la Innovación
-  image: ../../assets/uploads/socios.jpeg
+  image: ../../assets/uploads/socios.webp
   image_alt: Fotografía profesional de los socios fundadores de Rocketing
     Consulting, proyectando confianza, experiencia y liderazgo.
-  business_bio: Rocketing Consulting nace en Venezuela con la misión de elevar el
+  business_bio:
+    Rocketing Consulting nace en Venezuela con la misión de elevar el
     estándar de la ejecución digital. No solo asesoramos; nos integramos en la
     estructura de nuestros clientes para resolver problemas complejos de
     visibilidad, tecnología y posicionamiento de marca, convirtiendo desafíos
@@ -42,7 +43,8 @@ about:
   stat_2: Visión Disruptiva
 faq:
   - question: ¿Cómo inician el proceso de consultoría?
-    answer: Realizamos un diagnóstico inicial de 360° para identificar cuellos de
+    answer:
+      Realizamos un diagnóstico inicial de 360° para identificar cuellos de
       botella y oportunidades de mejora antes de proponer una hoja de ruta.
   - question: ¿Trabajan con proyectos internacionales?
     answer: Sí, nuestra metodología de trabajo remoto nos permite asesorar a
@@ -63,7 +65,7 @@ contact:
     youtube: ""
     tiktok: https://www.tiktok.com/@rocketing.com
   phone: "+584122184596"
-  footer_logo: ../../assets/uploads/logo-tranparency.png
+  footer_logo: ../../assets/uploads/logo-tranparency.webp
   address: Valencia, Venezuela
   footer_logo_alt: Logotipo de Rocketing Consulting en dorado y negro,
     transmitiendo elegancia, autoridad y vanguardia tecnológica.
