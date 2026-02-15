@@ -63,6 +63,14 @@ const finalAlt = seo?.social_image_alt || defaultSeo.social_image_alt;
     />
     <meta name="generator" content={Astro.generator} />
 
+    {/* --- GOOGLE FONTS LOADING --- */}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Red+Hat+Display:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <SeoHead
       title={finalTitle}
       description={finalDescription}

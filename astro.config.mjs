@@ -6,6 +6,8 @@ import tailwindcss from '@tailwindcss/vite';
 import netlify from '@astrojs/netlify';
 import react from '@astrojs/react';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   // 1. AGREGA ESTA LÍNEA (Vital para solucionar el error "Invalid URL")
@@ -16,5 +18,5 @@ export default defineConfig({
   },
 
   adapter: netlify(),
-  integrations: [react()]
+  integrations: [react(), sitemap()]
 });
