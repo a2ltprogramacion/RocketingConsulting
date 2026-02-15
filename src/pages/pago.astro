@@ -14,7 +14,7 @@ import Layout from "../layouts/Layout.astro";
     >
       <h2 class="text-xl font-semibold mb-4">Detalles del Pago</h2>
       <p class="mb-6 text-gray-600 dark:text-gray-300">
-        Simulación de transferencia o pago con tarjeta.
+        Transferencia o pago con tarjeta.
       </p>
 
       <form id="payment-form" class="space-y-4">
@@ -131,7 +131,7 @@ import Layout from "../layouts/Layout.astro";
   if (paymentForm && paymentStage && billingStage) {
     paymentForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      alert("Procesando pago simulado...");
+      alert("Procesando pago...");
       setTimeout(() => {
         paymentStage.classList.add("opacity-50", "pointer-events-none");
         billingStage.classList.remove("hidden");
