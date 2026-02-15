@@ -1,6 +1,9 @@
 ---
 // @src/pages/knowledge/index.astro
 import { getCollection, getEntry } from "astro:content";
+
+export const prerender = false;
+
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 
