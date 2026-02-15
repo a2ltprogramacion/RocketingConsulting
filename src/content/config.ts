@@ -50,6 +50,7 @@ const detailedContentSchema = ({ image }: { image: any }) => z.object({
 
   // 4. Metadatos de Negocio
   // -------------------------------------------------------------
+  consultant_video: z.string().url().optional().describe("URL de YouTube del video de simulación de llamada con consultor."),
   order: z.number().default(0).describe("Prioridad de visualización (1 aparece primero)."),
   price: z.string().optional().describe("Ej: 'Desde $500' o 'Consultar'."),
   category: z.string().optional().describe("Etiqueta para filtrar (Ej: 'Infraestructura', 'Software')."),

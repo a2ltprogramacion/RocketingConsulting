@@ -726,6 +726,13 @@ collections:
           hint: "Ayuda a filtrar el contenido para el usuario.",
         }
       - {
+          label: "🎥 Video del Consultor (YouTube)",
+          name: "consultant_video",
+          widget: "string",
+          required: false,
+          hint: "Pega aquí el enlace de YouTube del video de simulación de consultoría. Ej: https://www.youtube.com/watch?v=XXXXX",
+        }
+      - {
           label: "Orden",
           name: "order",
           widget: "number",
