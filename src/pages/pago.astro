@@ -146,6 +146,7 @@ import Layout from "../layouts/Layout.astro";
       const formData = new FormData(e.target);
       const data = Object.fromEntries(formData);
 
+      console.log("Sending data:", JSON.stringify(data));
       try {
         const response = await fetch("/api/register", {
           method: "POST",
