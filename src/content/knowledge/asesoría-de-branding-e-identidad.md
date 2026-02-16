@@ -35,7 +35,7 @@ content_blocks:
   p1_media_type: video
   p1_title: Estrategia y Fundamentos de Marca
   p1_content: >-
-
+    
 
     Antes de diseñar, necesitamos entender. Realizamos una inmersión profunda en la esencia de tu negocio para definir tu propósito (por qué existes), tu visión (a dónde quieres llegar), tus valores (en qué crees) y tu personalidad de marca. Analizamos a tu audiencia ideal y a tu competencia para encontrar ese espacio único en el mercado donde tu marca puede brillar con luz propia. Esta base estratégica es fundamental para asegurar que cada decisión visual y comunicacional que tomemos a continuación esté alineada con tus objetivos de negocio.
   p1_image: ../../assets/uploads/2-estrategia-y-fundamentos-de-marca.webp
@@ -47,5 +47,6 @@ content_blocks:
     sostenible de tu negocio.
   p3_image: ../../assets/uploads/4-voz-y-mensaje-de-marca.webp
 category: Asesoría
+consultant_video: https://www.youtube.com/shorts/fNJ_kvz9Jsc
 order: 4
 ---
