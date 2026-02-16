@@ -11,7 +11,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   // 1. AGREGA ESTA LÍNEA (Vital para solucionar el error "Invalid URL")
-  site: 'https://a2lt-authority.netlify.app',
+  site: 'https://a2lt-test.netlify.app',
 
   vite: {
     plugins: [tailwindcss()]
