@@ -1,10 +1,9 @@
 ---
 title: Asesoría de Branding e Identidad
 main_image: ../../assets/uploads/1-asesoría-de-branding-e-identidad.webp
-main_image_alt: Miniatura de estilo YouTube con un consultor en traje azul
-  señalando una pantalla con elementos de marca (logos, tipografía, paleta de
-  colores), con el texto "ASESORÍA DE BRANDING" y "CONSTRUYE UNA MARCA
-  INOLVIDABLE".
+main_image_alt: Miniatura de estilo YouTube con una consultora señalando una
+  pantalla con elementos de marca (logos, tipografía, paleta de colores), con
+  el texto "ASESORÍA DE BRANDING" y "CONSTRUYE UNA MARCA INOLVIDABLE".
 description: Una marca es mucho más que un logo bonito; es la promesa que le
   haces a tus clientes y la experiencia que les entregas. Te ayudamos a definir
   tu ADN corporativo, una identidad visual y comunicar tu valor único para que

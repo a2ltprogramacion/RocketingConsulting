@@ -29,7 +29,7 @@ hero:
   cta_link: "#contacto"
 clients: []
 about:
-  title: Aliados Estratégicos en la Era de la Innovación
+  title: Interconectores Comerciales
   image: ../../assets/uploads/socios.webp
   image_alt: Fotografía profesional de los socios fundadores de Rocketing
     Consulting, proyectando confianza, experiencia y liderazgo.

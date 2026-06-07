@@ -17,6 +17,10 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  adapter: netlify(),
+  adapter: netlify({
+    devFeatures: {
+      images: false
+    }
+  }),
   integrations: [react(), sitemap()]
 });

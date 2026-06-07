@@ -1,8 +1,8 @@
 ---
 title: Asesoría de Edición de Video
 main_image: ../../assets/uploads/1-asesoría-de-edición-de-video.webp
-main_image_alt: Miniatura de estilo YouTube con un consultor en traje señalando
-  una compleja línea de tiempo de edición de video en una pantalla, con el texto
+main_image_alt: Miniatura de estilo YouTube con un consultor señalando una
+  compleja línea de tiempo de edición de video en una pantalla, con el texto
   "ASESORÍA DE EDICIÓN DE VIDEO" y "NARRATIVA VISUAL DE ALTO IMPACTO"
 description: El video es el rey del contenido, pero solo si cuenta una historia.
   Te asesoramos para que tus producciones no solo sean técnicamente impecables,
