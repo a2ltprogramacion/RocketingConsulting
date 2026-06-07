@@ -1,5 +1,8 @@
 ---
 // @src/components/organisms/Navbar.astro
+import { Image } from "astro:assets";
+import logoIcon from "../../assets/uploads/logo-tranparency-icon.webp";
+
 interface Props {
   siteName: string;
   whatsappLink: string;
@@ -28,10 +31,24 @@ const navLinks = [
     {/* LOGO DEL SITIO */}
     <a
       href="/"
-      class="text-2xl font-heading font-black text-white tracking-tight hover:text-primary transition-colors"
+      class="flex items-center gap-3 text-2xl font-heading font-black text-white tracking-tight hover:text-primary transition-colors"
     >
-      {siteName}
-      <span class="text-primary">.</span>
+      <div
+        id="navbar-logo-container"
+        class="w-0 opacity-0 overflow-hidden transition-all duration-300 flex items-center"
+      >
+        <Image
+          src={logoIcon}
+          alt="Logo Rocketing Consulting"
+          width={40}
+          height={40}
+          class="w-10 h-10 object-contain"
+        />
+      </div>
+      <span>
+        {siteName}
+        <span class="text-primary">.</span>
+      </span>
     </a>
 
     {/* MENÚ DE ESCRITORIO */}
@@ -219,11 +236,17 @@ const navLinks = [
     link.addEventListener("click", toggleMenu);
   });
 
+  const logoContainer = document.getElementById("navbar-logo-container");
+
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
       header?.classList.add("border-white/10", "bg-background/90");
+      logoContainer?.classList.remove("w-0", "opacity-0");
+      logoContainer?.classList.add("w-10", "opacity-100", "mr-1");
     } else {
       header?.classList.remove("border-white/10", "bg-background/90");
+      logoContainer?.classList.remove("w-10", "opacity-100", "mr-1");
+      logoContainer?.classList.add("w-0", "opacity-0");
     }
   });
 </script>
